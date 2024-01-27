@@ -1,6 +1,6 @@
+import usePageMetadata from 'hooks/use-page-metadata';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import usePageMetadata from 'hooks/use-page-metadata';
 
 import useSearch from 'hooks/use-search';
 

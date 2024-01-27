@@ -1,10 +1,10 @@
-import { getUserByNameSlug } from 'lib/users';
-import { getPostsByAuthorSlug } from 'lib/posts';
-import { AuthorJsonLd } from 'lib/json-ld';
 import usePageMetadata from 'hooks/use-page-metadata';
+import { AuthorJsonLd } from 'lib/json-ld';
+import { getPostsByAuthorSlug } from 'lib/posts';
+import { getUserByNameSlug } from 'lib/users';
 
-import TemplateArchive from 'templates/archive';
 import Title from 'components/Title';
+import TemplateArchive from 'templates/archive';
 
 export default function Author({ user, posts }) {
   const { title, name, avatar, description, slug } = user;

@@ -2,13 +2,13 @@ import Link from 'next/link';
 import { Helmet } from 'react-helmet';
 
 import useSite from 'hooks/use-site';
-import { getAllCategories, categoryPathBySlug } from 'lib/categories';
+import { categoryPathBySlug, getAllCategories } from 'lib/categories';
 import { WebpageJsonLd } from 'lib/json-ld';
 
-import Layout from 'components/Layout';
-import Header from 'components/Header';
-import Section from 'components/Section';
 import Container from 'components/Container';
+import Header from 'components/Header';
+import Layout from 'components/Layout';
+import Section from 'components/Section';
 import SectionTitle from 'components/SectionTitle';
 
 import styles from 'styles/pages/Categories.module.scss';

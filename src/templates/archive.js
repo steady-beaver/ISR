@@ -1,16 +1,16 @@
 import { Helmet } from 'react-helmet';
 
+import useSite from 'hooks/use-site';
 import { WebpageJsonLd } from 'lib/json-ld';
 import { helmetSettingsFromMetadata } from 'lib/site';
-import useSite from 'hooks/use-site';
 
-import Layout from 'components/Layout';
-import Header from 'components/Header';
-import Section from 'components/Section';
 import Container from 'components/Container';
-import SectionTitle from 'components/SectionTitle';
-import PostCard from 'components/PostCard';
+import Header from 'components/Header';
+import Layout from 'components/Layout';
 import Pagination from 'components/Pagination/Pagination';
+import PostCard from 'components/PostCard';
+import Section from 'components/Section';
+import SectionTitle from 'components/SectionTitle';
 
 import styles from 'styles/templates/Archive.module.scss';
 

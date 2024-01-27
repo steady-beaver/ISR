@@ -9,7 +9,7 @@
     "dev": "next dev",
     "export": "next export",
     "lint": "eslint .",
-    "lint:no-path": "eslint",
+    "lint:fix": "npx eslint --fix",
     "start": "next start -p ${PORT:=3000}"
   },
   "dependencies": {

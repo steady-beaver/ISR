@@ -1,9 +1,9 @@
+import usePageMetadata from 'hooks/use-page-metadata';
 import { getCategoryBySlug } from 'lib/categories';
 import { getPostsByCategoryId } from 'lib/posts';
-import usePageMetadata from 'hooks/use-page-metadata';
 
-import TemplateArchive from 'templates/archive';
 import Title from 'components/Title';
+import TemplateArchive from 'templates/archive';
 
 export default function Category({ category, posts }) {
   const { name, description, slug } = category;

@@ -1,17 +1,17 @@
 import NextApp from 'next/app';
 
-import { SiteContext, useSiteContext } from 'hooks/use-site';
 import { SearchProvider } from 'hooks/use-search';
+import { SiteContext, useSiteContext } from 'hooks/use-site';
 
-import { getSiteMetadata } from 'lib/site';
-import { getRecentPosts } from 'lib/posts';
 import { getCategories } from 'lib/categories';
-import NextNProgress from 'nextjs-progressbar';
 import { getAllMenus } from 'lib/menus';
+import { getRecentPosts } from 'lib/posts';
+import { getSiteMetadata } from 'lib/site';
+import NextNProgress from 'nextjs-progressbar';
 
+import variables from 'styles/_variables.module.scss';
 import 'styles/globals.scss';
 import 'styles/wordpress.scss';
-import variables from 'styles/_variables.module.scss';
 
 function App({ Component, pageProps = {}, metadata, recentPosts, categories, menus }) {
   const site = useSiteContext({
