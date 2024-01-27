@@ -1,13 +1,13 @@
 import useSite from 'hooks/use-site';
-import { getPaginatedPosts } from 'lib/posts';
 import { WebsiteJsonLd } from 'lib/json-ld';
+import { getPaginatedPosts } from 'lib/posts';
 
-import Layout from 'components/Layout';
-import Header from 'components/Header';
-import Section from 'components/Section';
 import Container from 'components/Container';
-import PostCard from 'components/PostCard';
+import Header from 'components/Header';
+import Layout from 'components/Layout';
 import Pagination from 'components/Pagination';
+import PostCard from 'components/PostCard';
+import Section from 'components/Section';
 
 import styles from 'styles/pages/Home.module.scss';
 
@@ -19,11 +19,11 @@ export default function Home({ posts, pagination }) {
     <Layout>
       <WebsiteJsonLd siteTitle={title} />
       <Header>
-        <h1
+        {/* <h1
           dangerouslySetInnerHTML={{
             __html: title,
           }}
-        />
+        /> */}
 
         <p
           className={styles.description}

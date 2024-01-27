@@ -8,16 +8,9 @@
     "build": "next build",
     "dev": "next dev",
     "export": "next export",
-    "format": "pnpm lint --fix",
-    "format:no-path": "pnpm lint:no-path --fix",
     "lint": "eslint .",
     "lint:no-path": "eslint",
-    "start": "next start -p ${PORT:=3000}",
-    "prepare": "husky install"
-  },
-  "lint-staged": {
-    "**/*.js": "pnpm format:no-path",
-    "**/*.scss": "pnpm prettier --write"
+    "start": "next start -p ${PORT:=3000}"
   },
   "dependencies": {
     "@apollo/client": "^3.7.14",
@@ -45,7 +38,6 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
-    "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "playwright": "^1.33.0",
     "prettier": "2.8.8"

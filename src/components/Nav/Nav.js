@@ -1,16 +1,16 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
 import Link from 'next/link';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
-import useSite from 'hooks/use-site';
 import useSearch, { SEARCH_STATE_LOADED } from 'hooks/use-search';
-import { postPathBySlug } from 'lib/posts';
+import useSite from 'hooks/use-site';
 import { findMenuByLocation, MENU_LOCATION_NAVIGATION_DEFAULT } from 'lib/menus';
+import { postPathBySlug } from 'lib/posts';
 
 import Section from 'components/Section';
 
-import styles from './Nav.module.scss';
 import NavListItem from 'components/NavListItem';
+import styles from './Nav.module.scss';
 
 const SEARCH_VISIBLE = 'visible';
 const SEARCH_HIDDEN = 'hidden';
@@ -178,7 +178,7 @@ const Nav = () => {
     <nav className={styles.nav}>
       <Section className={styles.navSection}>
         <p className={styles.navName}>
-          <Link href="/">{title}</Link>
+          <Link href="/">Hi {title}</Link>
         </p>
         <ul className={styles.navMenu}>
           {navigation?.map((listItem) => {

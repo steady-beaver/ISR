@@ -1,19 +1,19 @@
 import Link from 'next/link';
 import { Helmet } from 'react-helmet';
 
-import { getPageByUri, getAllPages, getBreadcrumbsByUri } from 'lib/pages';
-import { WebpageJsonLd } from 'lib/json-ld';
-import { helmetSettingsFromMetadata } from 'lib/site';
-import useSite from 'hooks/use-site';
 import usePageMetadata from 'hooks/use-page-metadata';
+import useSite from 'hooks/use-site';
+import { WebpageJsonLd } from 'lib/json-ld';
+import { getAllPages, getBreadcrumbsByUri, getPageByUri } from 'lib/pages';
+import { helmetSettingsFromMetadata } from 'lib/site';
 
-import Layout from 'components/Layout';
-import Header from 'components/Header';
-import Content from 'components/Content';
-import Section from 'components/Section';
-import Container from 'components/Container';
-import FeaturedImage from 'components/FeaturedImage';
 import Breadcrumbs from 'components/Breadcrumbs';
+import Container from 'components/Container';
+import Content from 'components/Content';
+import FeaturedImage from 'components/FeaturedImage';
+import Header from 'components/Header';
+import Layout from 'components/Layout';
+import Section from 'components/Section';
 
 import styles from 'styles/pages/Page.module.scss';
 

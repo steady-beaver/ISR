@@ -1,8 +1,8 @@
+import { QUERY_ALL_MENUS } from 'data/menus';
 import { getApolloClient } from 'lib/apollo-client';
 import { getTopLevelPages } from 'lib/pages';
-import { QUERY_ALL_MENUS } from 'data/menus';
 
-export const MENU_LOCATION_NAVIGATION_DEFAULT = 'DEFAULT_NAVIGATION';
+export const MENU_LOCATION_NAVIGATION_DEFAULT = 'PRIMARY';
 
 /**
  * getAllMenus
@@ -19,6 +19,7 @@ export async function getAllMenus() {
 
   const defaultNavigation = createMenuFromPages({
     locations: [MENU_LOCATION_NAVIGATION_DEFAULT],
+
     pages: await getTopLevelPages({
       queryIncludes: 'index',
     }),
