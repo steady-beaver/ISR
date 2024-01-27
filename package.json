@@ -10,7 +10,7 @@
     "export": "next export",
     "lint": "eslint .",
     "lint:fix": "npx eslint --fix",
-    "start": "next start -p ${PORT:=3000}"
+    "start": "next start"
   },
   "dependencies": {
     "@apollo/client": "^3.7.14",
