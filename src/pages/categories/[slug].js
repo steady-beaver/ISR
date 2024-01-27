@@ -1,5 +1,5 @@
 import usePageMetadata from 'hooks/use-page-metadata';
-import { getCategoryBySlug } from 'lib/categories';
+import { getAllCategories, getCategoryBySlug } from 'lib/categories';
 import { getPostsByCategoryId } from 'lib/posts';
 
 import Title from 'components/Title';
@@ -53,21 +53,21 @@ export async function getStaticPaths() {
 
   // 2. Uncomment the below
   //
-  // const { categories } = await getAllCategories();
+  const { categories } = await getAllCategories();
 
-  // const paths = categories.map((category) => {
-  //   const { slug } = category;
-  //   return {
-  //     params: {
-  //       slug,
-  //     },
-  //   };
-  // });
+  const paths = categories.map((category) => {
+    const { slug } = category;
+    return {
+      params: {
+        slug,
+      },
+    };
+  });
 
   // 3. Update `paths` in the return statement below to reference the `paths` constant above
 
   return {
-    paths: [],
+    paths,
     fallback: 'blocking',
   };
 }
