@@ -1,4 +1,4 @@
-@import "styles/settings/__settings";
+@import "styles/theme/theme";
 
 .postMetadata {
   text-align: center;
@@ -18,10 +18,12 @@
 .relatedPosts {
   display: flex;
   flex-direction: column;
+
   span {
     font-size: 1.2em;
     margin-bottom: 0.4em;
   }
+
   ul {
     list-style: none;
   }

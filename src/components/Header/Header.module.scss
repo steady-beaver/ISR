@@ -1,4 +1,4 @@
-@import "styles/settings/__settings";
+@import "styles/theme/theme";
 
 @import "styles/components/_container";
 
@@ -26,7 +26,7 @@
       }
     }
 
-    & + ul {
+    &+ul {
       margin-top: 1.5em;
     }
   }

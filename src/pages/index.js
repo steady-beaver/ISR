@@ -19,11 +19,11 @@ export default function Home({ posts, pagination }) {
     <Layout>
       <WebsiteJsonLd siteTitle={title} />
       <Header>
-        {/* <h1
+        <h1
           dangerouslySetInnerHTML={{
             __html: title,
           }}
-        /> */}
+        />
 
         <p
           className={styles.description}

@@ -1,5 +1,4 @@
-@import "styles/settings/__settings";
-@import "style.css";
+@import "styles/theme/theme";
 
 * {
   box-sizing: border-box;
@@ -31,6 +30,7 @@ img {
 }
 
 input {
+
   &[type="text"],
   &[type="search"],
   &[type="email"] {

@@ -1,0 +1,145 @@
+$font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
+  Courier New, monospace;
+
+@font-face {
+  font-family: 'IvyMode';
+  src: url('/iny-mode-font/ivy-mode-6.woff2') format('woff2')
+}
+
+.headingHero {
+  font-family: IvyMode;
+  font-size: 170px;
+  font-weight: 400;
+  line-height: 252px;
+  letter-spacing: 0.2em;
+  text-align: left;
+}
+
+.headingH1 {
+  font-family: IvyMode, sans-serif;
+  font-size: 120px;
+  font-weight: 400;
+  line-height: 136px;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.headingH2 {
+  font-family: IvyMode;
+  font-size: 37px;
+  font-weight: 400;
+  line-height: 55px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.headingH3 {
+  font-family: IvyMode;
+  font-size: 31px;
+  font-weight: 400;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.headingH4 {
+  font-family: Reem Kufi Fun;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 38px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+.headingH5 {
+  content: none;
+}
+
+.headingH6 {
+  font-family: Reem Kufi Fun;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0.05em;
+  text-align: left;
+}
+
+// probably not used
+//styleName: Secondary menu items;
+.subtitleStrong {
+  font-family: Reem Kufi Fun;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0.37em;
+  text-align: center;
+}
+
+//styleName: Input items;
+.subtitleSmall {
+  font-family: Basic Sans;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.22em;
+  text-align: left;
+}
+
+//styleName: Subtitle;
+.subtitle {
+  font-family: Reem Kufi Fun;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+//styleName: Meta;
+.subtitleTiny {
+  font-family: Basic Sans;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.2em;
+  text-align: left;
+}
+
+//styleName: Pargraph;
+.text {
+  font-family: Basic Sans;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.textS {
+  font-family: Basic Sans;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.textXS {
+  //styleName: Paragraph XSmall;
+  font-family: Basic Sans;
+  font-size: 13px;
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.textXXS {
+  //styleName: Paragraph XXSmall;
+  font-family: Basic Sans;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+}

@@ -1,4 +1,4 @@
-@import "styles/settings/__settings";
+@import "styles/theme/theme";
 
 .nav {
   position: relative;
@@ -6,7 +6,7 @@
   justify-content: flex-end;
   margin-top: 6em;
 
-  > * {
+  >* {
     display: flex;
     gap: 0.3em;
     align-items: center;
@@ -21,10 +21,12 @@
     border: 1px solid $color-gray-200;
     border-radius: 0.4em;
     padding: 0.2em 0.8em;
+
     &:hover {
       color: $color-primary;
       background-color: $color-gray-50;
     }
+
     svg {
       width: 0.8rem;
     }
@@ -45,10 +47,12 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
   @media (max-width: 768px) {
     display: none;
   }
 }
+
 .prev {
   margin-right: auto;
 }

@@ -9,9 +9,7 @@ import { getRecentPosts } from 'lib/posts';
 import { getSiteMetadata } from 'lib/site';
 import NextNProgress from 'nextjs-progressbar';
 
-import variables from 'styles/_variables.module.scss';
 import 'styles/globals.scss';
-import 'styles/wordpress.scss';
 
 function App({ Component, pageProps = {}, metadata, recentPosts, categories, menus }) {
   const site = useSiteContext({
@@ -24,7 +22,7 @@ function App({ Component, pageProps = {}, metadata, recentPosts, categories, men
   return (
     <SiteContext.Provider value={site}>
       <SearchProvider>
-        <NextNProgress height={4} color={variables.progressbarColor} />
+        <NextNProgress height={4} />
         <Component {...pageProps} />
       </SearchProvider>
     </SiteContext.Provider>

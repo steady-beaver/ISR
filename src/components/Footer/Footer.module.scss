@@ -1,4 +1,4 @@
-@import "styles/settings/__settings";
+@import "styles/theme/theme";
 
 .footer {
   width: 100%;
@@ -24,7 +24,7 @@
     justify-content: center;
   }
 
-  & > li {
+  &>li {
     max-width: 15em;
     margin: 2em;
   }
