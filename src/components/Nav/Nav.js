@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import CloseIcon from 'public/icons/close-new.svg';
 import HamburgerIcon from 'public/icons/hamburger-new.svg';
 import { useEffect, useState } from 'react';
@@ -23,11 +24,24 @@ const Nav = () => {
       {menuOpen ? (
         <div className={`${styles.openedMenu} headingH4`}>
           <CloseIcon className={styles.closeIcon} onClick={(e) => toggleMenu(e)} />
-          <span>Home</span>
-          <span>About me</span>
-          <span>Services</span>
-          <span>Portfolio</span>
-          <span>Journal</span>
+
+          <Link href="/">
+            <span>Home</span>
+          </Link>
+          <Link href="/about">
+            <span>About me</span>
+          </Link>
+          <Link href="/services">
+            <span>Services</span>
+          </Link>
+          {/* ================================= */}
+          {/* blog */}
+          <Link href="#">
+            <span>Journal</span>
+          </Link>
+          <Link href="#">
+            <span>Contact</span>
+          </Link>
 
           <div className={styles.social}>
             <a href="https://hotmail.com" target="_blank" rel="noopener noreferrer">

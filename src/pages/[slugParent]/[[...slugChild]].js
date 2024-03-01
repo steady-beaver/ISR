@@ -65,6 +65,7 @@ export default function Page({ page, breadcrumbs }) {
       </Header>
 
       <Content>
+        <Section>SLUUUUG</Section>
         <Section>
           <Container>
             <div
@@ -80,9 +81,7 @@ export default function Page({ page, breadcrumbs }) {
           <Section className={styles.sectionChildren}>
             <Container>
               <aside>
-                <p className={styles.childrenHeader}>
-                  <strong>{title}</strong>
-                </p>
+                <p className={styles.childrenHeader}>{/* <strong>{title}</strong> */}</p>
                 <ul>
                   {children.map((child) => {
                     return (

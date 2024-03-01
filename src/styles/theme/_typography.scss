@@ -2,8 +2,8 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   Courier New, monospace;
 
 @font-face {
-  font-family: 'IvyMode';
-  src: url('/iny-mode-font/ivy-mode-6.woff2') format('woff2')
+  font-family: IvyMode;
+  src: url('/iny-mode-font/IvyMode-Regular.woff2') format('woff2')
 }
 
 .headingHero {
@@ -39,7 +39,6 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 400;
   line-height: 46px;
   letter-spacing: 0.05em;
-  text-align: left;
 }
 
 .headingH4 {
@@ -48,7 +47,6 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 400;
   line-height: 38px;
   letter-spacing: 0.05em;
-  text-align: left;
 }
 
 .headingH5 {
@@ -64,6 +62,9 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   text-align: left;
 }
 
+// helper
+// className={`${''} headingH3`}
+
 // probably not used
 //styleName: Secondary menu items;
 .subtitleStrong {
@@ -75,16 +76,6 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   text-align: center;
 }
 
-//styleName: Input items;
-.subtitleSmall {
-  font-family: Basic Sans;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 32px;
-  letter-spacing: 0.22em;
-  text-align: left;
-}
-
 //styleName: Subtitle;
 .subtitle {
   font-family: Reem Kufi Fun;
@@ -92,7 +83,15 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 400;
   line-height: 27px;
   letter-spacing: 0.2em;
-  text-align: center;
+}
+
+//styleName: Input items;
+.subtitleSmall {
+  font-family: Basic Sans;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0.22em;
 }
 
 //styleName: Meta;
@@ -102,8 +101,11 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 400;
   line-height: 12px;
   letter-spacing: 0.2em;
-  text-align: left;
 }
+
+
+// helper       placeholder
+// className={`${''} headingH3`}
 
 //styleName: Pargraph;
 .text {
@@ -112,7 +114,6 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 300;
   line-height: 30px;
   letter-spacing: 0em;
-  text-align: left;
 }
 
 .textS {
@@ -121,7 +122,6 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 300;
   line-height: 23px;
   letter-spacing: 0em;
-  text-align: left;
 }
 
 .textXS {
@@ -131,7 +131,6 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 300;
   line-height: 16px;
   letter-spacing: 0em;
-  text-align: left;
 }
 
 .textXXS {
@@ -141,5 +140,18 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 300;
   line-height: 12px;
   letter-spacing: 0em;
-  text-align: left;
+}
+
+// helpers
+.vertical {
+  text-transform: uppercase;
+  position: absolute;
+  border: 1px solid green;
+  top: 50%;
+  transform-origin: top left;
+  transform: rotate(-90deg) translateX(-50%);
+  // transform: rotate(-90deg) translate(50%, -100%);
+  // position: absolute;
+  // left: 0;
+  // bottom: 0;
 }

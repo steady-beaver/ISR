@@ -1,6 +1,11 @@
 # Smile Is The Key
 
+```
+npm run dev
+```
+
 [Figma file](https://www.figma.com/file/1AjLHt0Tw1uTD4CcaTbiIk/202401-Smile-is-the-Key-Wireframes?type=design&node-id=0%3A1&mode=design&t=MM6WpU2AvgOvjknR-1)
+
 
 # Next.js WordPress Starter
 
