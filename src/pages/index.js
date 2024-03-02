@@ -8,6 +8,7 @@ import NewContainer from 'components/NewContainer/NewContainer';
 import Section from 'components/Section';
 import IntroductionSection from 'scenes/IntroductionSection/IntroductionSection';
 import ServiceSection from 'scenes/ServiceSection/ServiceSection';
+import TestimonialSection from 'scenes/TestimonialSection/TestimonialSection';
 
 export default function Home() {
   const { metadata = {} } = useSite();
@@ -26,6 +27,10 @@ export default function Home() {
 
       <NewContainer>
         <IntroductionSection />
+      </NewContainer>
+
+      <NewContainer>
+        <TestimonialSection />
       </NewContainer>
 
       <Section>

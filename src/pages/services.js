@@ -4,7 +4,9 @@ import { WebsiteJsonLd } from 'lib/json-ld';
 import Container from 'components/Container';
 import Header from 'components/Header';
 import Layout from 'components/Layout';
+import NewContainer from 'components/NewContainer/NewContainer';
 import Section from 'components/Section';
+import TestimonialSection from 'scenes/TestimonialSection/TestimonialSection';
 
 export default function Home() {
   const { metadata = {} } = useSite();
@@ -16,6 +18,10 @@ export default function Home() {
       <Header>
         <h1>Services</h1>
       </Header>
+
+      <NewContainer>
+        <TestimonialSection />
+      </NewContainer>
 
       <Section>
         <Container>Services</Container>

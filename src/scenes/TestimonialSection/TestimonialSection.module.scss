@@ -1,0 +1,32 @@
+@import 'src/styles/_media_queries.scss';
+
+.main {
+    height: 650px;
+    background-image: url('/pictures/testimonial-flower.png'), url('/pictures/signature.png');
+    background-position: center center, 110% 90%;
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    width: 580px;
+    margin: 0 auto;
+    text-align: center;
+
+    &>*:first-child {
+        text-transform: uppercase;
+    }
+
+
+    @include respond-width($s) {
+        padding: 0 10%;
+        width: 100%;
+        background-size: 75%, 300px;
+        background-position: center 60%, 110% 90%;
+    }
+
+}
