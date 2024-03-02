@@ -1,6 +1,11 @@
 .frame {
     padding: 100px 0;
-    border: 1px solid red;
     height: max(100vh, 1124px);
     position: relative;
+}
+
+.menuPos {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
 }

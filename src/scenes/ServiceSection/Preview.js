@@ -1,18 +1,16 @@
 import ReadMoreBtn from 'components/ReadMoreBtn/ReadMoreBtn';
+import Image from 'next/image';
 import styles from './Preview.module.scss';
 
-const Preview = () => {
+const Preview = ({ title, text, srcPrimary, srcSecondary }) => {
   return (
     <div className={styles.main}>
+      <Image src={srcPrimary} alt="Wedding" width={1000} height={1} className={styles.primaryImg} />
+      <Image src={srcSecondary} alt="Wedding" width={1000} height={1} className={styles.secondaryImg} />
+      <Image src={'/pictures/white-paper-1.png'} width={1000} height={1} className={styles.paperOrnament} />
       <div className={styles.textSection}>
-        <p className={`${''} headingH3`}>
-          The session focuses on capturing authentic moments of your love and friendship.
-        </p>
-        <p className={`${''} text`}>
-          This won't be your typical photoshoot. It's a shared experience freezing the magical moments of your
-          relationship. No staged smiles here – I aim to capture your genuine joy, love, and closeness. Ready for an
-          unforgettable date? Let's capture some real magic!
-        </p>
+        <p className={`${''} headingH3`}>{title}</p>
+        <p className={`${''} text`}>{text}</p>
         <ReadMoreBtn className={styles.readMore} to="/services" />
         {/* <ReadMoreBtn /> */}
       </div>

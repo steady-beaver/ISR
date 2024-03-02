@@ -40,6 +40,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Basic&family=Mrs+Saint+Delafield&family=Reem+Kufi+Fun:wght@400..700&display=swap"
             rel="stylesheet"
           />
+          <link rel="stylesheet" href="https://use.typekit.net/xze3ylu.css" />
         </Head>
         <body {...this.helmetBodyAttrComponents}>
           <Main />

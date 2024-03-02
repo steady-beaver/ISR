@@ -1,17 +1,28 @@
-const TabMenu = ({ option, setOption }) => {
+import styles from './TabMenu.module.scss';
+
+const TabMenu = ({ option, setOption, className }) => {
   return (
-    <div>
-      <ul>
-        <li className={option === 'couple' ? 'active' : ''} onClick={() => setOption('couple')}>
-          Couple
+    <div className={className}>
+      <ol className={styles.olStyles}>
+        <li
+          className={`${option === 'couple' ? styles.active : ''} ${styles.liItem} subtitleSmall`}
+          onClick={() => setOption('couple')}
+        >
+          <span className={` subtitleSmall ${styles.liText} `}>Couple sessions</span>
         </li>
-        <li className={option === 'wedding' ? 'active' : ''} onClick={() => setOption('wedding')}>
-          Wedding
+        <li
+          className={`${option === 'wedding' ? styles.active : ''} ${styles.liItem} subtitleSmall`}
+          onClick={() => setOption('wedding')}
+        >
+          <span className={`${styles.liText} subtitleSmall`}>Wedding sessions</span>
         </li>
-        <li className={option === 'elopement' ? 'active' : ''} onClick={() => setOption('elopement')}>
-          Elopement
+        <li
+          className={`${option === 'elopement' ? styles.active : ''} ${styles.liItem} subtitleSmall`}
+          onClick={() => setOption('elopement')}
+        >
+          <span className={`${styles.liText} subtitleSmall`}>Elopement sessions</span>
         </li>
-      </ul>
+      </ol>
     </div>
   );
 };

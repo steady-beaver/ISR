@@ -1,40 +1,33 @@
 $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
   Courier New, monospace;
 
-@font-face {
-  font-family: IvyMode;
-  src: url('/iny-mode-font/IvyMode-Regular.woff2') format('woff2')
-}
 
 .headingHero {
-  font-family: IvyMode;
+  font-family: ivymode;
   font-size: 170px;
   font-weight: 400;
   line-height: 252px;
   letter-spacing: 0.2em;
-  text-align: left;
 }
 
 .headingH1 {
-  font-family: IvyMode, sans-serif;
+  font-family: ivymode, sans-serif;
   font-size: 120px;
   font-weight: 400;
   line-height: 136px;
   letter-spacing: 0.2em;
-  text-align: center;
 }
 
 .headingH2 {
-  font-family: IvyMode;
+  font-family: ivymode;
   font-size: 37px;
   font-weight: 400;
   line-height: 55px;
   letter-spacing: 0.05em;
-  text-align: left;
 }
 
 .headingH3 {
-  font-family: IvyMode;
+  font-family: ivymode;
   font-size: 31px;
   font-weight: 400;
   line-height: 46px;
@@ -59,7 +52,6 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 400;
   line-height: 27px;
   letter-spacing: 0.05em;
-  text-align: left;
 }
 
 // helper
@@ -73,7 +65,6 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 700;
   line-height: 23px;
   letter-spacing: 0.37em;
-  text-align: center;
 }
 
 //styleName: Subtitle;
@@ -106,6 +97,8 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
 
 // helper       placeholder
 // className={`${''} headingH3`}
+
+// @import "styles/theme/theme";
 
 //styleName: Pargraph;
 .text {
@@ -146,7 +139,7 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
 .vertical {
   text-transform: uppercase;
   position: absolute;
-  border: 1px solid green;
+  // border: 1px solid green;
   top: 50%;
   transform-origin: top left;
   transform: rotate(-90deg) translateX(-50%);

@@ -1,5 +1,4 @@
 .main {
-    border: 1px solid red;
     margin-left: 165px;
     height: 100%;
     position: relative;
@@ -12,9 +11,40 @@
     width: 490px;
     display: flex;
     flex-direction: column;
-    gap: 40px;
+
+    &>p:first-child {
+        margin-bottom: 40px;
+    }
 }
 
 .readMore {
     align-self: flex-end;
+}
+
+.primaryImg {
+    width: 430px;
+    transform-origin: top right;
+    transform: rotate(-5deg);
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.secondaryImg {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    z-index: 1;
+    bottom: 20px;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+.paperOrnament {
+    position: absolute;
+    width: 300px;
+    aspect-ratio: 1/1;
+    left: 55%;
+    bottom: 130px;
+    transform: translateX(-50%);
 }
