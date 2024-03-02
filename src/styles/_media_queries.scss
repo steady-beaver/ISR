@@ -1,0 +1,20 @@
+$xl: 1650px;
+$l: 1280px;
+$m: 1100px;
+$s: 800px;
+$xs: 550px;
+// min: 375px;
+
+@mixin respond-width($media) {
+    $max-width: $media + 1px;
+
+    @media (max-width: #{$max-width}) {
+        @content;
+    }
+}
+
+// Usage:
+// 
+// @import 'src/styles/_media_queries.scss';
+// ...
+// @include respond-width($m) {

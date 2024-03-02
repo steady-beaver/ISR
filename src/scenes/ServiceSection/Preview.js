@@ -5,9 +5,19 @@ import styles from './Preview.module.scss';
 const Preview = ({ title, text, srcPrimary, srcSecondary }) => {
   return (
     <div className={styles.main}>
-      <Image src={srcPrimary} alt="Wedding" width={1000} height={1} className={styles.primaryImg} />
-      <Image src={srcSecondary} alt="Wedding" width={1000} height={1} className={styles.secondaryImg} />
-      <Image src={'/pictures/white-paper-1.png'} width={1000} height={1} className={styles.paperOrnament} />
+      <div className={styles.primaryImgFrame}>
+        <Image src={srcPrimary} alt="Wedding" fill={true} className={styles.primaryImg} />
+      </div>
+      <div className={styles.secondaryImgFrame}>
+        <Image
+          src={'/pictures/white-paper-1.png'}
+          width={1000}
+          height={1}
+          className={styles.paperOrnament}
+          alt="Paper decoration"
+        />
+        <Image src={srcSecondary} alt="Wedding" fill={true} className={styles.secondaryImg} />
+      </div>
       <div className={styles.textSection}>
         <p className={`${''} headingH3`}>{title}</p>
         <p className={`${''} text`}>{text}</p>

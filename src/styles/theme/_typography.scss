@@ -1,6 +1,7 @@
+@import 'src/styles/_media_queries.scss';
+
 $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono,
   Courier New, monospace;
-
 
 .headingHero {
   font-family: ivymode;
@@ -16,6 +17,16 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 400;
   line-height: 136px;
   letter-spacing: 0.2em;
+
+  @include respond-width($m) {
+    font-size: 70px;
+    line-height: 60px;
+  }
+
+  @include respond-width($s) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .headingH2 {
@@ -32,6 +43,12 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 400;
   line-height: 46px;
   letter-spacing: 0.05em;
+
+  @include respond-width($s) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
 }
 
 .headingH4 {
@@ -74,6 +91,11 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 400;
   line-height: 27px;
   letter-spacing: 0.2em;
+
+  @include respond-width($s) {
+    font-size: 10px;
+    line-height: 15px;
+  }
 }
 
 //styleName: Input items;
@@ -107,6 +129,11 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-weight: 300;
   line-height: 30px;
   letter-spacing: 0em;
+
+  @include respond-width($s) {
+    font-size: 14px;
+    line-height: 21px;
+  }
 }
 
 .textS {
@@ -138,13 +165,7 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
 // helpers
 .vertical {
   text-transform: uppercase;
-  position: absolute;
-  // border: 1px solid green;
-  top: 50%;
   transform-origin: top left;
   transform: rotate(-90deg) translateX(-50%);
-  // transform: rotate(-90deg) translate(50%, -100%);
-  // position: absolute;
-  // left: 0;
-  // bottom: 0;
+  width: max-content;
 }
