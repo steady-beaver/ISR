@@ -6,6 +6,7 @@ import Header from 'components/Header';
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
 import Section from 'components/Section';
+import IntroductionSection from 'scenes/IntroductionSection/IntroductionSection';
 import ServiceSection from 'scenes/ServiceSection/ServiceSection';
 
 export default function Home() {
@@ -21,6 +22,10 @@ export default function Home() {
 
       <NewContainer>
         <ServiceSection />
+      </NewContainer>
+
+      <NewContainer>
+        <IntroductionSection />
       </NewContainer>
 
       <Section>

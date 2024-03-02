@@ -13,10 +13,6 @@
     @include respond-width($m) {
         transform: scale(0.8);
     }
-
-    @include respond-width($s) {
-        transform: scale(0.6);
-    }
 }
 
 

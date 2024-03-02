@@ -50,6 +50,14 @@
 
 .readMore {
     align-self: flex-end;
+
+    @include respond-width($s) {
+        width: max-content;
+        position: absolute;
+        right: 50vw;
+        transform: translateX(50%) scale(0.8);
+        bottom: -80px;
+    }
 }
 
 .primaryImgFrame {

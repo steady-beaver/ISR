@@ -1,0 +1,43 @@
+@import 'src/styles/_media_queries.scss';
+
+.main {
+    height: 650px;
+    background-image: url('/pictures/about-me-flower.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    width: 650px;
+    margin: 0 auto;
+    padding: 0 112px;
+    text-align: center;
+
+    &>*:first-child {
+        font-size: 53px;
+        text-transform: uppercase;
+        text-wrap: nowrap;
+    }
+
+    @include respond-width($s) {
+        width: 100%;
+    }
+
+    @include respond-width($xs) {
+        height: auto;
+        padding: 70px 15% 20px;
+    }
+}
+
+.linkBtn {
+    align-self: flex-end;
+
+    @include respond-width($s) {
+        align-self: center;
+    }
+}
