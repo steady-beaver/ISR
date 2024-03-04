@@ -1,0 +1,23 @@
+@import "styles/theme/theme";
+
+.sendBtn {
+    width: 160px;
+    height: 50px;
+    background-color: transparent;
+    border: 1px solid $black;
+    cursor: pointer;
+
+    &:focus {
+        border-width: 2px;
+    }
+
+    &:hover {
+        color: $brown;
+        border-color: $brown;
+    }
+
+    &[disabled] {
+        border-color: $gray;
+        color: $gray;
+    }
+}

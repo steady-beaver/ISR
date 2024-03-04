@@ -141,7 +141,6 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-size: 15px;
   font-weight: 300;
   line-height: 23px;
-  letter-spacing: 0em;
 }
 
 .textXS {
@@ -150,7 +149,6 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-size: 13px;
   font-weight: 300;
   line-height: 16px;
-  letter-spacing: 0em;
 }
 
 .textXXS {
@@ -159,7 +157,6 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   font-size: 10px;
   font-weight: 300;
   line-height: 12px;
-  letter-spacing: 0em;
 }
 
 // helpers
@@ -172,4 +169,12 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
 
 .bold {
   font-weight: 700;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.letterSpacing {
+  letter-spacing: 2px;
 }

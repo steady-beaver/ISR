@@ -36,9 +36,43 @@
     }
 }
 
+
+.newsletterInput {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        margin-top: 50px;
+        margin-bottom: 32px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        gap: 20px;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid $black;
+        background-color: transparent;
+        flex: 1;
+
+        &:focus {
+            border-color: $brown;
+            border-width: 2px;
+        }
+    }
+
+    .helper {
+        margin-top: 16px;
+    }
+}
+
 .bottomPart {
-    border: 1px solid red;
-    padding: 70px 0;
+    padding: 70px 0 0;
     text-transform: uppercase;
 
     display: flex;
@@ -46,33 +80,25 @@
     align-items: center;
 
     .rights {
+        position: relative;
+        bottom: -2px;
+    }
+
+    .rights>span:first-child {
         margin-right: 30px;
     }
-}
 
+    .iconBg {
+        fill: $black;
 
-.iconBg {
-    fill: $black;
-
-    &:hover {
-        fill: $brown;
+        &:hover {
+            fill: $brown;
+        }
     }
+
+    .media {
+        display: flex;
+        gap: 10px;
+    }
+
 }
-
-
-.media {
-    display: flex;
-    gap: 10px;
-}
-
-// .explore {
-//     flex: 1;
-//     text-transform: uppercase;
-//     list-style-type: none;
-// }
-
-// .support {
-//     flex: 1;
-//     text-transform: uppercase;
-
-// }
