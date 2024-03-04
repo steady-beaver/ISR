@@ -4,24 +4,58 @@
     border-top: 1px solid $black;
     height: 600px;
     padding: 50px 50px 70px;
+
+    @include respond-width($m) {
+        height: auto;
+        padding: 50px;
+    }
 }
 
 .upperPart {
     display: flex;
+
+    @include respond-width($m) {
+        flex-direction: column;
+        align-items: center;
+        // justify-content: stretch;
+        gap: 60px;
+    }
 }
 
 .newsletter {
     flex: 0 0 60%;
 
+    @include respond-width($m) {
+        flex: auto;
+    }
+
     .container {
         max-width: 580px;
         padding-right: 30px;
+
+        @include respond-width($m) {
+            text-align: center;
+            padding-right: 0;
+        }
     }
 }
 
 .footerCol {
     flex: 1;
     text-transform: uppercase;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-width($m) {
+        gap: 50px;
+        padding-top: 50px;
+    }
+
+    @include respond-width($s) {
+        padding-top: 0;
+        text-align: center;
+    }
 
     & ul {
         list-style-type: none;
@@ -52,6 +86,11 @@
         justify-content: space-between;
         align-items: flex-end;
         gap: 20px;
+
+        @include respond-width($xs) {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     input {
@@ -64,10 +103,19 @@
             border-color: $brown;
             border-width: 2px;
         }
+
+        @include respond-width($xs) {
+            width: 100%;
+        }
     }
 
     .helper {
         margin-top: 16px;
+        text-align: left;
+
+        @include respond-width($xs) {
+            text-align: center;
+        }
     }
 }
 
@@ -79,13 +127,31 @@
     justify-content: space-between;
     align-items: center;
 
+    @include respond-width($s) {
+        padding: 20px 0 0;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+
     .rights {
         position: relative;
         bottom: -2px;
+
+        @include respond-width($xs) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+        }
     }
 
     .rights>span:first-child {
         margin-right: 30px;
+
+        @include respond-width($xs) {
+            margin-right: 0;
+        }
     }
 
     .iconBg {

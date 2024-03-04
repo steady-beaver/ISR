@@ -7,6 +7,12 @@
     border: 1px solid $black;
     cursor: pointer;
 
+    @include respond-width($m) {
+        width: 100px;
+        height: 40px;
+    }
+
+
     &:focus {
         border-width: 2px;
     }

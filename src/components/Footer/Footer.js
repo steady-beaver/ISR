@@ -44,35 +44,38 @@ const Footer = () => {
           </div>
         </div>
         <div className={`${styles.footerCol} `}>
-          <span className="subtitle bold">Explore</span>
-          <ul className="subtitle">
-            <li>
-              <a href="#">About me</a>
-            </li>
-            <li>
-              <a href="#">Services</a>
-            </li>
-            <li>
-              <a href="#">Portfolio</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-          </ul>
-        </div>
-        <div className={`${styles.footerCol} `}>
-          <span className="subtitle bold">Support</span>
-          <ul className="subtitle">
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Terms</a>
-            </li>
-            <li>
-              <a href="#">Privacy policy</a>
-            </li>
-          </ul>
+          <div>
+            <span className="subtitle bold">Explore</span>
+            <ul className="subtitle">
+              <li>
+                <a href="#">About me</a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+              <li>
+                <a href="#">Portfolio</a>
+              </li>
+              <li>
+                <a href="#">Blog</a>
+              </li>
+            </ul>
+          </div>
+          {/* <div className={`${styles.footerCol} `}> */}
+          <div>
+            <span className="subtitle bold">Support</span>
+            <ul className="subtitle">
+              <li>
+                <a href="#">Contact</a>
+              </li>
+              <li>
+                <a href="#">Terms</a>
+              </li>
+              <li>
+                <a href="#">Privacy policy</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
