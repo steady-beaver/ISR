@@ -1,6 +1,9 @@
 'use client';
 
-import Image from 'next/image';
+import Facebook from 'components/Social/Facebook';
+import Instagram from 'components/Social/Instagram';
+import Mail from 'components/Social/Mail';
+import Pinterest from 'components/Social/Pinterest';
 import Link from 'next/link';
 import CloseIcon from 'public/icons/close-new.svg';
 import HamburgerIcon from 'public/icons/hamburger-new.svg';
@@ -44,18 +47,10 @@ const Nav = () => {
           </Link>
 
           <div className={styles.social}>
-            <a href="https://hotmail.com" target="_blank" rel="noopener noreferrer">
-              <Image src="/icons/social/mail.svg" alt="e-mail contact" width={32} height={32} />
-            </a>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <Image src="/icons/social/fb.svg" alt="Facebook contact" width={32} height={32} />
-            </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <Image src="/icons/social/instagram.svg" alt="Instagram contact" width={32} height={32} />
-            </a>
-            <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">
-              <Image src="/icons/social/pinterest.svg" alt="Pinterest contact" width={32} height={32} />
-            </a>
+            <Facebook iconBg={styles.iconBg} />
+            <Instagram iconBg={styles.iconBg} />
+            <Pinterest iconBg={styles.iconBg} />
+            <Mail iconBg={styles.iconBg} />
           </div>
         </div>
       ) : (

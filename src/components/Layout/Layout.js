@@ -5,7 +5,7 @@ import styles from './Layout.module.scss';
 import useSite from 'hooks/use-site';
 import { helmetSettingsFromMetadata } from 'lib/site';
 
-import Footer from 'components/Footer';
+import Footer from 'components/Footer/Footer';
 import Main from 'components/Main';
 import Nav, { NavOld } from 'components/Nav';
 
@@ -70,6 +70,7 @@ const Layout = ({ children }) => {
       <Main>{children}</Main>
 
       <Footer />
+      {/* <FooterOld /> */}
     </div>
   );
 };

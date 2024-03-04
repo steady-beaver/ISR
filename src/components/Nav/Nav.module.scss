@@ -39,5 +39,18 @@
     position: absolute;
     top: 10vh;
     right: 10vh;
+    fill: $brown-dark;
+
+    &:hover {
+      fill: $brown-light;
+    }
+  }
+
+  .iconBg {
+    fill: $brown-dark;
+
+    &:hover {
+      fill: $brown-light;
+    }
   }
 }
