@@ -159,6 +159,13 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   line-height: 12px;
 }
 
+.signature {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-size: 64px;
+  font-weight: 400;
+  font-style: normal;
+}
+
 // helpers
 .vertical {
   text-transform: uppercase;

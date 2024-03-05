@@ -42,7 +42,7 @@ const Nav = () => {
           <Link href="#">
             <span>Journal</span>
           </Link>
-          <Link href="#">
+          <Link href="/contacts">
             <span>Contact</span>
           </Link>
 

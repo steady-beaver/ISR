@@ -3,6 +3,7 @@
 .frame {
     padding: 100px 0;
     height: max(100vh, 1124px);
+    height: max(100svh, 1124px);
     position: relative;
     // border: 1px solid orange;
 
@@ -12,6 +13,7 @@
 
         margin-right: 50px;
         height: 100vh;
+        height: 100svh;
     }
 
     @include respond-width($s) {

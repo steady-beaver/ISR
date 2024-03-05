@@ -16,6 +16,7 @@
     inset: 0;
     width: 100vw;
     height: 100vh;
+    height: 100svh;
     background-color: #140F0D;
     z-index: 5;
     display: flex;
@@ -39,6 +40,8 @@
     position: absolute;
     top: 10vh;
     right: 10vh;
+    top: 10svh;
+    right: 10svh;
     fill: $brown-dark;
 
     &:hover {

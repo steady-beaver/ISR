@@ -1,0 +1,43 @@
+@import 'src/styles/_media_queries.scss';
+
+.main {
+    max-width: 650px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.presentation {
+    height: 400px;
+    width: 350px;
+    position: relative;
+
+    background-image: url('/ornaments/book-session-flower.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+
+    .olaPicture {
+        position: absolute;
+        top: 60%;
+        left: 60%;
+        transform: translate(-50%, -50%) rotate(-7deg);
+    }
+
+    .signature {
+        position: absolute;
+        bottom: 0;
+        right: 30px;
+        transform: rotate(-10deg);
+    }
+}
+
+
+.invitationText {
+    @include respond-width($s) {
+        padding: 0 50px;
+    }
+}
