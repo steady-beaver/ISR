@@ -1,3 +1,5 @@
+'use client';
+
 import SendBtn from 'components/SendBtn/SendBtn';
 import { useState } from 'react';
 import Select from 'react-select';
@@ -121,7 +123,7 @@ const ContactForm = () => {
                   backgroundColor: state.isFocused ? '#F5EBE5' : '#E6DFD7',
                 };
               },
-              valueContainer: (baseStyles, state) => ({
+              valueContainer: (baseStyles) => ({
                 ...baseStyles,
                 // position: 'relative',
                 // bottom: '-3px',
