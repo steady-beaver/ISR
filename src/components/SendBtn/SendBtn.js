@@ -1,8 +1,8 @@
 import styles from './SendBtn.module.scss';
 
-const SendBtn = ({ children, onClick, disabled }) => {
+const SendBtn = ({ children, onClick, disabled, ...rest }) => {
   return (
-    <button onClick={onClick} disabled={disabled} className={`${styles.sendBtn} `}>
+    <button onClick={onClick} disabled={disabled} className={`${styles.sendBtn} `} {...rest}>
       {children}
     </button>
   );

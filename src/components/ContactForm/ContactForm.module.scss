@@ -1,13 +1,90 @@
+@import "styles/theme/theme";
+
 .main {
     max-width: 650px;
-    border: 1px solid blue;
     margin: 100px auto;
+
+    @include respond-width($s) {
+        padding: 0 50px;
+        max-width: 100%;
+        margin-bottom: 50px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        @include respond-width($xs) {
+            gap: 40px;
+        }
+
+        &>div {
+            display: flex;
+            justify-content: space-between;
+
+            @include respond-width($xs) {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+
+        input,
+        textarea {
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $black;
+
+            font-family: basic-sans;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 16px;
+            letter-spacing: 2px;
+
+            @include respond-width($xs) {
+                width: 100% !important;
+            }
+        }
+
+        input[name="name"] {
+            width: 100%;
+        }
+
+        input[name="email"] {
+            width: 45%;
+        }
+
+        input[name="phone"] {
+            width: 45%;
+        }
+
+        input[name="month"] {
+            width: 30%;
+        }
+
+        textarea[name="message"] {
+            width: 100%;
+        }
+    }
 }
 
 .controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 30px;
+
+    @include respond-width($xs) {
+        flex-direction: column;
+        gap: 10px !important;
+    }
+
+    &>span {
+        @include respond-width($xs) {
+            text-align: center;
+            width: 200px;
+        }
+    }
 }
 
 .policy {

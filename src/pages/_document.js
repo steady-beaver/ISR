@@ -35,7 +35,7 @@ export default class MyDocument extends Document {
         <Head>
           {this.helmetHeadComponents}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
           <link
             href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Reem+Kufi+Fun:wght@400..700&display=swap"
             rel="stylesheet"
