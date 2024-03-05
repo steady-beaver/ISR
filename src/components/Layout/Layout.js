@@ -7,7 +7,7 @@ import { helmetSettingsFromMetadata } from 'lib/site';
 
 import Footer from 'components/Footer/Footer';
 import Main from 'components/Main';
-import Nav, { NavOld } from 'components/Nav';
+import Nav from 'components/Nav';
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -65,7 +65,7 @@ const Layout = ({ children }) => {
       <Helmet {...helmetSettings} />
 
       <Nav />
-      <NavOld />
+      {/* <NavOld /> */}
 
       <Main>{children}</Main>
 

@@ -2,7 +2,6 @@ import useSite from 'hooks/use-site';
 import { WebsiteJsonLd } from 'lib/json-ld';
 
 import ContactForm from 'components/ContactForm/ContactForm';
-import Header from 'components/Header';
 import InfoPoint from 'components/InfoPoint/InfoPoint';
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
@@ -17,9 +16,6 @@ export default function Contacts() {
   return (
     <Layout>
       <WebsiteJsonLd siteTitle={title} />
-      <Header>
-        <h1>Contacts</h1>
-      </Header>
 
       <NewContainer>
         <PersonalWidget />
