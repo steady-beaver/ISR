@@ -7,6 +7,10 @@ const sitemap = require('./plugins/sitemap');
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    loader: 'akamai',
+    path: '',
+  },
 
   // By default, Next.js removes the trailing slash. One reason this would be good
   // to include is by default, the `path` property of the router for the homepage
@@ -46,7 +50,9 @@ const nextConfig = {
 
 module.exports = () => {
   const plugins = [indexSearch, feed, sitemap];
-  return plugins.reduce((acc, plugin) => plugin(acc), nextConfig);
+  const res = plugins.reduce((acc, plugin) => plugin(acc), nextConfig);
+  // console.log('RES: ', res);
+  return res;
 };
 
 /**
