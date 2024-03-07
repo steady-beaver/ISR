@@ -54,7 +54,7 @@ const Nav = () => {
           </div>
         </div>
       ) : (
-        <HamburgerIcon onClick={(e) => toggleMenu(e)} />
+        <HamburgerIcon className={styles.hamburgerIcon} onClick={(e) => toggleMenu(e)} />
       )}
     </nav>
   );

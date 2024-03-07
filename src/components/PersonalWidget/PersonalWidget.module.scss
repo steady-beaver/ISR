@@ -2,7 +2,7 @@
 
 .main {
     max-width: 650px;
-    margin: 0 auto;
+    margin: 100px auto;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -13,25 +13,80 @@
 
 .presentation {
     height: 400px;
-    width: 350px;
+    width: 400px;
     position: relative;
 
-    background-image: url('/ornaments/book-session-flower.png');
-    background-position: right center;
-    background-repeat: no-repeat;
+    .flower {
+        position: absolute;
+        bottom: 50%;
+        left: 30%;
+        transform: translate(-50%, 50%);
+    }
 
     .olaPicture {
         position: absolute;
-        top: 60%;
-        left: 60%;
-        transform: translate(-50%, -50%) rotate(-7deg);
+        bottom: 35%;
+        left: 57%;
+        transform: translate(-50%, 50%) rotate(-3deg);
     }
 
     .signature {
         position: absolute;
         bottom: 0;
         right: 30px;
-        transform: rotate(-10deg);
+        transform: rotate(-5deg);
+    }
+}
+
+.shakePlant {
+    animation: shakePlant 1s ease-in-out;
+}
+
+@keyframes shakePlant {
+    0% {
+        transform: translate(-50%, 50%) rotate(0deg);
+    }
+
+    25% {
+        transform: translate(-50%, 50%) rotate(3deg);
+    }
+
+    50% {
+        transform: translate(-50%, 50%) rotate(-5deg);
+    }
+
+    75% {
+        transform: translate(-50%, 50%) rotate(3deg);
+    }
+
+    100% {
+        transform: translate(-50%, 50%) rotate(0deg);
+    }
+}
+
+.shakeOla {
+    animation: shakeOla 1s ease-in-out;
+}
+
+@keyframes shakeOla {
+    0% {
+        transform: translate(-50%, 50%) rotate(-3deg);
+    }
+
+    20% {
+        transform: translate(-50%, 50%) rotate(-5deg);
+    }
+
+    50% {
+        transform: translate(-50%, 50%) rotate(4deg);
+    }
+
+    75% {
+        transform: translate(-50%, 50%) rotate(-4deg);
+    }
+
+    100% {
+        transform: translate(-50%, 50%) rotate(-3deg);
     }
 }
 

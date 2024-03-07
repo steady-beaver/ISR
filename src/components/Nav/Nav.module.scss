@@ -27,6 +27,34 @@
 
     span {
       text-transform: uppercase;
+      position: relative;
+      transition: color 0.3s ease;
+
+
+    }
+
+    span::after {
+      content: '';
+      display: block;
+      height: 5px;
+      position: absolute;
+      width: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-size: 100px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image: url('/ornaments/item-underline.svg');
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    span:hover {
+      color: $brown-light;
+    }
+
+    span:hover::after {
+      opacity: 1;
     }
 
     .social {
@@ -38,11 +66,10 @@
 
   .closeIcon {
     position: absolute;
-    top: 10vh;
-    right: 10vh;
-    top: 10svh;
-    right: 10svh;
+    top: 20px;
+    right: 45px;
     fill: $brown-dark;
+    transition: fill 0.3s ease;
 
     &:hover {
       fill: $brown-light;
@@ -51,9 +78,20 @@
 
   .iconBg {
     fill: $brown-dark;
+    transition: fill 0.3s ease;
 
     &:hover {
       fill: $brown-light;
+    }
+
+  }
+
+  .hamburgerIcon {
+    fill: $black;
+    transition: fill 0.3s ease;
+
+    &:hover {
+      fill: $brown-dark;
     }
   }
 }

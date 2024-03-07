@@ -6,6 +6,7 @@
     background-color: transparent;
     border: 1px solid $black;
     cursor: pointer;
+    transition: all 0.2s ease;
 
     @include respond-width($m) {
         width: 100px;

@@ -13,6 +13,7 @@
     width: 350px;
     text-transform: uppercase;
     opacity: 0.5;
+    transition: all 0.3s ease;
 
     @include respond-width($s) {
         width: 50px;

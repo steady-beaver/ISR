@@ -11,13 +11,14 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel="stylesheet" href="https://use.typekit.net/xze3ylu.css" />
+
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&family=Reem+Kufi+Fun:wght@400..700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Allison&family=Reem+Kufi+Fun:wght@400..700&display=swap"
             rel="stylesheet"
-          />
-          <link rel="stylesheet" href="https://use.typekit.net/xze3ylu.css" />
+          ></link>
         </Head>
         <body>
           <Main />

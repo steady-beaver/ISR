@@ -1,10 +1,9 @@
-import Container from 'components/Container';
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
-import Section from 'components/Section';
+import PersonalWidget from 'components/PersonalWidget/PersonalWidget';
 import IntroductionSection from 'scenes/IntroductionSection/IntroductionSection';
 import ServiceSection from 'scenes/ServiceSection/ServiceSection';
-import TestimonialSection from 'scenes/TestimonialSection/TestimonialSection';
+import styles from 'styles/pages/Home.module.scss';
 
 export default function Home() {
   return (
@@ -17,13 +16,11 @@ export default function Home() {
         <IntroductionSection />
       </NewContainer>
 
-      <NewContainer>
+      {/* <NewContainer>
         <TestimonialSection />
-      </NewContainer>
+      </NewContainer> */}
 
-      <Section>
-        <Container>Holla Home</Container>
-      </Section>
+      <PersonalWidget className={styles.personalWidget} />
     </Layout>
   );
 }
