@@ -7,10 +7,10 @@ const sitemap = require('./plugins/sitemap');
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    loader: 'akamai',
-    path: '',
-  },
+  // images: {
+  //   loader: 'akamai',
+  //   path: '',
+  // },
 
   // By default, Next.js removes the trailing slash. One reason this would be good
   // to include is by default, the `path` property of the router for the homepage
@@ -34,7 +34,7 @@ const nextConfig = {
     POSTS_PRERENDER_COUNT: 5,
 
     WORDPRESS_GRAPHQL_ENDPOINT: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
-    WORDPRESS_MENU_LOCATION_NAVIGATION: process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || 'PRIMARY',
+    // WORDPRESS_MENU_LOCATION_NAVIGATION: process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || 'PRIMARY',
     WORDPRESS_PLUGIN_SEO: parseEnvValue(process.env.WORDPRESS_PLUGIN_SEO, false),
   },
 

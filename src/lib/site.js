@@ -2,7 +2,7 @@ import { getApolloClient } from 'lib/apollo-client';
 
 import { decodeHtmlEntities, removeExtraSpaces } from 'lib/util';
 
-import { QUERY_SEO_DATA, QUERY_SITE_DATA } from 'data/site';
+import { QUERY_SITE_DATA } from 'data/site';
 
 /**
  * getSiteMetadata
@@ -12,7 +12,6 @@ export async function getSiteMetadata() {
   const apolloClient = getApolloClient();
 
   let siteData;
-  let seoData;
 
   try {
     siteData = await apolloClient.query({
@@ -42,53 +41,6 @@ export async function getSiteMetadata() {
     settings.language = 'en';
   } else {
     settings.language = language.split('_')[0];
-  }
-
-  // If the SEO plugin is enabled, look up the data
-  // and apply it to the default settings
-
-  if (process.env.WORDPRESS_PLUGIN_SEO === true) {
-    try {
-      seoData = await apolloClient.query({
-        query: QUERY_SEO_DATA,
-      });
-    } catch (e) {
-      console.log(`[site][getSiteMetadata] Failed to query SEO plugin: ${e.message}`);
-      console.log('Is the SEO Plugin installed? If not, disable WORDPRESS_PLUGIN_SEO in next.config.js.');
-      throw e;
-    }
-
-    const { webmaster, social } = seoData?.data?.seo || {};
-
-    if (social) {
-      settings.social = {};
-
-      Object.keys(social).forEach((key) => {
-        const { url } = social[key];
-        if (!url || key === '__typename') return;
-        settings.social[key] = url;
-      });
-    }
-
-    if (webmaster) {
-      settings.webmaster = {};
-
-      Object.keys(webmaster).forEach((key) => {
-        if (!webmaster[key] || key === '__typename') return;
-        settings.webmaster[key] = webmaster[key];
-      });
-    }
-
-    if (social.twitter) {
-      settings.twitter = {
-        username: social.twitter.username,
-        cardType: social.twitter.cardType,
-      };
-
-      settings.social.twitter = {
-        url: `https://twitter.com/${settings.twitter.username}`,
-      };
-    }
   }
 
   settings.title = decodeHtmlEntities(settings.title);

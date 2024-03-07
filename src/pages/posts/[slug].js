@@ -1,13 +1,8 @@
 import Link from 'next/link';
-import { Helmet } from 'react-helmet';
 
-import usePageMetadata from 'hooks/use-page-metadata';
-import useSite from 'hooks/use-site';
 import { categoryPathBySlug } from 'lib/categories';
 import { formatDate } from 'lib/datetime';
-import { ArticleJsonLd } from 'lib/json-ld';
 import { getPostBySlug, getRecentPosts, getRelatedPosts, postPathBySlug } from 'lib/posts';
-import { helmetSettingsFromMetadata } from 'lib/site';
 
 import Container from 'components/Container';
 import Content from 'components/Content';
@@ -19,44 +14,8 @@ import Section from 'components/Section';
 
 import styles from 'styles/pages/Post.module.scss';
 
-export default function Post({ post, socialImage, related }) {
-  const {
-    title,
-    metaTitle,
-    description,
-    content,
-    date,
-    author,
-    categories,
-    modified,
-    featuredImage,
-    isSticky = false,
-  } = post;
-
-  const { metadata: siteMetadata = {}, homepage } = useSite();
-
-  if (!post.og) {
-    post.og = {};
-  }
-
-  post.og.imageUrl = `${homepage}${socialImage}`;
-  post.og.imageSecureUrl = post.og.imageUrl;
-  post.og.imageWidth = 2000;
-  post.og.imageHeight = 1000;
-
-  const { metadata } = usePageMetadata({
-    metadata: {
-      ...post,
-      title: metaTitle,
-      description: description || post.og?.description || `Read more about ${title}`,
-    },
-  });
-
-  if (process.env.WORDPRESS_PLUGIN_SEO !== true) {
-    metadata.title = `${title} - ${siteMetadata.title}`;
-    metadata.og.title = metadata.title;
-    metadata.twitter.title = metadata.title;
-  }
+export default function Post({ post, related }) {
+  const { title, content, date, author, categories, modified, featuredImage, isSticky = false } = post;
 
   const metadataOptions = {
     compactCategories: false,
@@ -64,14 +23,8 @@ export default function Post({ post, socialImage, related }) {
 
   const { posts: relatedPostsList, title: relatedPostsTitle } = related || {};
 
-  const helmetSettings = helmetSettingsFromMetadata(metadata);
-
   return (
     <Layout>
-      <Helmet {...helmetSettings} />
-
-      <ArticleJsonLd post={post} siteTitle={siteMetadata.title} />
-
       <Header>
         {featuredImage && (
           <FeaturedImage

@@ -3,13 +3,10 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 import useSearch, { SEARCH_STATE_LOADED } from 'hooks/use-search';
-import useSite from 'hooks/use-site';
-import { findMenuByLocation, MENU_LOCATION_NAVIGATION_DEFAULT } from 'lib/menus';
 import { postPathBySlug } from 'lib/posts';
 
 import Section from 'components/Section';
 
-import NavListItem from 'components/NavListItem';
 import styles from './NavOld.module.scss';
 
 const SEARCH_VISIBLE = 'visible';
@@ -19,12 +16,6 @@ const Nav = () => {
   const formRef = useRef();
 
   const [searchVisibility, setSearchVisibility] = useState(SEARCH_HIDDEN);
-
-  const { metadata = {}, menus } = useSite();
-  const { title } = metadata;
-
-  const navigationLocation = process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || MENU_LOCATION_NAVIGATION_DEFAULT;
-  const navigation = findMenuByLocation(menus, navigationLocation);
 
   const { query, results, search, clearSearch, state } = useSearch({
     maxResults: 5,
@@ -176,15 +167,8 @@ const Nav = () => {
 
   return (
     <nav className={styles.nav}>
+      {/*  only the search is left */}
       <Section className={styles.navSection}>
-        <p className={styles.navName}>
-          <Link href="/">Hi {title}</Link>
-        </p>
-        <ul className={styles.navMenu}>
-          {navigation?.map((listItem) => {
-            return <NavListItem key={listItem.id} className={styles.navSubMenu} item={listItem} />;
-          })}
-        </ul>
         <div className={styles.navSearch}>
           {searchVisibility === SEARCH_HIDDEN && (
             <button onClick={handleOnToggleSearch} disabled={!searchIsLoaded}>

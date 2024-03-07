@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Helmet } from 'react-helmet';
 
 import Container from 'components/Container';
 import Layout from 'components/Layout';
@@ -10,10 +9,6 @@ import styles from 'styles/pages/Error.module.scss';
 export default function Custom404() {
   return (
     <Layout>
-      <Helmet>
-        <title>404 - Page Not Found</title>
-        <meta name="robots" content="noindex, nofollow" />
-      </Helmet>
       <Section>
         <Container className={styles.center}>
           <h1>Page Not Found</h1>

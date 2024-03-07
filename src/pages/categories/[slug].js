@@ -1,4 +1,3 @@
-import usePageMetadata from 'hooks/use-page-metadata';
 import { getAllCategories, getCategoryBySlug } from 'lib/categories';
 import { getPostsByCategoryId } from 'lib/posts';
 
@@ -6,16 +5,9 @@ import Title from 'components/Title';
 import TemplateArchive from 'templates/archive';
 
 export default function Category({ category, posts }) {
-  const { name, description, slug } = category;
+  const { name, slug } = category;
 
-  const { metadata } = usePageMetadata({
-    metadata: {
-      ...category,
-      description: description || category.og?.description || `Read ${posts.length} posts from ${name}`,
-    },
-  });
-
-  return <TemplateArchive title={name} Title={<Title title={name} />} posts={posts} slug={slug} metadata={metadata} />;
+  return <TemplateArchive title={name} Title={<Title title={name} />} posts={posts} slug={slug} />;
 }
 
 export async function getStaticProps({ params = {} } = {}) {

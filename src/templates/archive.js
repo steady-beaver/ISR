@@ -1,9 +1,3 @@
-import { Helmet } from 'react-helmet';
-
-import useSite from 'hooks/use-site';
-import { WebpageJsonLd } from 'lib/json-ld';
-import { helmetSettingsFromMetadata } from 'lib/site';
-
 import Container from 'components/Container';
 import Header from 'components/Header';
 import Layout from 'components/Layout';
@@ -21,26 +15,11 @@ export default function TemplateArchive({
   Title,
   posts,
   postOptions = DEFAULT_POST_OPTIONS,
-  slug,
-  metadata,
+  metadata = { description: 'TO DO DESCRIPTION' },
   pagination,
 }) {
-  const { metadata: siteMetadata = {} } = useSite();
-
-  if (process.env.WORDPRESS_PLUGIN_SEO !== true) {
-    metadata.title = `${title} - ${siteMetadata.title}`;
-    metadata.og.title = metadata.title;
-    metadata.twitter.title = metadata.title;
-  }
-
-  const helmetSettings = helmetSettingsFromMetadata(metadata);
-
   return (
     <Layout>
-      <Helmet {...helmetSettings} />
-
-      <WebpageJsonLd title={title} description={metadata.description} siteTitle={siteMetadata.title} slug={slug} />
-
       <Header>
         <Container>
           <h1>{Title || title}</h1>
