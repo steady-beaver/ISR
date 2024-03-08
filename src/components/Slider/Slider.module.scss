@@ -1,0 +1,143 @@
+@import "styles/theme/theme";
+
+.main {
+    position: relative;
+    // border: 1px solid red;
+    width: auto;
+    height: calc(100svh - 100px);
+    height: calc(100vh - 100px);
+    // aspect-ratio: 1.63;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $white;
+    text-align: center;
+    margin: 0 45px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    animation: canvasFadeInOut 7s ease-in-out forwards infinite;
+    opacity: 0;
+}
+
+.upperText {
+    animation: upperPartFadeInOut 7s ease-in-out forwards infinite;
+    opacity: 0;
+}
+
+.title {
+    color: $brown;
+    margin: 50px auto;
+    animation: upperPartFadeInOut 7s ease-in-out forwards infinite;
+    opacity: 0;
+}
+
+.bottomText {
+    max-width: 560px;
+    line-height: 20px;
+    margin-bottom: 24px;
+    animation: bottomPartFadeInOut 7s ease-in-out forwards infinite;
+    opacity: 0;
+}
+
+.readMore {
+    font-family: basic-sans;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0.2em;
+    animation: bottomPartFadeInOut 7s ease-in-out forwards infinite;
+    opacity: 0;
+}
+
+
+@keyframes canvasFadeInOut {
+    0% {
+        opacity: 0;
+        /* Initial state: transparent */
+    }
+
+    14.29% {
+        opacity: 1;
+        /* Visible after 1 second */
+    }
+
+    85.71% {
+        opacity: 1;
+        /* Stay visible from 1 to 6 seconds */
+    }
+
+    100% {
+        opacity: 0;
+        /* Fade out at 6 seconds */
+    }
+}
+
+@keyframes upperPartFadeInOut {
+    0% {
+        opacity: 0;
+        /* Initial state: transparent */
+    }
+
+    28.57% {
+        opacity: 0;
+        /* Stay transparent from 0 to 2 seconds */
+    }
+
+    42.86% {
+        opacity: 1;
+        /* Fade in from 2 to 3 seconds */
+    }
+
+    71.43% {
+        opacity: 1;
+        /* Stay visible from 3 to 5 seconds */
+    }
+
+    85.71% {
+        opacity: 0;
+        /* Fade out from 5 to 6 seconds */
+    }
+
+    100% {
+        opacity: 0;
+        /* Final state: transparent */
+    }
+}
+
+
+@keyframes bottomPartFadeInOut {
+    0% {
+        opacity: 0;
+        /* Initial state: transparent */
+    }
+
+    40% {
+        opacity: 0;
+        /* Stay transparent from 0 to 3 seconds */
+    }
+
+    50% {
+        opacity: 1;
+        /* Fade in from 3 to 4 seconds */
+    }
+
+    60% {
+        opacity: 1;
+        /* Stay visible from 4 to 5 seconds */
+    }
+
+    85.71% {
+        opacity: 0;
+        /* Fade out from 5 to 6 seconds */
+    }
+
+    100% {
+        opacity: 0;
+        /* Final state: transparent */
+    }
+}
