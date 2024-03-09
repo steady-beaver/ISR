@@ -1,55 +1,30 @@
-// import Link from 'next/link';
 import Slider from 'components/Slider/Slider';
-import { Fade } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css';
+import { useEffect, useState } from 'react';
+import current from './SliderSection.model';
 import styles from './SliderSection.module.scss';
 
 const SliderSection = () => {
-  const properties = {
-    duration: 7000,
-    autoPlay: true,
-    transitionDuration: 1,
-    arrows: false,
-    infinite: true,
-    easing: 'ease',
-  };
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const current = [
-    {
-      photoUrl: '/slider/slide-1.jpg',
-      topText: 'MARTHA + CARLOS',
-      title: 'CLOSENESS',
-      bottomText:
-        'They arrived in a camper, said I do on an empty beach in peak season. Their wedding was unique, just like their love.',
-    },
-    {
-      photoUrl: '/slider/slide-2.jpg',
-      topText: 'MARTHA + CARLOS',
-      title: 'CLOSENESS',
-      bottomText:
-        'They arrived in a camper, said I do on an empty beach in peak season. Their wedding was unique, just like their love.',
-    },
-    {
-      photoUrl: '/slider/slide-3.jpg',
-      topText: 'MARTHA + CARLOS',
-      title: 'CLOSENESS',
-      bottomText:
-        'They arrived in a camper, said I do on an empty beach in peak season. Their wedding was unique, just like their love.',
-    },
-  ];
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((counter) => (counter + 1) % current.length);
+    }, 7000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    console.log('currentIndex: ', currentIndex);
+  }, [currentIndex]);
 
   return (
-    // <Link href="/sessions">
-    <div className={styles.main}>
-      <Fade {...properties}>
-        {current.map(({ photoUrl, topText, title, bottomText }, index) => (
-          <div key={index}>
-            <Slider photoUrl={photoUrl} topText={topText} title={title} bottomText={bottomText} />
-          </div>
-        ))}
-      </Fade>
+    <div className={styles.mainFrame}>
+      {current.map((item, i) => (
+        // <Slider {...item} key={i} />
+        <Slider {...item} key={i} className={`${i === currentIndex ? styles.active : null} `} />
+      ))}
     </div>
-    // </Link>
   );
 };
 

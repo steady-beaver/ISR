@@ -64,11 +64,8 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
 }
 
 .headingH6 {
-  font-family: Reem Kufi Fun;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 27px;
-  letter-spacing: 0.05em;
+  content: none;
+  //styleName: Subtitle;
 }
 
 // helper
