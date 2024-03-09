@@ -1,13 +1,14 @@
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
-import PersonalWidget from 'components/PersonalWidget/PersonalWidget';
 import IntroductionSection from 'scenes/IntroductionSection/IntroductionSection';
 import ServiceSection from 'scenes/ServiceSection/ServiceSection';
-import styles from 'styles/pages/Home.module.scss';
+import SliderSection from 'scenes/SliderSection/SliderSection';
 
 export default function Home() {
   return (
     <Layout>
+      <SliderSection />
+
       <NewContainer>
         <ServiceSection />
       </NewContainer>
@@ -20,7 +21,7 @@ export default function Home() {
         <TestimonialSection />
       </NewContainer> */}
 
-      <PersonalWidget className={styles.personalWidget} />
+      {/* <PersonalWidget className={styles.personalWidget} /> */}
     </Layout>
   );
 }
