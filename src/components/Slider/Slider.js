@@ -1,6 +1,5 @@
 import styles from './Slider.module.scss';
 
-
 const Slider = ({ photoUrl, topText, title, bottomText, className }) => {
   return (
     <div className={`${styles.main} ${className} `} style={{ backgroundImage: `url(${photoUrl})` }}>
