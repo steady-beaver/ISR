@@ -1,21 +1,21 @@
 @import 'src/styles/_media_queries.scss';
 
 .main {
-    // border: 1px solid red;
-    margin-left: 165px;
-    height: 100%;
-    position: relative;
+    width: calc(100% - 165px);
+    height: calc(100% - 200px);
+    right: 0;
+    position: absolute;
 
-    @include respond-width($m) {
-        margin-left: 100px;
+    @include respond-width($s) {
+        width: calc(100% - 100px);
     }
 }
 
 .textSection {
     // border: 1px solid green;
     position: absolute;
-    top: 100px;
-    right: 100px;
+    top: 50px;
+    right: 70px;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -23,7 +23,7 @@
     &>*:first-child {
         margin-bottom: 40px;
 
-        @include respond-width($s) {
+        @include respond-width($m) {
             margin-bottom: 15px;
         }
     }
@@ -36,15 +36,25 @@
         }
     }
 
+    @include respond-width($l) {
+        width: 700px;
+        top: auto;
+        right: 0;
+        bottom: 0;
+    }
+
     @include respond-width($m) {
-        right: 50px;
-        width: 48%;
+        width: min(700px, 100%);
+        bottom: -50px;
     }
 
     @include respond-width($s) {
-        top: 50%;
-        right: 0;
-        width: 100%;
+        top: 50vw;
+        bottom: auto;
+    }
+
+    @include respond-width($xs) {
+        padding-right: 20px;
     }
 }
 
@@ -56,7 +66,7 @@
         position: absolute;
         right: 50vw;
         transform: translateX(75%) scale(0.8); // hmm
-        bottom: -80px;
+        bottom: -100px;
     }
 }
 
@@ -64,22 +74,27 @@
     position: absolute;
     width: 430px;
     aspect-ratio: 1/1.5;
-    top: 20px;
-    left: 20px;
-    transform: rotate(-5deg);
+    top: 30px;
+    left: 50px;
+    transform: rotate(-2deg);
     transform-origin: top right;
 
+    @include respond-width($l) {
+        top: auto;
+        left: 155px;
+        width: 350px;
+    }
+
     @include respond-width($m) {
-        width: 30%;
-        top: 15%;
+        left: 100px;
+        width: 250px;
     }
 
     @include respond-width($s) {
-        width: 150px;
-        top: 5%;
-        left: 50%;
-        transform: translateX(-100%) rotate(-2deg);
+        left: 0;
+        width: 40%;
     }
+
 }
 
 .primaryImg {
@@ -90,22 +105,27 @@
     position: absolute;
     width: 360px;
     aspect-ratio: 1/1;
-    bottom: 20px;
-    left: 45%;
-    transform: translateX(-50%);
+    bottom: 110px;
+    right: 380px;
+    // transform: translateX(-50%);
+
+    @include respond-width($l) {
+        bottom: auto;
+        right: auto;
+        top: 100px;
+        left: 500px;
+        transform: rotate(2deg);
+    }
 
     @include respond-width($m) {
-        width: 30%;
-        left: 20%;
-        bottom: 35%;
-        transform-origin: top left;
-        transform: translateX(-50%) translateY(50%) rotate(5deg);
+        top: 60px;
+        left: 330px;
+        width: 250px;
     }
 
     @include respond-width($s) {
-        width: 150px;
-        bottom: 75%;
-        left: 70%;
+        width: 40%;
+        left: 40%;
     }
 }
 
@@ -119,5 +139,4 @@
     aspect-ratio: 1/1;
     left: 25%;
     bottom: 13%;
-    // transform: translateX(-50%);
 }

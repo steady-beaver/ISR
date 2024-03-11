@@ -2,9 +2,9 @@ import ReadMoreBtn from 'components/ReadMoreBtn/ReadMoreBtn';
 import Image from 'next/image';
 import styles from './Preview.module.scss';
 
-const Preview = ({ title, text, srcPrimary, srcSecondary }) => {
+const Preview = ({ title, text, srcPrimary, srcSecondary, className }) => {
   return (
-    <div className={styles.main}>
+    <div className={`${styles.main} ${className}`}>
       <div className={styles.primaryImgFrame}>
         <Image src={srcPrimary} alt="Wedding" fill={true} className={styles.primaryImg} />
       </div>

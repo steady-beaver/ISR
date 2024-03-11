@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Preview from './Preview';
-import model from './ServiceSection.model.json';
+import model from './ServiceSection.model.js';
 import styles from './ServiceSection.module.scss';
 import TabMenu from './TabMenu';
 
@@ -14,7 +14,14 @@ const ServiceSection = () => {
         <div className="subtitle">Services</div>
         <h2 className="headingH1">For you</h2>
       </div>
-      <Preview {...model[option]} />
+      {model.map(({ serviceType, ...item }, i) => {
+        console.log('item: ', item);
+        return (
+          <Preview {...item} key={i} className={`${serviceType === option ? styles.selected : styles.notSelected}`} />
+        );
+      })}
+      {/* <Preview {...model[option]} /> */}
+
       <TabMenu option={option} setOption={setOption} className={styles.menuPos} />
     </section>
   );
