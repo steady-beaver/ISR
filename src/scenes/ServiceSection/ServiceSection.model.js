@@ -10,14 +10,14 @@ const model = [
     serviceType: 'wedding',
     title: 'Authentic moments on your wedding day. Natural and emotive.',
     text: "Allow me to tell the story of your wedding day through images that reflect its essence authentically. With a keen eye for emotion and sensitivity, I'll capture every heartfelt moment, ensuring they're preserved for eternity.",
-    srcPrimary: '/pictures/wedding-primary.png',
-    srcSecondary: '/pictures/wedding-secondary.png',
+    srcPrimary: '/pictures/wedding-primary.jpg',
+    srcSecondary: '/pictures/wedding-secondary.jpg',
   },
   {
     serviceType: 'elopement',
     title: 'Elopement weddings celebrate love and individuality, free from constraints.',
     text: "Elopement weddings celebrate love on your terms, amidst stunning landscapes. No rules, just raw emotions. As your photographer, I thrive on capturing these authentic moments against breathtaking backdrops. Let's create images reflecting your unique story and the beauty of nature.",
-    srcPrimary: '/pictures/elopement-primary.png',
+    srcPrimary: '/pictures/elopement-primary.jpg',
     srcSecondary: '/pictures/elopement-secondary.jpg',
   },
 ];
