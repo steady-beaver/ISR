@@ -10,18 +10,19 @@
     transition: opacity 0.4s ease;
 }
 
+//  These styles work in combination with Preview.module.scss
+
 .frame {
     padding: 100px 0;
     height: max(100vh, 1124px);
     height: max(100svh, 1124px);
     position: relative;
+    // border: 1px solid orange;
 
     @include respond-width($m) {
         margin-bottom: 50px;
-
         margin-right: 50px;
-        height: 100vh;
-        height: 100svh;
+        height: 900px;
     }
 
     @include respond-width($s) {

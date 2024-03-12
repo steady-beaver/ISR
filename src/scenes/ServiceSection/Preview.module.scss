@@ -5,6 +5,7 @@
     height: calc(100% - 200px);
     right: 0;
     position: absolute;
+    // border: 1px solid red;
 
     @include respond-width($s) {
         width: calc(100% - 100px);
