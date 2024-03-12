@@ -14,10 +14,6 @@ const SliderSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    console.log('currentIndex: ', currentIndex);
-  }, [currentIndex]);
-
   return (
     <div className={styles.mainFrame}>
       {current.map((item, i) => (

@@ -15,12 +15,10 @@ const ServiceSection = () => {
         <h2 className="headingH1">For you</h2>
       </div>
       {model.map(({ serviceType, ...item }, i) => {
-        console.log('item: ', item);
         return (
           <Preview {...item} key={i} className={`${serviceType === option ? styles.selected : styles.notSelected}`} />
         );
       })}
-      {/* <Preview {...model[option]} /> */}
 
       <TabMenu option={option} setOption={setOption} className={styles.menuPos} />
     </section>
