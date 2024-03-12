@@ -105,14 +105,13 @@
     aspect-ratio: 1/1;
     bottom: 110px;
     right: 380px;
-    // transform: translateX(-50%);
+    transform: rotate(2deg);
 
     @include respond-width($l) {
         bottom: auto;
         right: auto;
         top: 100px;
         left: 500px;
-        transform: rotate(2deg);
     }
 
     @include respond-width($m) {

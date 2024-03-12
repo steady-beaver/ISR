@@ -5,6 +5,8 @@ $s: 800px;
 $xs: 550px;
 // min: 375px;
 
+
+//   @include respond-width($s) {
 @mixin respond-width($media) {
     $max-width: $media + 1px;
 
