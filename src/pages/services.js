@@ -1,7 +1,6 @@
-import Container from 'components/Container';
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
-import Section from 'components/Section';
+import QuatroSectionVarA from 'scenes/QuatroSectionVarA/QuatroSectionVarA';
 import StandardHeaderSection from 'scenes/StandardHeaderSection/StandardHeaderSection';
 
 export default function Home() {
@@ -15,9 +14,16 @@ export default function Home() {
         />
       </NewContainer>
 
-      <Section>
-        <Container>Services</Container>
-      </Section>
+      <NewContainer>
+        <QuatroSectionVarA
+          header="Couple"
+          title="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus."
+          p1="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc ornare varius fusce et. Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerissque netus."
+          p2="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc ornare varius fusce et. Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerissque netus."
+          srcPrimary="/pictures/couple-primary.jpg"
+          srcSecondary="/pictures/couple-secondary.jpg"
+        />
+      </NewContainer>
     </Layout>
   );
 }

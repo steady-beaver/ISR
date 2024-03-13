@@ -6,7 +6,10 @@ $xs: 550px;
 // min: 375px;
 
 
-//   @include respond-width($s) {
+
+// @import 'src/styles/_media_queries.scss';
+// ...
+// @include respond-width($m) {
 @mixin respond-width($media) {
     $max-width: $media + 1px;
 
@@ -14,9 +17,3 @@ $xs: 550px;
         @content;
     }
 }
-
-// Usage:
-// 
-// @import 'src/styles/_media_queries.scss';
-// ...
-// @include respond-width($m) {
