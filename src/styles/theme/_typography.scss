@@ -71,6 +71,8 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
 // helper
 // className={`${''} headingH3`}
 
+// @include simpleTransition;
+
 // probably not used
 //styleName: Secondary menu items;
 .subtitleStrong {
@@ -134,6 +136,7 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
 }
 
 .textS {
+  //styleName: Link !?;
   font-family: basic-sans;
   font-size: 15px;
   font-weight: 300;
