@@ -1,12 +1,19 @@
 @import "styles/theme/theme";
 
 .main {
-    width: 330px;
+    max-width: 330px;
     padding: 0 10px 40px;
     text-align: center;
 
     @include respond-width($m) {
-        width: 250px;
+        max-width: 250px;
+    }
+}
+
+.customSmallFont {
+    @include respond-width($xs) {
+        font-size: 12px;
+        line-height: 18px;
     }
 }
 

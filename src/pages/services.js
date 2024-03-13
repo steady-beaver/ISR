@@ -1,5 +1,6 @@
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
+import FaqSection from 'scenes/FaqSection/FaqSection';
 import QuatroSectionVarA from 'scenes/QuatroSectionVarA/QuatroSectionVarA';
 import StandardHeaderSection from 'scenes/StandardHeaderSection/StandardHeaderSection';
 import TestimonialSection from 'scenes/TestimonialSection/TestimonialSection';
@@ -32,13 +33,20 @@ export default function Home() {
         <VideoSection url="https://www.youtube.com/watch?v=gW6pa6bnyVU" />
       </NewContainer>
 
-      <NewContainer>
-        <TravelSection primaryImg="/pictures/travel/travel-1.jpg" secondaryImg="/pictures/travel/travel-2.jpg" />
-        {/* <TravelSection primaryImg="/pictures/travel/travel-1.jpg" secondaryImg="/pictures/travel/travel-2.jpg" /> */}
-      </NewContainer>
+      {/* WEDDINGS */}
 
       <NewContainer>
         <TestimonialSection />
+      </NewContainer>
+
+      {/* ELOPEMENT */}
+
+      <NewContainer>
+        <TravelSection primaryImg="/pictures/travel/travel-1.jpg" secondaryImg="/pictures/travel/travel-2.jpg" />
+      </NewContainer>
+
+      <NewContainer>
+        <FaqSection />
       </NewContainer>
     </Layout>
   );

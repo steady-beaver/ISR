@@ -28,7 +28,7 @@
     @include respond-width($s) {
         padding: 0 10%;
         width: 100%;
-        background-position: center 60%, 110% 90%;
+        background-position: center, 110% 100%;
     }
 
 }
