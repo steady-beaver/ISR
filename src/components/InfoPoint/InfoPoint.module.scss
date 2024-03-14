@@ -2,7 +2,7 @@
 
 .main {
     max-width: 330px;
-    padding: 0 10px 40px;
+    // padding: 0 10px 40px;
     text-align: center;
 
     @include respond-width($m) {
@@ -26,4 +26,9 @@
     background-image: url('/ornaments/info-plant.png');
     background-position: center center;
     background-repeat: no-repeat;
+}
+
+.extra {
+    width: 75%;
+    margin: 18px auto 0;
 }

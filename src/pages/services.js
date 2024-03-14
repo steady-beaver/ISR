@@ -5,6 +5,7 @@ import QuatroSectionVarA from 'scenes/QuatroSectionVarA/QuatroSectionVarA';
 import StandardHeaderSection from 'scenes/StandardHeaderSection/StandardHeaderSection';
 import TestimonialSection from 'scenes/TestimonialSection/TestimonialSection';
 import TravelSection from 'scenes/TravelSection/TravelSection';
+import TripleSection from 'scenes/TripleSection/TripleSection';
 import VideoSection from 'scenes/VideoSection/VideoSection';
 
 export default function Home() {
@@ -33,7 +34,9 @@ export default function Home() {
         <VideoSection url="https://www.youtube.com/watch?v=gW6pa6bnyVU" />
       </NewContainer>
 
-      {/* WEDDINGS */}
+      <NewContainer>
+        <TripleSection photoSrc="/pictures/service-wedding.jpg" />
+      </NewContainer>
 
       <NewContainer>
         <TestimonialSection />

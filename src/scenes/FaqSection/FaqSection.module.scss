@@ -30,6 +30,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
+    row-gap: 40px;
+    column-gap: 20px;
 
     @include respond-width($s) {
         grid-template-columns: repeat(2, 1fr);
