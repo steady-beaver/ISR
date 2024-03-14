@@ -1,20 +1,45 @@
-@import 'src/styles/_media_queries.scss';
+@import 'src/styles/theme/theme.scss';
+
 
 .main {
     max-width: 650px;
-    margin: 100px auto;
+    margin: 200px auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 20px;
     justify-content: center;
     align-items: center;
+
+    @include respond-width($m) {
+        margin: 150px auto;
+    }
+
+    @include respond-width($s) {
+        margin: 100px auto;
+    }
 }
 
 .presentation {
     height: 400px;
     width: 400px;
+    transition: all 0.15s ease;
     position: relative;
+
+    &:hover {
+        transition: all 0.15s ease;
+        cursor: pointer;
+    }
+
+    &:hover .flower {
+        transition: all 0.15s ease;
+        transform: translate(-50%, 50%) rotate(-3deg);
+    }
+
+    &:hover .olaPicture {
+        transition: all 0.15s ease;
+        transform: translate(-50%, 50%) rotate(3deg);
+    }
 
     .flower {
         position: absolute;

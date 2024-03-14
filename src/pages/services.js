@@ -1,7 +1,9 @@
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
+import PersonalWidget from 'components/PersonalWidget/PersonalWidget';
 import FaqSection from 'scenes/FaqSection/FaqSection';
 import QuatroSectionVarA from 'scenes/QuatroSectionVarA/QuatroSectionVarA';
+import QuatroSectionVarB from 'scenes/QuatroSectionVarB/QuatroSectionVarB';
 import StandardHeaderSection from 'scenes/StandardHeaderSection/StandardHeaderSection';
 import TestimonialSection from 'scenes/TestimonialSection/TestimonialSection';
 import TravelSection from 'scenes/TravelSection/TravelSection';
@@ -42,7 +44,16 @@ export default function Home() {
         <TestimonialSection />
       </NewContainer>
 
-      {/* ELOPEMENT */}
+      <NewContainer>
+        <QuatroSectionVarB
+          header="Elopement"
+          title="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus."
+          p1="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc ornare varius fusce et. Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerissque netus."
+          p2="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc ornare varius fusce et. Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerissque netus."
+          srcPrimary="/pictures/service-elopement-1.jpg"
+          srcSecondary="/pictures/service-elopement-2.jpg"
+        />
+      </NewContainer>
 
       <NewContainer>
         <TravelSection primaryImg="/pictures/travel/travel-1.jpg" secondaryImg="/pictures/travel/travel-2.jpg" />
@@ -50,6 +61,10 @@ export default function Home() {
 
       <NewContainer>
         <FaqSection />
+      </NewContainer>
+
+      <NewContainer>
+        <PersonalWidget />
       </NewContainer>
     </Layout>
   );

@@ -6,7 +6,7 @@ const Preview = ({ title, text, srcPrimary, srcSecondary, className }) => {
   return (
     <div className={`${styles.main} ${className}`}>
       <div className={styles.primaryImgFrame}>
-        <Image src={srcPrimary} alt="Wedding" fill={true} className={styles.primaryImg} />
+        <Image src={srcPrimary} alt="Wedding" fill={true} className={`${styles.primaryImg} imgShadow`} />
       </div>
       <div className={styles.secondaryImgFrame}>
         <Image
@@ -16,7 +16,7 @@ const Preview = ({ title, text, srcPrimary, srcSecondary, className }) => {
           className={styles.paperOrnament}
           alt="Paper decoration"
         />
-        <Image src={srcSecondary} alt="Wedding" fill={true} className={styles.secondaryImg} />
+        <Image src={srcSecondary} alt="Wedding" fill={true} className={`${styles.secondaryImg} imgShadow`} />
       </div>
       <div className={styles.textSection}>
         <p className={`${''} headingH3`}>{title}</p>

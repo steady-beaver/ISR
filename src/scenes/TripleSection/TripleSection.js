@@ -11,7 +11,7 @@ const TripleSection = ({ photoSrc }) => {
       <div className={styles.wrapper}>
         <div className={styles.colLeft}>
           <div className={styles.primaryImg}>
-            <Image src={photoSrc} fill={true} alt="Wedding" className={styles.primarySrc} />
+            <Image src={photoSrc} fill={true} alt="Wedding" className={`${styles.primarySrc} imgShadow`} />
             <Image
               src={'/ornaments/tape-ornament.png'}
               width={100}

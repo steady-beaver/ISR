@@ -10,7 +10,13 @@ const QuatroSectionVarA = ({ header, title, p1, p2, srcPrimary, srcSecondary }) 
       <div className={styles.desktopLayoutVarA}>
         <div className={styles.leftColVarA}>
           <div className={styles.primaryFrameVarA}>
-            <Image src={srcPrimary} alt="Wedding" width={375} height={600} className={styles.imgPrimary} />
+            <Image
+              src={srcPrimary}
+              alt="Wedding"
+              width={375}
+              height={600}
+              className={`${styles.imgPrimary} imgShadow`}
+            />
           </div>
 
           <p className={`${styles.p2VarA} text`}>{p2}</p>
@@ -26,7 +32,7 @@ const QuatroSectionVarA = ({ header, title, p1, p2, srcPrimary, srcSecondary }) 
               className={styles.paperOrnamentVarA}
               alt="Paper decoration"
             />
-            <Image src={srcSecondary} alt="Wedding" fill={true} />
+            <Image src={srcSecondary} alt="Wedding" fill={true} className="imgShadow" />
           </div>
         </div>
       </div>
