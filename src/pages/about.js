@@ -1,18 +1,50 @@
-import Container from 'components/Container';
-import Header from 'components/Header';
 import Layout from 'components/Layout';
-import Section from 'components/Section';
+import NewContainer from 'components/NewContainer/NewContainer';
+import PersonalWidget from 'components/PersonalWidget/PersonalWidget';
+import AllThatMattersSection from 'scenes/AllThatMattersSection/AllThatMattersSection';
+import QuatroSectionVarB from 'scenes/QuatroSectionVarB/QuatroSectionVarB';
+import StandardHeaderSection from 'scenes/StandardHeaderSection/StandardHeaderSection';
+import VideoSection from 'scenes/VideoSection/VideoSection';
 
 export default function Home() {
   return (
     <Layout>
-      <Header>
-        <h1>About me</h1>
-      </Header>
+      <NewContainer>
+        <StandardHeaderSection
+          subtitle="About me"
+          title="Hi, I'm Ola"
+          text="A photographer who adores coffee, traveling, nature, sunsets, draws inspiration from music, loves yoga, and can spend hours gazing at the ocean."
+        />
+      </NewContainer>
 
-      <Section>
-        <Container>About me</Container>
-      </Section>
+      <NewContainer>
+        <VideoSection url="https://www.youtube.com/watch?v=JtYaDKNssbI" />
+      </NewContainer>
+
+      <NewContainer>{/* timeline */}</NewContainer>
+
+      <NewContainer>
+        <QuatroSectionVarB
+          header="Portugal"
+          title="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus."
+          p1="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc ornare varius fusce et. Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerissque netus."
+          p2="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc ornare varius fusce et. Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerissque netus."
+          srcPrimary="/pictures/portugal-1.jpg"
+          srcSecondary="/pictures/portugal-2.jpg"
+        />
+      </NewContainer>
+
+      <NewContainer>
+        <AllThatMattersSection
+          primaryImg="/pictures/matters/matters-2.jpg"
+          secondaryImg="/pictures/matters/matters-1.jpg"
+          thirdImg="/pictures/matters/matters-3.jpg"
+        />
+      </NewContainer>
+
+      <NewContainer>
+        <PersonalWidget />
+      </NewContainer>
     </Layout>
   );
 }

@@ -45,8 +45,8 @@ const Footer = () => {
         </div>
         <div className={`${styles.footerCol} `}>
           <div>
-            <span className="subtitle bold">Explore</span>
-            <ul className="subtitle">
+            <span className="textS letterSpacing bold">Explore</span>
+            <ul className="textS letterSpacing">
               <li>
                 <a href="#">About me</a>
               </li>
@@ -63,8 +63,8 @@ const Footer = () => {
           </div>
           {/* <div className={`${styles.footerCol} `}> */}
           <div>
-            <span className="subtitle bold">Support</span>
-            <ul className="subtitle">
+            <span className="textS letterSpacing bold">Support</span>
+            <ul className="textS letterSpacing">
               <li>
                 <a href="#">Contact</a>
               </li>
