@@ -6,8 +6,8 @@ const TimelineSection = ({ children }) => {
     <div className={styles.main}>
       <h6 className={`${styles.title} subtitleStrong uppercase`}>I guess I've always known what I wanted.</h6>
       <p className={`text ${styles.text}`}>
-        Sitting still was never my thing. I've never worked a 9-to-5 job. I've always had one foot in the world, drawing
-        inspiration from people and travels. That's why I value naturalness in photography so much.
+        Sitting still was never my thing. I&lsquo;ve never worked a 9-to-5 job. I've always had one foot in the world,
+        drawing inspiration from people and travels. That&lsquo;s why I value naturalness in photography so much.
       </p>
       <div className={styles.wrapper}>
         {React.Children.map(children, (child, index) => {
