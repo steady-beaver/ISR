@@ -45,7 +45,8 @@
     text-transform: uppercase;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    gap: 135px;
 
     @include respond-width($m) {
         gap: 50px;

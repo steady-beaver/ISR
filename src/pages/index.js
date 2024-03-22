@@ -21,8 +21,6 @@ export default function Home() {
       <NewContainer>
         <IntroductionSection />
       </NewContainer>
-
-      {/* <PersonalWidget className={styles.personalWidget} /> */}
     </Layout>
   );
 }

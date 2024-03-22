@@ -17,3 +17,15 @@ $xs: 550px;
         @content;
     }
 }
+
+// .main {
+//     margin: 150px auto 200px;
+
+//     @include respond-width($m) {
+//         margin: 150px auto 150px;
+//     }
+
+//     @include respond-width($s) {
+//         margin: 100px auto;
+//     }
+// }

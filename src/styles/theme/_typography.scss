@@ -11,6 +11,11 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
   letter-spacing: 0.2em;
 }
 
+// helper
+// className={`${''} headingH1`}
+
+// @include simpleTransition;
+
 .headingH1 {
   font-family: ivymode, sans-serif;
   font-size: 120px;
@@ -188,4 +193,8 @@ $font-family-default: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu San
 
 .letterSpacing {
   letter-spacing: 2px;
+}
+
+.centered {
+  text-align: center;
 }

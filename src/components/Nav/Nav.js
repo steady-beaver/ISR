@@ -39,7 +39,7 @@ const Nav = () => {
           </Link>
           {/* ================================= */}
           {/* blog */}
-          <Link href="#">
+          <Link href="/blog">
             <span>Journal</span>
           </Link>
           <Link href="/contacts">

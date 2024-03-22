@@ -1,0 +1,59 @@
+@import "styles/theme/theme";
+
+.main {
+    margin: 150px auto 200px;
+
+    @include respond-width($m) {
+        margin: 150px auto 150px;
+    }
+
+    @include respond-width($s) {
+        margin: 100px auto;
+    }
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+
+    .backBtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        fill: currentColor;
+        @include simpleTransition;
+        margin-bottom: 90px;
+
+        &:hover {
+            color: $brown;
+        }
+    }
+
+    .title {
+        font-size: 80px;
+        margin-bottom: 40px;
+    }
+
+    .category:after {
+        content: "";
+        width: 3px;
+        height: 3px;
+        display: inline-block;
+        margin: 2px 9px 2px 8px;
+        border-radius: 50%;
+        background-color: $black;
+    }
+
+    .details {
+        margin-bottom: 35px;
+    }
+
+    .excerpt {
+        margin-bottom: 40px;
+    }
+}
