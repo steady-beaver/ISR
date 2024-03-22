@@ -1,7 +1,9 @@
 import BackToJournalBtn from 'components/BackToJournalBtn/BackToJournalBtn';
+import CategoriesWidget from 'components/CategoriesWidget/CategoriesWidget';
 import Date from 'components/Date/Date';
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
+import NewsletterWidget from 'components/NewsletterWidget/NewsletterWidget';
 import { getAllCategories, getPostSlugs, getSinglePost } from 'lib/ola-blog';
 import PersonalSection from 'scenes/PersonalSection/PersonalSection';
 import styles from './Post.module.scss';
@@ -62,10 +64,10 @@ const BlogArticle = ({ postData, allCategories }) => {
                 __html: postData.content,
               }}
             />
-            {/* <div className={styles.sideBar}>
+            <div className={styles.sideBar}>
               <NewsletterWidget />
               <CategoriesWidget categories={allCategories} />
-            </div> */}
+            </div>
           </div>
         </div>
       </NewContainer>

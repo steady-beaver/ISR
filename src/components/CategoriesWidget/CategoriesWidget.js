@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './CategoriesWidget.module.scss';
 
 const CategoriesWidget = ({ categories }) => {
@@ -8,11 +9,11 @@ const CategoriesWidget = ({ categories }) => {
       <h5 className={`${styles.title} subtitleSmall uppercase bold letterSpacing`}>Categories</h5>
 
       {categories.map((item, i) => (
-        // <Link key={i} href={`category/${item.slug}/`}>
-        <div key={i} className={`${styles.item} subtitleSmall uppercase letterSpacing`}>
-          {item.name}
-        </div>
-        // </Link>
+        <Link key={i} href={`category/${item.slug}/`}>
+          <div key={i} className={`${styles.item} subtitleSmall uppercase letterSpacing`}>
+            {item.name}
+          </div>
+        </Link>
       ))}
     </div>
   );
