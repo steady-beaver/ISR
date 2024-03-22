@@ -6,6 +6,15 @@
     gap: 16px;
 }
 
+.title {
+    @include simpleTransition;
+    display: inline-block;
+
+    &:hover {
+        color: $brown;
+    }
+}
+
 .category:after {
     content: "";
     width: 3px;

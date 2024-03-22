@@ -1,6 +1,6 @@
 'useClient';
 
-import SendBtn from 'components/SendBtn/SendBtn';
+import RightArrowBtn from 'components/RightArrowBtn/RightArrowBtn';
 import Facebook from 'components/Social/Facebook';
 import Instagram from 'components/Social/Instagram';
 import Mail from 'components/Social/Mail';
@@ -33,9 +33,7 @@ const Footer = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   className={` textXS`}
                 />
-                <SendBtn onClick={() => console.log(email)} disabled={!email}>
-                  <span className="textXS bold uppercase letterSpacing">Send</span>
-                </SendBtn>
+                <RightArrowBtn onClick={() => console.log(email)} disabled={!email} className={styles.sendBtn} />
               </div>
               <span className={`${styles.helper} textXS`}>
                 By signing up to our newsletter you agree to our privacy policy.

@@ -3,9 +3,9 @@ import Link from 'next/link';
 import bookSessionFlower from 'public/ornaments/book-session-flower.png';
 import olaPhoto from 'public/ornaments/ola.jpg';
 import { useInView } from 'react-intersection-observer';
-import styles from './PersonalWidget.module.scss';
+import styles from './PersonalSection.module.scss';
 
-const PersonalWidget = ({ className }) => {
+const PersonalSection = ({ className }) => {
   const { ref, inView } = useInView({
     threshold: 0.6,
   });
@@ -40,4 +40,4 @@ const PersonalWidget = ({ className }) => {
   );
 };
 
-export default PersonalWidget;
+export default PersonalSection;

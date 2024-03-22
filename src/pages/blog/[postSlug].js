@@ -2,16 +2,17 @@ import BackToJournalBtn from 'components/BackToJournalBtn/BackToJournalBtn';
 import Date from 'components/Date/Date';
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
-import PersonalWidget from 'components/PersonalWidget/PersonalWidget';
-import { getPostSlugs, getSinglePost } from 'lib/ola-blog';
+import { getAllCategories, getPostSlugs, getSinglePost } from 'lib/ola-blog';
+import PersonalSection from 'scenes/PersonalSection/PersonalSection';
 import styles from './Post.module.scss';
 
 export const getStaticProps = async ({ params }) => {
   const postData = await getSinglePost(params.postSlug);
-
+  const allCategories = await getAllCategories();
   return {
     props: {
       postData,
+      allCategories,
     },
   };
 };
@@ -29,7 +30,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-const BlogArticle = ({ postData }) => {
+const BlogArticle = ({ postData, allCategories }) => {
   return (
     <Layout>
       <NewContainer>
@@ -54,17 +55,23 @@ const BlogArticle = ({ postData }) => {
             <img src={postData.featuredImage.node.link} alt="Featured image" />
           </div>
 
-          <div
-            className={`wpBlog`}
-            dangerouslySetInnerHTML={{
-              __html: postData.content,
-            }}
-          />
+          <div className={styles.blogLayout}>
+            <div
+              className={`wpBlog`}
+              dangerouslySetInnerHTML={{
+                __html: postData.content,
+              }}
+            />
+            {/* <div className={styles.sideBar}>
+              <NewsletterWidget />
+              <CategoriesWidget categories={allCategories} />
+            </div> */}
+          </div>
         </div>
       </NewContainer>
 
       <NewContainer>
-        <PersonalWidget />
+        <PersonalSection />
       </NewContainer>
     </Layout>
   );

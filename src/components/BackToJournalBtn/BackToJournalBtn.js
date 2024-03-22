@@ -4,7 +4,7 @@ import styles from './BackToJournalBtn.module.scss';
 
 const BackToJournalBtn = () => {
   return (
-    <Link className={styles.backBtn} href="http://localhost:3000/blog/">
+    <Link className={styles.backBtn} href="/blog">
       <ArrowBack />
       <span className="subtitleStrong uppercase">Back to journal</span>
     </Link>

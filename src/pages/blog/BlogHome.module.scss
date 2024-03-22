@@ -38,6 +38,12 @@
 
         .title {
             margin-bottom: 4px;
+            @include simpleTransition;
+            display: inline-block;
+
+            &:hover {
+                color: $brown;
+            }
         }
 
 

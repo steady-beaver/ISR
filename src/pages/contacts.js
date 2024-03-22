@@ -2,7 +2,7 @@ import ContactForm from 'components/ContactForm/ContactForm';
 import InfoPoint from 'components/InfoPoint/InfoPoint';
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
-import PersonalWidget from 'components/PersonalWidget/PersonalWidget';
+import PersonalSection from 'scenes/PersonalSection/PersonalSection';
 
 import styles from '../styles/pages/NewPageStyles.module.scss';
 
@@ -10,7 +10,7 @@ export default function Contacts() {
   return (
     <Layout>
       <NewContainer>
-        <PersonalWidget />
+        <PersonalSection />
 
         <ContactForm />
 

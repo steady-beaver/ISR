@@ -1,7 +1,7 @@
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
-import PersonalWidget from 'components/PersonalWidget/PersonalWidget';
 import AllThatMattersSection from 'scenes/AllThatMattersSection/AllThatMattersSection';
+import PersonalSection from 'scenes/PersonalSection/PersonalSection';
 import QuatroSectionVarB from 'scenes/QuatroSectionVarB/QuatroSectionVarB';
 import StandardHeaderSection from 'scenes/StandardHeaderSection/StandardHeaderSection';
 import Episode from 'scenes/TimelineSection/Episode';
@@ -68,7 +68,7 @@ export default function Home() {
       </NewContainer>
 
       <NewContainer>
-        <PersonalWidget />
+        <PersonalSection />
       </NewContainer>
     </Layout>
   );

@@ -1,7 +1,7 @@
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
-import PersonalWidget from 'components/PersonalWidget/PersonalWidget';
 import FaqSection from 'scenes/FaqSection/FaqSection';
+import PersonalSection from 'scenes/PersonalSection/PersonalSection';
 import QuatroSectionVarA from 'scenes/QuatroSectionVarA/QuatroSectionVarA';
 import QuatroSectionVarB from 'scenes/QuatroSectionVarB/QuatroSectionVarB';
 import StandardHeaderSection from 'scenes/StandardHeaderSection/StandardHeaderSection';
@@ -64,7 +64,7 @@ export default function Home() {
       </NewContainer>
 
       <NewContainer>
-        <PersonalWidget />
+        <PersonalSection />
       </NewContainer>
     </Layout>
   );

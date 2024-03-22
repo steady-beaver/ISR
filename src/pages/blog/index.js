@@ -6,6 +6,7 @@ import NewContainer from 'components/NewContainer/NewContainer';
 import ReadMoreBtn from 'components/ReadMoreBtn/ReadMoreBtn';
 import { getAllCategories, getPostsSegment } from 'lib/ola-blog';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from 'react';
 import styles from './BlogHome.module.scss';
 
@@ -25,7 +26,9 @@ const BlogHome = ({ posts, allCategories }) => {
           <div className={styles.highlightBlog}>
             <div className={styles.textCol}>
               <div>
-                <h2 className={`${styles.title} headingH2 uppercase`}>{lastPost.title}</h2>
+                <h2 className={`${styles.title} headingH2 uppercase`}>
+                  <Link href={`/blog/${lastPost.slug}`}>{lastPost.title}</Link>
+                </h2>
                 <div className={`${styles.details} subtitleTiny uppercase`}>
                   {lastPost?.categories?.nodes.map((categoryObj, i) => (
                     <span key={i} className={`${styles.category}`}>
@@ -43,35 +46,37 @@ const BlogHome = ({ posts, allCategories }) => {
               />
 
               <div>
-                <ReadMoreBtn to={'http://localhost:3000' + '/blog/' + `${lastPost.slug}`} />
+                <ReadMoreBtn to={`/blog/${lastPost.slug}`} />
               </div>
             </div>
+
             <div className={`${styles.imageFrame}`}>
-              <Image
-                src={`${process.env.WORDPRESS_UPLOADS_URL + '/' + lastPost.featuredImage.node.mediaDetails.file}`}
-                alt="Wedding"
-                fill={true}
-                className={`${styles.primaryFrame} objectCover imgShadow`}
-              />
-              <Image
-                src={'/ornaments/grass-ornament.svg'}
-                alt="Grass ornament"
-                width={45}
-                height={60}
-                className={styles.grassOrnament}
-              />
-              <Image
-                src={'/ornaments/old-postcard.png'}
-                alt="Old postcard ornament"
-                fill={true}
-                className={styles.postcardBack}
-              />
+              <Link href={`/blog/${lastPost.slug}`}>
+                <Image
+                  src={`${process.env.WORDPRESS_UPLOADS_URL + '/' + lastPost.featuredImage.node.mediaDetails.file}`}
+                  alt="Wedding"
+                  fill={true}
+                  className={`${styles.primaryFrame} objectCover imgShadow`}
+                />
+                <Image
+                  src={'/ornaments/grass-ornament.svg'}
+                  alt="Grass ornament"
+                  width={45}
+                  height={60}
+                  className={styles.grassOrnament}
+                />
+                <Image
+                  src={'/ornaments/old-postcard.png'}
+                  alt="Old postcard ornament"
+                  fill={true}
+                  className={styles.postcardBack}
+                />
+              </Link>
             </div>
           </div>
 
           <div className={styles.wrapper}>
             {restPosts.nodes.map((item, i) => {
-              const link = 'http://localhost:3000' + '/blog/' + item.slug;
               return (
                 <ArticlePreview
                   key={i}
@@ -81,7 +86,8 @@ const BlogHome = ({ posts, allCategories }) => {
                   date={item.date}
                   title={item.title}
                   excerpt={item.excerpt}
-                  link={link}
+                  slug={item.slug}
+                  link={'/blog/' + item.slug}
                 />
               );
             })}

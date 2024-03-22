@@ -1,11 +1,6 @@
 import Link from 'next/link';
 import styles from './ArticlePreview.module.scss';
 
-// type categoriesT = {
-//   name: string,
-//   slug: string,
-// }[];
-
 const ArticlePreview = ({
   primaryImgSrc = '/pictures/article-preview.jpeg',
   srcSet,
@@ -29,7 +24,10 @@ const ArticlePreview = ({
         </Link>
       </div>
       <div>
-        <h2 className={`${styles.title} headingH2 uppercase`}>{title}</h2>
+        <h2 className={`${styles.title} headingH2 uppercase`}>
+          <Link href={link}>{title} </Link>
+        </h2>
+
         <div className={`${styles.details} subtitleTiny uppercase`}>
           {categories?.map((categoryObj, i) => (
             <span key={i} className={`${styles.category}`}>
