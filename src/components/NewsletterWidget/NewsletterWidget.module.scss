@@ -2,6 +2,15 @@
 
 .main {
     margin-bottom: 40px;
+    width: 100%;
+
+    @include respond-width($m) {
+        width: 350px;
+    }
+
+    @include respond-width($xs) {
+        width: 300px;
+    }
 }
 
 
@@ -10,6 +19,10 @@
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
+
+    @include respond-width($xs) {
+        margin-top: 20px;
+    }
 
     label {
         margin-top: 50px;

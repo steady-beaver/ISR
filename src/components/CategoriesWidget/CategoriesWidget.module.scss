@@ -1,9 +1,23 @@
 @import "styles/theme/theme";
 
-.main {}
+.main {
+    width: 100%;
+
+    @include respond-width($m) {
+        width: 350px;
+    }
+
+    @include respond-width($xs) {
+        width: 300px;
+    }
+}
 
 .title {
     margin-bottom: 40px;
+
+    @include respond-width($xs) {
+        margin-bottom: 20px;
+    }
 }
 
 .item {
