@@ -1,26 +1,36 @@
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
+import { getPostsSegment } from 'lib/ola-blog';
 import IntroductionSection from 'scenes/IntroductionSection/IntroductionSection';
+import JournalSection from 'scenes/JournalSection/JournalSection';
 import ServiceSection from 'scenes/ServiceSection/ServiceSection';
 import SliderSection from 'scenes/SliderSection/SliderSection';
 import VideoSection from 'scenes/VideoSection/VideoSection';
 
-export default function Home() {
+export default function Home({ recentThreePosts, imageStorageBase }) {
   return (
     <Layout>
       <SliderSection />
 
       <NewContainer>
         <ServiceSection />
-      </NewContainer>
 
-      <NewContainer>
         <VideoSection url="https://www.youtube.com/watch?v=mrobdVDb8B4" />
-      </NewContainer>
 
-      <NewContainer>
+        <JournalSection recentThreePosts={recentThreePosts} imgBase={imageStorageBase} />
+
         <IntroductionSection />
       </NewContainer>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const initialSegment = await getPostsSegment();
+  return {
+    props: {
+      recentThreePosts: [initialSegment?.nodes?.[0], initialSegment?.nodes?.[1], initialSegment?.nodes?.[2]],
+      imageStorageBase: process.env.WORDPRESS_UPLOADS_URL,
+    },
+  };
 }

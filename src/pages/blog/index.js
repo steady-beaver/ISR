@@ -3,14 +3,12 @@ import CategoryBar from 'components/CategoryBar/CategoryBar';
 import Layout from 'components/Layout';
 import LoadMoreBtn from 'components/LoadMoreBtn/LoadMoreBtn';
 import NewContainer from 'components/NewContainer/NewContainer';
-import ReadMoreBtn from 'components/ReadMoreBtn/ReadMoreBtn';
+import PostHighlight from 'components/PostHighlight/PostHighlight';
 import { getAllCategories, getPostsSegment } from 'lib/ola-blog';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 import styles from './BlogHome.module.scss';
 
-const BlogHome = ({ posts, allCategories }) => {
+const BlogHome = ({ posts, allCategories, imageStorageBase }) => {
   const [firstPost, ...rest] = posts.nodes;
   const [lastPost] = useState(firstPost); //just first post
   const [restPosts, setRestPosts] = useState({ nodes: rest, pageInfo: posts.pageInfo }); // rest posts and pageInfo
@@ -22,8 +20,10 @@ const BlogHome = ({ posts, allCategories }) => {
           <h1 className={` ${styles.heading} headingH1 uppercase centered`}>Journal</h1>
           <CategoryBar allCategories={allCategories} />
 
+          <PostHighlight post={lastPost} imgBase={imageStorageBase} />
+
           {/* TODO separate component */}
-          <div className={styles.highlightBlog}>
+          {/* <div className={styles.highlightBlog}>
             <div className={styles.textCol}>
               <div>
                 <h2 className={`${styles.title} headingH2 uppercase`}>
@@ -73,7 +73,7 @@ const BlogHome = ({ posts, allCategories }) => {
                 />
               </Link>
             </div>
-          </div>
+          </div> */}
 
           <div className={styles.wrapper}>
             {restPosts.nodes.map((item, i) => {
@@ -100,12 +100,13 @@ const BlogHome = ({ posts, allCategories }) => {
 };
 
 export async function getStaticProps() {
-  const allBlogPosts = await getPostsSegment();
+  const initialPosts = await getPostsSegment();
   const allCategories = await getAllCategories();
   return {
     props: {
-      posts: allBlogPosts,
+      posts: initialPosts,
       allCategories,
+      imageStorageBase: process.env.WORDPRESS_UPLOADS_URL,
     },
   };
 }

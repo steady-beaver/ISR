@@ -2,8 +2,6 @@ import Link from 'next/link';
 import styles from './CategoriesWidget.module.scss';
 
 const CategoriesWidget = ({ categories }) => {
-  console.log(categories);
-
   return (
     <div className={styles.main}>
       <h5 className={`${styles.title} subtitleSmall uppercase bold letterSpacing`}>Categories</h5>
