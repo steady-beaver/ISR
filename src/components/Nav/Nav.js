@@ -34,11 +34,12 @@ const Nav = () => {
           <Link href="/services">
             <span>Services</span>
           </Link>
+          <Link href="/portfolio">
+            <span>Portfolio</span>
+          </Link>
           <Link href="/about">
             <span>About me</span>
           </Link>
-          {/* ================================= */}
-          {/* blog */}
           <Link href="/blog">
             <span>Journal</span>
           </Link>

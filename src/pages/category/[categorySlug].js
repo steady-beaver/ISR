@@ -5,7 +5,7 @@ import Layout from 'components/Layout';
 import LoadMoreBtn from 'components/LoadMoreBtn/LoadMoreBtn';
 import NewContainer from 'components/NewContainer/NewContainer';
 import { getAllCategories, getPostsSegment } from 'lib/ola-blog';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './Category.module.scss';
 
 export const getStaticPaths = async () => {
@@ -39,6 +39,15 @@ const ArchivePage = ({ categoryDataSegment, allCategories, currentCategorySlug }
   const currentCategory = allCategories.filter((item) => item.slug === currentCategorySlug)[0];
 
   const [postData, setPostData] = useState(categoryDataSegment);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const newCategoryDataSegment = await getPostsSegment(null, currentCategorySlug);
+      setPostData(newCategoryDataSegment);
+    };
+
+    fetchData();
+  }, [currentCategorySlug]);
 
   return (
     <Layout>
