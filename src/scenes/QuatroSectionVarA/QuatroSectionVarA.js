@@ -58,6 +58,7 @@ const QuatroSectionVarA = ({ header, title, p1, p2, srcPrimary, srcSecondary }) 
         <div className={styles.bottomPartFrame}>
           <h3 className={`${styles.titleVarA} headingH3`}>{title}</h3>
           <p className={`${styles.p1VarA} text`}>{p1}</p>
+          <p className={`${styles.p2VarA} text`}>{p2}</p>
         </div>
       </div>
     </div>

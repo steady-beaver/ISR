@@ -6,10 +6,6 @@
     align-items: stretch;
     height: 1040px;
 
-    @include respond-width($l) {
-        height: 900px;
-    }
-
     @include respond-width($s) {
         height: 800px;
     }
@@ -20,7 +16,7 @@
 
     @include respond-width($xs) {
         margin: 100px 25px;
-        height: 550px;
+        height: 650px;
     }
 }
 

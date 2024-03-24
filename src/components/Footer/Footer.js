@@ -5,6 +5,7 @@ import Facebook from 'components/Social/Facebook';
 import Instagram from 'components/Social/Instagram';
 import Mail from 'components/Social/Mail';
 import Pinterest from 'components/Social/Pinterest';
+import Link from 'next/link';
 import { useState } from 'react';
 import styles from './Footer.module.scss';
 
@@ -16,8 +17,8 @@ const Footer = () => {
         <div className={styles.newsletter}>
           <div className={styles.container}>
             <div className={`${''} headingH3`}>
-              Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc
-              ornare varius fusce et.{' '}
+              Get insider tips on Portugal&rsquo;s best wedding spots and personal travel stories from my life as a
+              wedding photographer. Sign up to explore Portugal with me.
             </div>
 
             <div className={styles.newsletterInput}>
@@ -46,16 +47,16 @@ const Footer = () => {
             <span className="textS letterSpacing bold">Explore</span>
             <ul className="textS letterSpacing">
               <li>
-                <a href="#">About me</a>
+                <Link href="/about">About me</Link>
               </li>
               <li>
-                <a href="#">Services</a>
+                <Link href="/services">Services</Link>
               </li>
               <li>
-                <a href="#">Portfolio</a>
+                <Link href="/portfolio">Portfolio</Link>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <Link href="/">Blog</Link>
               </li>
             </ul>
           </div>
@@ -64,13 +65,13 @@ const Footer = () => {
             <span className="textS letterSpacing bold">Support</span>
             <ul className="textS letterSpacing">
               <li>
-                <a href="#">Contact</a>
+                <Link href="/contacts">Contact</Link>
               </li>
               <li>
-                <a href="#">Terms</a>
+                <Link href="#">Terms</Link>
               </li>
               <li>
-                <a href="#">Privacy policy</a>
+                <Link href="#">Privacy policy</Link>
               </li>
             </ul>
           </div>
@@ -80,7 +81,9 @@ const Footer = () => {
       <div className={styles.bottomPart}>
         <div className={`${styles.rights} textXXS`}>
           <span>All rights reserved - Ola Nandalona 2024</span>
-          <span>Design: Nooneway Studio</span>
+          <Link href="https://noonewaystudio.com/" target="_blank" rel="noopener noreferrer">
+            <span>Design: Nooneway Studio</span>
+          </Link>
         </div>
         <div className={`${styles.media} `}>
           <Facebook iconBg={styles.iconBg} />

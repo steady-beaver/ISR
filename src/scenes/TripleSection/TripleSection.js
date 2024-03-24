@@ -21,25 +21,30 @@ const TripleSection = ({ photoSrc }) => {
             />
           </div>
           <h3 className={`${styles.title} headingH3`}>
-            Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus.
+            Wedding photos that capture your story and emotions, lasting forever.
           </h3>
           <p className={`${styles.text} text`}>
-            Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc
-            ornare varius fusce et. Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerissque netus.
+            During weddings, I carefully and thoughtfully capture the true atmosphere of your day. I focus on the
+            realness of each moment to tell your story. I thoroughly document the essence of the celebration, making
+            sure to preserve every important detail and emotion.
           </p>
         </div>
         <div className={styles.colRight}>
-          <InfoPoint title="Package 1" extra={'3-hours session • 3-hours session • 3-hours session'}>
-            Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus.
+          <InfoPoint title="Package 1" extra="3-hour Photo Coverage • 100 Digital Images • Online Private Gallery">
+            Catch the key moments of your wedding, like the ceremony and same-day photoshoot.
           </InfoPoint>
           <InfoPoint
             title="Package 2"
-            extra={'3-hours session • 3-hours session • 3-hours session • 3-hours session  • 3-hours session'}
+            extra="5-hour Photo Coverage • 200 Digital Images • Outside session on the wedding day  • Online Private Gallery"
           >
-            Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus.
+            Package designed to capture the essence of your special day from the preparations to the ceremony and
+            cocktail hour.
           </InfoPoint>
-          <InfoPoint title="Package 3" extra={'3-hours session • 3-hours session • 3-hours session'}>
-            Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus.
+          <InfoPoint
+            title="Package 3"
+            extra="8-hour Photo Coverage • 400 Digital Images • Outside session on the wedding day • Pre-wedding session • Online Gallery"
+          >
+            All-inclusive wedding package: from prep to late-night dances, capturing your day&rsquo;s essence.
           </InfoPoint>
         </div>
       </div>

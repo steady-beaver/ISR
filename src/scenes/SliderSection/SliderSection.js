@@ -17,7 +17,6 @@ const SliderSection = () => {
   return (
     <div className={styles.mainFrame}>
       {current.map((item, i) => (
-        // <Slider {...item} key={i} />
         <Slider {...item} key={i} className={`${i === currentIndex ? styles.active : null} `} />
       ))}
     </div>

@@ -67,6 +67,10 @@
     animation: shakePlant 1s ease-in-out;
 }
 
+.invitationText {
+    max-width: 400px;
+}
+
 @keyframes shakePlant {
     0% {
         transform: translate(-50%, 50%) rotate(0deg);

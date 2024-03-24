@@ -7,9 +7,9 @@ const TravelSection = ({ primaryImg, secondaryImg }) => {
       <div className={styles.textFrame}>
         <h2 className={`${styles.title} headingH1 uppercase`}>Travel</h2>
         <p className={`${styles.text} textS letterSpacing`}>
-          Fantastic professionalism during our wedding, every guest was impressed by the work and the way it was done,
-          always ready for the right moments no matter what and doing it happily. Very cooperative with the videographer
-          team that was also in the wedding.
+          Ready to travel anywhere for your destination wedding! Let&rsquo;s turn your dream location into the backdrop
+          of your special day. I&rsquo;ll fly out to capture every moment, making sure your love story is beautifully
+          told, no matter where in the world you decide to say I DO.
         </p>
         <span className={`${styles.link} textS letterSpacing uppercase`}>ASK ME ABOUT DETAILS</span>
       </div>

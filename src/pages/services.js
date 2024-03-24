@@ -17,16 +17,16 @@ export default function Home() {
         <StandardHeaderSection
           subtitle="Services"
           title="For you"
-          text="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc ornare varius fusce et. "
+          text="Capture love everywhere - from couple shoots to big weddings or elopements. Let's make memories in Portugal or any corner of the world!"
         />
       </NewContainer>
 
       <NewContainer>
         <QuatroSectionVarA
           header="Couple"
-          title="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus."
-          p1="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc ornare varius fusce et. Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerissque netus."
-          p2="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc ornare varius fusce et. Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerissque netus."
+          title="Let's have a photoshoot that's all about your love story."
+          p1="I'll make sure it's relaxed and welcoming, so you can easily be yourselves. You'll get real smiles and genuine moments of closeness. We'll capture what makes your relationship special in every photo."
+          p2="We're focusing on Portugal's beautiful scenes, but I'm all about catching those quick, magic moments wherever they happen. Ready to make memories with real laughter, love, and everything that goes unsaid between you? Let's start this fun adventure."
           srcPrimary="/pictures/couple-primary.jpg"
           srcSecondary="/pictures/couple-secondary.jpg"
         />
@@ -47,9 +47,9 @@ export default function Home() {
       <NewContainer>
         <QuatroSectionVarB
           header="Elopement"
-          title="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus."
-          p1="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc ornare varius fusce et. Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerissque netus."
-          p2="Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerisque netus. Odio leo turpis non nunc ornare varius fusce et. Lorem ipsum dolor sit amet consectetur. Urna convallis leo scelerissque netus."
+          title="There's something incredibly special about elopement weddings that resonates deeply with me."
+          p1="The intimate setting, connection between the couple, and the unique stories waiting to be told – these moments are what I cherish the most as a photographer. My services for elopement are limitless. Whether you desire to have me by your side capturing every moment from dawn till dusk, or you prefer focusing on just the pivotal moments"
+          p2="I understand the beauty in the simplicity and the significance of these intimate exchanges, and I aim to preserve them in the most authentic way possible."
           srcPrimary="/pictures/service-elopement-1.jpg"
           srcSecondary="/pictures/service-elopement-2.jpg"
         />

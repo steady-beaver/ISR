@@ -1,12 +1,12 @@
 @import 'src/styles/_media_queries.scss';
 
 .main {
-    height: 500px;
+    // height: 500px;
     margin: 100px auto 100px;
-    background-image: url('/pictures/testimonial-flower.png'), url('/pictures/signature.png');
-    background-position: center center, 100% 90%;
-    background-repeat: no-repeat, no-repeat;
-    background-size: contain, 300px;
+    background-image: url('/pictures/testimonial-flower.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
 
     display: flex;
     flex-direction: column;
@@ -15,6 +15,7 @@
     gap: 30px;
 
     text-align: center;
+    position: relative;
 
     &>* {
         max-width: 550px;
@@ -22,6 +23,14 @@
 
     &>*:first-child {
         text-transform: uppercase;
+    }
+
+    .signature {
+        position: relative;
+        left: 15%;
+        bottom: 20px;
+        transform: rotate(-8deg);
+        font-size: 40px;
     }
 
 

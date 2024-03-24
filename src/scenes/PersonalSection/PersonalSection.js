@@ -19,22 +19,21 @@ const PersonalSection = ({ className }) => {
             className={`${styles.flower} ${inView ? styles.shakePlant : ''} `}
             width={464}
             height={594}
-            alt="Alluring Portuguese flower"
+            alt="Portuguese flower"
           />
           <Image
             src={olaPhoto}
             className={`${styles.olaPicture} ${inView ? styles.shakeOla : ''} `}
             width={200}
             height={200}
-            alt="Ola's profile picture"
+            alt="Image of a wedding photographer Ola Nadolna standing on the Algarve cliffs."
           />
         </Link>
         <span className={`${styles.signature} signature`}>Ola</span>
       </div>
-      <div className={`${''} subtitleStrong uppercase`}>Contact me</div>
+      <div className={`${''} subtitleStrong uppercase`}>Book a session</div>
       <div className={`${styles.invitationText} textS`}>
-        Provide all necessary information about your dream session. I will contact you within 48h via email or phone to
-        discuss the details. If you have exact date of arrival please add it to your message.
+        Let&rsquo;s make memories! Hit the image to book your session and bring your dream photos to life
       </div>
     </div>
   );
