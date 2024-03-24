@@ -1,7 +1,7 @@
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
 import StandardHeaderSection from 'scenes/StandardHeaderSection/StandardHeaderSection';
-import styles from './portfolio.module.scss';
+import styles from './PortfolioNew.module.scss';
 
 const Portfolio = () => {
   return (
