@@ -1,11 +1,13 @@
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
+import ParagraphsWP from 'components/ParagraphsWP/ParagraphsWP';
 import FaqSection from 'scenes/FaqSection/FaqSection';
 import PersonalSection from 'scenes/PersonalSection/PersonalSection';
 import QuatroSectionVarA from 'scenes/QuatroSectionVarA/QuatroSectionVarA';
 import QuatroSectionVarB from 'scenes/QuatroSectionVarB/QuatroSectionVarB';
 import StandardHeaderSection from 'scenes/StandardHeaderSection/StandardHeaderSection';
 import TestimonialSection from 'scenes/TestimonialSection/TestimonialSection';
+import TestimonialSectionNew from 'scenes/TestimonialSectionNew/TestimonialSectionNew';
 import TravelSection from 'scenes/TravelSection/TravelSection';
 import TripleSection from 'scenes/TripleSection/TripleSection';
 import VideoSection from 'scenes/VideoSection/VideoSection';
@@ -42,6 +44,20 @@ export default function Home() {
 
       <NewContainer>
         <TestimonialSection />
+      </NewContainer>
+
+      <NewContainer>
+        <TestimonialSectionNew
+          title="Ready for the right moment"
+          content={
+            <ParagraphsWP
+              longText={
+                'ut lectus arcu bibendum at varius vel pharetra vel turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a cras semper auctor neque vitae tempus quam pellentesque nec nam aliquam sem et tortor consequat id porta nibh venenatis cras sed felis eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar\r\n\r\nSECOND ut lectus arcu bibendum at varius vel pharetra vel turpis nunc eget lorem dolor sed viverra ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a cras semper auctor neque vitae tempus quam pellentesque nec nam aliquam sem et tortor consequat id porta nibh venenatis cras sed felis eget velit aliquet sagittis id consectetur purus ut faucibus pulvinar'
+              }
+            />
+          }
+          name="Magda"
+        />
       </NewContainer>
 
       <NewContainer>
