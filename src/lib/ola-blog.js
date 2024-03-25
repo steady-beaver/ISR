@@ -136,3 +136,111 @@ export async function getAllCategories() {
 
   return slugsArr;
 }
+
+// ===============   SESSIONS ===============
+
+export async function getSessionsSegment(endCursor = null) {
+  const condition = `where: {orderby: {field: DATE, order: DESC}}, after: "${endCursor}", first: 5`;
+
+  const sessionsSegmentQuery = gql`
+    query getSessionsSegment {
+      sessions(${condition}) {
+        nodes {
+          title
+          uri
+          status
+          slug
+          date
+          featuredImage {
+            node {
+              mediaItemUrl
+              sizes
+              srcSet
+              sourceUrl
+              mediaDetails {
+                sizes {
+                  width
+                  fileSize
+                  sourceUrl
+                }
+              }
+            }
+          }
+          sessionConfigs {
+            order
+            sessionType {
+              nodes {
+                name
+                slug
+              }
+            }
+          }
+        }
+        pageInfo {
+          endCursor
+          hasNextPage
+          hasPreviousPage
+          startCursor
+        }
+      }
+    }
+  `;
+
+  const apolloClient = getApolloClient();
+  const res = await apolloClient.query({ query: sessionsSegmentQuery });
+  const sessionsSegmentData = res.data.sessions;
+
+  return sessionsSegmentData;
+}
+
+// const slugsQuery = gql`
+//   query getSingleSession {
+//     sessions {
+//       nodes {
+//         testimonial {
+//           title
+//           name
+//           content
+//         }
+//         title
+//         square {
+//           text
+//           title
+//           imageA {
+//             node {
+//               link
+//               mediaItemUrl
+//               sizes
+//               sourceUrl
+//               srcSet
+//               title
+//               uri
+//             }
+//           }
+//           imageB {
+//             node {
+//               link
+//               mediaItemUrl
+//               sizes
+//               sourceUrl
+//               srcSet
+//               title
+//               uri
+//             }
+//           }
+//           imageC {
+//             node {
+//               link
+//               mediaItemUrl
+//               sizes
+//               sourceUrl
+//               srcSet
+//               title
+//               uri
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

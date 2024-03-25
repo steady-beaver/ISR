@@ -22,65 +22,15 @@ const BlogHome = ({ posts, allCategories, imageStorageBase }) => {
 
           <PostHighlight post={lastPost} imgBase={imageStorageBase} />
 
-          {/* TODO separate component */}
-          {/* <div className={styles.highlightBlog}>
-            <div className={styles.textCol}>
-              <div>
-                <h2 className={`${styles.title} headingH2 uppercase`}>
-                  <Link href={`/blog/${lastPost.slug}`}>{lastPost.title}</Link>
-                </h2>
-                <div className={`${styles.details} subtitleTiny uppercase`}>
-                  {lastPost?.categories?.nodes.map((categoryObj, i) => (
-                    <span key={i} className={`${styles.category}`}>
-                      {categoryObj.name}
-                    </span>
-                  ))}
-                  <span>{lastPost.date}</span>
-                </div>
-              </div>
-              <div
-                className={`${styles.excerpt} textS`}
-                dangerouslySetInnerHTML={{
-                  __html: lastPost.excerpt,
-                }}
-              />
-
-              <div>
-                <ReadMoreBtn to={`/blog/${lastPost.slug}`} />
-              </div>
-            </div>
-
-            <div className={`${styles.imageFrame}`}>
-              <Link href={`/blog/${lastPost.slug}`}>
-                <Image
-                  src={`${process.env.WORDPRESS_UPLOADS_URL + '/' + lastPost.featuredImage.node.mediaDetails.file}`}
-                  alt="Wedding"
-                  fill={true}
-                  className={`${styles.primaryFrame} objectCover imgShadow`}
-                />
-                <Image
-                  src={'/ornaments/grass-ornament.svg'}
-                  alt="Grass ornament"
-                  width={45}
-                  height={60}
-                  className={styles.grassOrnament}
-                />
-                <Image
-                  src={'/ornaments/old-postcard.png'}
-                  alt="Old postcard ornament"
-                  fill={true}
-                  className={styles.postcardBack}
-                />
-              </Link>
-            </div>
-          </div> */}
-
           <div className={styles.wrapper}>
-            {restPosts.nodes.map((item, i) => {
+            {restPosts.nodes.map((item) => {
               return (
                 <ArticlePreview
-                  key={i}
-                  primaryImgSrc={item.featuredImage.node.mediaDetails.sizes[0].sourceUrl}
+                  key={item.slug}
+                  primaryImgSrc={
+                    item?.featuredImage?.node?.mediaDetails?.sizes?.[0]?.sourceUrl ??
+                    item?.featuredImage?.node?.sourceUrl
+                  }
                   srcSet={item.featuredImage.node.srcSet}
                   categories={item.categories.nodes}
                   date={item.date}

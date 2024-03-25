@@ -10,8 +10,6 @@ const LoadMoreBtn = ({ className, restPosts, setRestPosts, categorySlug = null }
       nodes: [...nextPostSegment.nodes, ...restPosts.nodes],
     };
 
-    console.log('newPostsObj: ', newPostsObj);
-
     setRestPosts(newPostsObj);
   };
 
@@ -25,7 +23,6 @@ const LoadMoreBtn = ({ className, restPosts, setRestPosts, categorySlug = null }
           if (areMorePages) return handleClick();
         }}
       >
-        {/* <CircleAround className={styles.circleAround} /> */}
         <span className={`${styles.btn} subtitleSmall`}>{areMorePages ? 'Load more' : 'No more pages'}</span>
       </span>
     </div>

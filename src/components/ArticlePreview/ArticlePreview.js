@@ -1,3 +1,4 @@
+import Date from 'components/Date/Date';
 import Link from 'next/link';
 import styles from './ArticlePreview.module.scss';
 
@@ -34,15 +35,17 @@ const ArticlePreview = ({
               {categoryObj.name}
             </span>
           ))}
-          <span>{date}</span>
+          <Date>{date}</Date>
         </div>
       </div>
-      <div
-        className={`${styles.excerpt} text`}
-        dangerouslySetInnerHTML={{
-          __html: excerpt,
-        }}
-      />
+      {excerpt && (
+        <div
+          className={`${styles.excerpt} text`}
+          dangerouslySetInnerHTML={{
+            __html: excerpt,
+          }}
+        />
+      )}
       <div>
         <Link href={link}>
           <span className={`${styles.articleLink} textS regular uppercase letterSpacing`}>Read more</span>
