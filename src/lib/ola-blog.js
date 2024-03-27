@@ -166,7 +166,7 @@ export async function getSessionsSegment(endCursor = null) {
               }
             }
           }
-          sessionConfigs {
+          main {
             order
             sessionType {
               nodes {
@@ -193,54 +193,164 @@ export async function getSessionsSegment(endCursor = null) {
   return sessionsSegmentData;
 }
 
-// const slugsQuery = gql`
-//   query getSingleSession {
-//     sessions {
-//       nodes {
-//         testimonial {
-//           title
-//           name
-//           content
-//         }
-//         title
-//         square {
-//           text
-//           title
-//           imageA {
-//             node {
-//               link
-//               mediaItemUrl
-//               sizes
-//               sourceUrl
-//               srcSet
-//               title
-//               uri
-//             }
-//           }
-//           imageB {
-//             node {
-//               link
-//               mediaItemUrl
-//               sizes
-//               sourceUrl
-//               srcSet
-//               title
-//               uri
-//             }
-//           }
-//           imageC {
-//             node {
-//               link
-//               mediaItemUrl
-//               sizes
-//               sourceUrl
-//               srcSet
-//               title
-//               uri
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-// `;
+export async function getSessionSlugs() {
+  const slugsQuery = gql`
+    query getSessionSlugs {
+      sessions {
+        nodes {
+          slug
+        }
+      }
+    }
+  `;
+
+  const apolloClient = getApolloClient();
+  const res = await apolloClient.query({ query: slugsQuery });
+  const slugsArr = res.data.sessions.nodes;
+
+  return slugsArr;
+}
+
+export async function getSingleSession(slug) {
+  const singleSessionQuery = gql`
+    query getSingleSession {
+      session(idType: SLUG, id: "${slug}") {
+        id
+        date
+        featuredImage {
+          node {
+            altText
+            srcSet
+            sourceUrl
+            caption
+          }
+        }
+        slug
+        main {
+          description
+          order
+          sessionType {
+            nodes {
+              name
+              slug
+            }
+          }
+        }
+        square {
+          text
+          squareSectionHeading
+          imageA {
+            node {
+              altText
+              srcSet
+              sourceUrl
+              caption
+            }
+          }
+          imageB {
+            node {
+              altText
+              srcSet
+              sourceUrl
+              caption
+            }
+          }
+          imageC {
+            node {
+              altText
+              srcSet
+              sourceUrl
+              caption
+            }
+          }
+        }
+        testimonial {
+          testimonialHeading
+          content
+          name
+        }
+        title
+        middleBigImage {
+          middleFullWidthImage {
+            node {
+              altText
+              sourceUrl
+              srcSet
+              caption
+            }
+          }
+        }
+        lastBigImage {
+          lastFullWidthImage {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+            }
+          }
+        }
+        octagon {
+          rightText
+          rightTitle
+          leftText
+          leftTitle
+          leftEndImage {
+            node {
+              altText
+              srcSet
+              sourceUrl
+              caption
+            }
+          }
+          leftMiddleImage {
+            node {
+              altText
+              srcSet
+              sourceUrl
+              caption
+            }
+          }
+          leftTopImage {
+            node{
+              altText
+              srcSet
+              sourceUrl
+              caption
+            }
+          }
+          rightEndImage {
+            node{
+              altText
+              srcSet
+              sourceUrl
+              caption
+            }
+          }
+          rightMiddleImage {
+            node{
+              altText
+              srcSet
+              sourceUrl
+              caption
+            }
+          }
+          rightTopImage {
+            node{
+              altText
+              srcSet
+              sourceUrl
+              caption
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const apolloClient = getApolloClient();
+  const res = await apolloClient.query({ query: singleSessionQuery });
+  const session = res.data.session;
+
+  return session;
+}

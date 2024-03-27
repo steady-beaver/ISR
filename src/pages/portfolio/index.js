@@ -5,7 +5,7 @@ import NewContainer from 'components/NewContainer/NewContainer';
 import { getSessionsSegment } from 'lib/ola-blog';
 import { useState } from 'react';
 import StandardHeaderSection from 'scenes/StandardHeaderSection/StandardHeaderSection';
-import styles from './PortfolioNew.module.scss';
+import styles from './Portfolio.module.scss';
 
 export async function getStaticProps() {
   const initialSessionsData = await getSessionsSegment();
@@ -19,7 +19,6 @@ export async function getStaticProps() {
 const Portfolio = ({ initialSessionsData }) => {
   const [sessions, setSessions] = useState(initialSessionsData);
 
-  console.log('seSSions: ', sessions);
   return (
     <Layout>
       <NewContainer>

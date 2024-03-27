@@ -1,0 +1,57 @@
+@import "styles/theme/theme";
+
+.main {
+    margin: 150px auto 100px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 50px;
+    align-items: start;
+
+    @include respond-width($s) {
+        margin: 100px auto 100px;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: center;
+    align-items: start;
+
+    @include respond-width($s) {
+        gap: 20px;
+    }
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+    height: min-content;
+    // max-height: 350px;
+
+    @include respond-width($s) {
+        padding: 20px;
+    }
+
+
+
+    &>p {
+        line-height: 21px;
+
+        @include respond-width($s) {
+            font-size: 12px;
+        }
+    }
+
+    &>* {
+        @include respond-width($s) {
+            font-size: 12px;
+        }
+    }
+}
