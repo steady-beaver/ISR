@@ -1,11 +1,15 @@
 @import "styles/theme/theme";
 
 .main {
-    margin: 150px auto 100px;
+    margin: 200px auto;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 50px;
     align-items: center;
+
+    @include respond-width($m) {
+        margin: 150px auto;
+    }
 
     @include respond-width(600px) {
         margin: 100px auto 100px;
@@ -20,6 +24,7 @@
     gap: 25px;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 
     @include respond-width($s) {
         padding: 20px;

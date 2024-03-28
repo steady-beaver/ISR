@@ -42,25 +42,33 @@ const Session = ({ session }) => {
           <StandardHeaderSection
             subtitle={session?.main?.sessionType?.nodes?.[0]?.name ?? 'Category'}
             title={session?.title}
-            text={session.main.description}
+            text={session?.main?.description}
           />
 
-          <FullWidthImage imageNode={session.featuredImage.node} className={styles.topImage} />
+          {session.featuredImage && (
+            <FullWidthImage imageNode={session.featuredImage.node} className={styles.topImage} />
+          )}
 
           {/* ОCTAGON */}
           <OctagonSection data={session.octagon} />
 
-          <FullWidthImage imageNode={session.middleBigImage.middleFullWidthImage.node} />
+          {session.middleBigImage.middleFullWidthImage && (
+            <FullWidthImage imageNode={session.middleBigImage.middleFullWidthImage.node} />
+          )}
 
-          <TestimonialSectionNew
-            title={session?.testimonial?.testimonialHeading}
-            content={<ParagraphsWP longText={session?.testimonial?.content} />}
-            name={session?.testimonial?.name}
-          />
+          {session?.testimonial?.testimonialHeading && (
+            <TestimonialSectionNew
+              title={session?.testimonial?.testimonialHeading}
+              content={<ParagraphsWP longText={session?.testimonial?.content} />}
+              name={session?.testimonial?.name}
+            />
+          )}
 
           <SquareSection data={session.square} />
 
-          <FullWidthImage imageNode={session.lastBigImage.lastFullWidthImage.node} />
+          {session.lastBigImage.lastFullWidthImage && (
+            <FullWidthImage imageNode={session.lastBigImage.lastFullWidthImage.node} />
+          )}
         </div>
 
         {/* GALLERY */}
