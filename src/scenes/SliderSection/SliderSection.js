@@ -7,10 +7,10 @@ const SliderSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    // const interval = setInterval(() => {
-    //   setCurrentIndex((counter) => (counter + 1) % current.length);
-    // }, 7000);
-    // return () => clearInterval(interval);
+    const interval = setInterval(() => {
+      setCurrentIndex((counter) => (counter + 1) % current.length);
+    }, 7000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
