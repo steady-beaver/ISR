@@ -7,15 +7,11 @@ import Pinterest from 'components/Social/Pinterest';
 import Link from 'next/link';
 import CloseIcon from 'public/icons/close-new.svg';
 import HamburgerIcon from 'public/icons/hamburger-new.svg';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import styles from './Nav.module.scss';
 
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    console.log('useEffect: menuOpen', menuOpen);
-  }, [menuOpen]);
 
   const toggleMenu = (e) => {
     e.stopPropagation();

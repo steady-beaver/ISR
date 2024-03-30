@@ -7,7 +7,7 @@ const LoadMoreBtn = ({ className, restPosts, setRestPosts, categorySlug = null }
 
     const newPostsObj = {
       pageInfo: { ...nextPostSegment.pageInfo },
-      nodes: [...nextPostSegment.nodes, ...restPosts.nodes],
+      nodes: [...restPosts.nodes, ...nextPostSegment.nodes],
     };
 
     setRestPosts(newPostsObj);

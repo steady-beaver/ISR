@@ -19,6 +19,8 @@ export async function getStaticProps() {
 const Portfolio = ({ initialSessionsData }) => {
   const [sessions, setSessions] = useState(initialSessionsData);
 
+  console.log('seSSions: ', sessions);
+
   return (
     <Layout>
       <NewContainer>

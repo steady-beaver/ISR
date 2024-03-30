@@ -7,7 +7,7 @@ const LoadMoreSessionsBtn = ({ className, sessions, setSessions }) => {
 
     const newSessionsObj = {
       pageInfo: { ...nextSessionsSegment.pageInfo },
-      nodes: [...nextSessionsSegment.nodes, ...sessions.nodes],
+      nodes: [...sessions.nodes, ...nextSessionsSegment.nodes],
     };
 
     setSessions(newSessionsObj);

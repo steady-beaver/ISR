@@ -82,3 +82,12 @@
 
     }
 }
+
+.loader {
+    height: 5px;
+    width: 100%;
+
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+}

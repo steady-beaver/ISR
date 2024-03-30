@@ -3,11 +3,13 @@
 .selected {
     opacity: 1;
     transition: opacity 0.4s ease;
+    z-index: 1;
 }
 
 .notSelected {
     opacity: 0;
     transition: opacity 0.4s ease;
+    z-index: 0;
 }
 
 //  These styles work in combination with Preview.module.scss
@@ -40,6 +42,7 @@
     position: absolute;
     bottom: 100px;
     right: 0;
+    z-index: 10;
 
     @include respond-width($l) {
         right: auto;

@@ -2,9 +2,9 @@ import InfoPoint from 'components/InfoPoint/InfoPoint';
 import Image from 'next/image';
 import styles from './TripleSection.module.scss';
 
-const TripleSection = ({ photoSrc }) => {
+const TripleSection = ({ photoSrc, id }) => {
   return (
-    <div className={styles.main}>
+    <div className={styles.main} id={id}>
       <div className={styles.verticalFrame}>
         <h2 className={`${styles.title} headingH1 vertical uppercase`}>Wedding</h2>
       </div>

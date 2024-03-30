@@ -7,6 +7,7 @@ const Slider = ({ photoUrl, topText, title, bottomText, className }) => {
       <h2 className={`${styles.title} `}>{title}</h2>
       <p className={`${styles.bottomText} text `}>{bottomText}</p>
       <span className={styles.readMore}>READ MORE</span>
+      <div className={styles.loader} />
     </div>
   );
 };

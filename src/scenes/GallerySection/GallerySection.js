@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import styles from './GallerySection.module.scss';
@@ -47,16 +47,6 @@ const GallerySection = ({ data }) => {
   const imgNodesArr = getImgArray(data);
   const slidesArr = getSlidesArray(imgNodesArr);
   const [index, setIndex] = useState(-1);
-
-  useEffect(() => {
-    console.log('imgNodesArr: ', imgNodesArr);
-  }, [imgNodesArr]);
-  useEffect(() => {
-    console.log('INDEX: ', index);
-  }, [index]);
-  useEffect(() => {
-    console.log('slidesArr: ', slidesArr);
-  }, [slidesArr]);
 
   return (
     <div className={styles.main}>

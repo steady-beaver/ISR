@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import styles from './QuatroSectionVarA.module.scss';
 
-const QuatroSectionVarA = ({ header, title, p1, p2, srcPrimary, srcSecondary }) => {
+const QuatroSectionVarA = ({ header, title, p1, p2, srcPrimary, srcSecondary, id }) => {
   return (
-    <div className={styles.mainVarA}>
+    <div className={styles.mainVarA} id={id}>
       <div className={styles.verticalFrameVarA}>
         <h2 className={`${''} headingH1 vertical uppercase`}>{header}</h2>
       </div>

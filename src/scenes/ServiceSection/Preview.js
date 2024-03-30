@@ -1,8 +1,9 @@
 import ReadMoreBtn from 'components/ReadMoreBtn/ReadMoreBtn';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Preview.module.scss';
 
-const Preview = ({ title, text, srcPrimary, srcSecondary, className }) => {
+const Preview = ({ title, text, srcPrimary, srcSecondary, link, className }) => {
   return (
     <div className={`${styles.main} ${className}`}>
       <div className={styles.primaryImgFrame}>
@@ -19,10 +20,11 @@ const Preview = ({ title, text, srcPrimary, srcSecondary, className }) => {
         <Image src={srcSecondary} alt="Wedding" fill={true} className={`${styles.secondaryImg} imgShadow`} />
       </div>
       <div className={styles.textSection}>
-        <p className={`${''} headingH3`}>{title}</p>
+        <Link href={link}>
+          <h4 className={`${styles.title} headingH3`}>{title}</h4>
+        </Link>
         <p className={`${''} text`}>{text}</p>
-        <ReadMoreBtn className={styles.readMore} to="/services" />
-        {/* <ReadMoreBtn /> */}
+        <ReadMoreBtn className={styles.readMore} to={`${link}`} />
       </div>
     </div>
   );

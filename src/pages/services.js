@@ -25,6 +25,7 @@ export default function Home() {
 
       <NewContainer>
         <QuatroSectionVarA
+          id="coupleSection"
           header="Couple"
           title="Let's have a photoshoot that's all about your love story."
           p1="I'll make sure it's relaxed and welcoming, so you can easily be yourselves. You'll get real smiles and genuine moments of closeness. We'll capture what makes your relationship special in every photo."
@@ -39,7 +40,7 @@ export default function Home() {
       </NewContainer>
 
       <NewContainer>
-        <TripleSection photoSrc="/pictures/service-wedding.jpg" />
+        <TripleSection photoSrc="/pictures/service-wedding.jpg" id="weddingSection" />
       </NewContainer>
 
       <NewContainer>
@@ -62,6 +63,7 @@ export default function Home() {
 
       <NewContainer>
         <QuatroSectionVarB
+          id="elopementSection"
           header="Elopement"
           title="There's something incredibly special about elopement weddings that resonates deeply with me."
           p1="The intimate setting, connection between the couple, and the unique stories waiting to be told – these moments are what I cherish the most as a photographer. My services for elopement are limitless. Whether you desire to have me by your side capturing every moment from dawn till dusk, or you prefer focusing on just the pivotal moments"
