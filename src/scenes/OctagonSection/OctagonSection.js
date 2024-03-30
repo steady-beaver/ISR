@@ -2,8 +2,6 @@ import CoveredImg from 'components/CoveredImg/CoveredImg';
 import styles from './OctagonSection.module.scss';
 
 const OctagonSection = ({ data }) => {
-  console.log('DATA: ', data);
-
   const {
     leftTitle,
     leftText,

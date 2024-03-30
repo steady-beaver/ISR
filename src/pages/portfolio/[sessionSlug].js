@@ -1,8 +1,10 @@
 import FullWidthImage from 'components/FullWidthImage/FullWidthImage';
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
+import NewContainerPatch from 'components/NewContainerPatch/NewContainerPatch';
 import ParagraphsWP from 'components/ParagraphsWP/ParagraphsWP';
 import { getSessionSlugs, getSingleSession } from 'lib/ola-blog';
+import GallerySection from 'scenes/GallerySection/GallerySection';
 import OctagonSection from 'scenes/OctagonSection/OctagonSection';
 import PersonalSection from 'scenes/PersonalSection/PersonalSection';
 import SquareSection from 'scenes/SquareSection/SquareSection';
@@ -38,42 +40,43 @@ const Session = ({ session }) => {
   return (
     <Layout>
       <NewContainer>
-        <div className={styles.main}>
-          <StandardHeaderSection
-            subtitle={session?.main?.sessionType?.nodes?.[0]?.name ?? 'Category'}
-            title={session?.title}
-            text={session?.main?.description}
-          />
-
-          {session.featuredImage && (
-            <FullWidthImage imageNode={session.featuredImage.node} className={styles.topImage} />
-          )}
-
-          {/* ОCTAGON */}
-          <OctagonSection data={session.octagon} />
-
-          {session.middleBigImage.middleFullWidthImage && (
-            <FullWidthImage imageNode={session.middleBigImage.middleFullWidthImage.node} />
-          )}
-
-          {session?.testimonial?.testimonialHeading && (
-            <TestimonialSectionNew
-              title={session?.testimonial?.testimonialHeading}
-              content={<ParagraphsWP longText={session?.testimonial?.content} />}
-              name={session?.testimonial?.name}
+        <NewContainerPatch>
+          <div className={styles.main}>
+            <StandardHeaderSection
+              subtitle={session?.main?.sessionType?.nodes?.[0]?.name ?? 'Category'}
+              title={session?.title}
+              text={session?.main?.description}
             />
-          )}
 
-          <SquareSection data={session.square} />
+            {session.featuredImage && (
+              <FullWidthImage imageNode={session.featuredImage.node} className={styles.topImage} />
+            )}
 
-          {session.lastBigImage.lastFullWidthImage && (
-            <FullWidthImage imageNode={session.lastBigImage.lastFullWidthImage.node} />
-          )}
-        </div>
+            <OctagonSection data={session.octagon} />
 
-        {/* GALLERY */}
+            {session.middleBigImage.middleFullWidthImage && (
+              <FullWidthImage imageNode={session.middleBigImage.middleFullWidthImage.node} />
+            )}
 
-        <PersonalSection />
+            {session?.testimonial?.testimonialHeading && (
+              <TestimonialSectionNew
+                title={session?.testimonial?.testimonialHeading}
+                content={<ParagraphsWP longText={session?.testimonial?.content} />}
+                name={session?.testimonial?.name}
+              />
+            )}
+
+            <SquareSection data={session.square} />
+
+            {session.lastBigImage.lastFullWidthImage && (
+              <FullWidthImage imageNode={session.lastBigImage.lastFullWidthImage.node} />
+            )}
+          </div>
+
+          <GallerySection data={session.gallery} />
+
+          <PersonalSection />
+        </NewContainerPatch>
       </NewContainer>
     </Layout>
   );

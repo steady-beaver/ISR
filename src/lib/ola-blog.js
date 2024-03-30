@@ -217,15 +217,610 @@ export async function getSingleSession(slug) {
       session(idType: SLUG, id: "${slug}") {
         id
         date
-        featuredImage {
-          node {
-            altText
-            srcSet
-            sourceUrl
-            caption
+        slug
+        title
+        gallery{
+          gallery1 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery2 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery3 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery4 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery5 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery6 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery7 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery8 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery9 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery10 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery11 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery12 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery13 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery14 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery15 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery16 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery17 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery18 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery19 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery20 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery21 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery22 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery23 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery24 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery25 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery26 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery27 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery28 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery29 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery30 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery31 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery32 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery33 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery34 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery35 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery36 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery37 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery38 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery39 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery40 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery41 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery42 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery43 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery44 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery45 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery46 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery47 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery48 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery49 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
+          }
+          gallery50 {
+            node {
+              altText
+              caption
+              srcSet
+              sourceUrl
+              mediaDetails {
+                width
+                height
+              }
+            }
           }
         }
-        slug
         main {
           description
           order
@@ -234,6 +829,14 @@ export async function getSingleSession(slug) {
               name
               slug
             }
+          }
+        }
+        featuredImage {
+          node {
+            altText
+            srcSet
+            sourceUrl
+            caption
           }
         }
         square {
@@ -269,7 +872,6 @@ export async function getSingleSession(slug) {
           content
           name
         }
-        title
         middleBigImage {
           middleFullWidthImage {
             node {

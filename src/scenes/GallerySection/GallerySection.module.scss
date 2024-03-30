@@ -1,0 +1,50 @@
+@import "styles/theme/theme";
+
+.main {
+    height: 800px;
+    max-height: 60vh;
+    width: 100%;
+    overflow: auto;
+    margin: 200px auto;
+
+    @include respond-width($m) {
+        margin: 150px auto;
+    }
+
+    @include respond-width($s) {
+        margin: 100px auto 100px;
+    }
+}
+
+.canvas {
+    height: 100%;
+    width: max-content;
+}
+
+.row {
+    height: 50%;
+    display: flex;
+    gap: 35px;
+
+    @include respond-width($s) {
+        gap: 20px;
+    }
+}
+
+.upper {
+    position: relative;
+    bottom: 70px;
+
+    @include respond-width($s) {
+        bottom: 40px;
+    }
+}
+
+.lower {
+    position: relative;
+    bottom: 35px;
+
+    @include respond-width($s) {
+        bottom: 20px;
+    }
+}
