@@ -65,8 +65,7 @@ const ArchivePage = ({ categoryDataSegment, allCategories, currentCategorySlug }
               return (
                 <ArticlePreview
                   key={i}
-                  primaryImgSrc={item.featuredImage.node.mediaDetails.sizes[0].sourceUrl}
-                  srcSet={item.featuredImage.node.srcSet}
+                  imgNode={item.featuredImage.node}
                   categories={item.categories.nodes}
                   date={item.date}
                   title={item.title}

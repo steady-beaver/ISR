@@ -27,11 +27,7 @@ const BlogHome = ({ posts, allCategories, imageStorageBase }) => {
               return (
                 <ArticlePreview
                   key={item.slug}
-                  primaryImgSrc={
-                    item?.featuredImage?.node?.mediaDetails?.sizes?.[0]?.sourceUrl ??
-                    item?.featuredImage?.node?.sourceUrl
-                  }
-                  srcSet={item.featuredImage.node.srcSet}
+                  imgNode={item.featuredImage.node}
                   categories={item.categories.nodes}
                   date={item.date}
                   title={item.title}

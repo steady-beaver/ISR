@@ -35,10 +35,7 @@ const Portfolio = ({ initialSessionsData }) => {
               return (
                 <ArticlePreview
                   key={item.slug}
-                  primaryImgSrc={
-                    item?.featuredImage?.node?.mediaDetails?.sizes?.[0]?.sourceUrl ??
-                    item?.featuredImage?.node?.sourceUrl
-                  }
+                  imgNode={item.featuredImage.node}
                   categories={item?.sessionConfigs?.sessionType?.nodes ?? []}
                   date={item.date}
                   title={item.title}

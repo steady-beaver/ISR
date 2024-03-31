@@ -1,27 +1,14 @@
+import CoveredImg from 'components/CoveredImg/CoveredImg';
 import Date from 'components/Date/Date';
 import Link from 'next/link';
 import styles from './ArticlePreview.module.scss';
 
-const ArticlePreview = ({
-  primaryImgSrc = '/pictures/article-preview.jpeg',
-  srcSet,
-  categories,
-  date,
-  title,
-  excerpt,
-  link,
-}) => {
+const ArticlePreview = ({ imgNode, categories, date, title, excerpt, link }) => {
   return (
     <div className={styles.main}>
       <div className={styles.imgFrame}>
         <Link href={link}>
-          <img
-            src={primaryImgSrc}
-            srcSet={srcSet}
-            sizes="(max-width: 800px) 950vw, 50vw"
-            className={styles.primaryImg}
-            alt="Article preview thumbnail"
-          />
+          <CoveredImg imageNode={imgNode} />
         </Link>
       </div>
       <div>

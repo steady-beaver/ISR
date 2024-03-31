@@ -153,21 +153,17 @@ export async function getSessionsSegment(endCursor = null) {
           date
           featuredImage {
             node {
-              mediaItemUrl
-              sizes
+              altText
+              caption
               srcSet
               sourceUrl
               mediaDetails {
-                sizes {
-                  width
-                  fileSize
-                  sourceUrl
-                }
+                width
+                height
               }
             }
           }
           main {
-            order
             sessionType {
               nodes {
                 name
@@ -823,7 +819,6 @@ export async function getSingleSession(slug) {
         }
         main {
           description
-          order
           sessionType {
             nodes {
               name
@@ -834,9 +829,13 @@ export async function getSingleSession(slug) {
         featuredImage {
           node {
             altText
+            caption
             srcSet
             sourceUrl
-            caption
+            mediaDetails {
+              width
+              height
+            }
           }
         }
         square {
@@ -955,4 +954,50 @@ export async function getSingleSession(slug) {
   const session = res.data.session;
 
   return session;
+}
+
+// =======    STAR SESSIONS    =========
+export async function getAllStarSessions() {
+  const allStarSessionsQuery = gql`
+    query getAllStarSessions {
+      starSessions {
+        nodes {
+          title
+          uri
+          status
+          slug
+          date
+          featuredImage {
+            node {
+              mediaItemUrl
+              sizes
+              srcSet
+              sourceUrl
+              mediaDetails {
+                sizes {
+                  width
+                  fileSize
+                  sourceUrl
+                }
+              }
+            }
+          }
+          mainStar {
+            sessionType {
+              nodes {
+                name
+                slug
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const apolloClient = getApolloClient();
+  const res = await apolloClient.query({ query: allStarSessionsQuery });
+  const starSessions = res.data.starSessions;
+
+  return starSessions;
 }
