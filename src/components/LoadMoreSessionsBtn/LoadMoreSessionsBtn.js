@@ -1,13 +1,17 @@
 import { getSessionsSegment } from 'lib/ola-blog';
 import styles from './LoadMoreSessionsBtn.module.scss';
 
-const LoadMoreSessionsBtn = ({ className, sessions, setSessions }) => {
+const LoadMoreSessionsBtn = ({ className, sessions, setSessions, popularSessionSlugsArr }) => {
   const handleClick = async () => {
     const nextSessionsSegment = await getSessionsSegment(sessions.pageInfo.endCursor.toString());
 
+    const filteredNextSegmentNodes = nextSessionsSegment.nodes.filter(
+      (item) => !popularSessionSlugsArr.includes(item.slug)
+    );
+
     const newSessionsObj = {
       pageInfo: { ...nextSessionsSegment.pageInfo },
-      nodes: [...sessions.nodes, ...nextSessionsSegment.nodes],
+      nodes: [...sessions.nodes, ...filteredNextSegmentNodes],
     };
 
     setSessions(newSessionsObj);

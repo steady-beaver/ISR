@@ -151,6 +151,11 @@ export async function getSessionsSegment(endCursor = null) {
           status
           slug
           date
+          contentType {
+            node {
+              name
+            }
+          }
           featuredImage {
             node {
               altText
@@ -956,37 +961,48 @@ export async function getSingleSession(slug) {
   return session;
 }
 
-// =======    STAR SESSIONS    =========
-export async function getAllStarSessions() {
-  const allStarSessionsQuery = gql`
-    query getAllStarSessions {
-      starSessions {
+//  ======== type | Sessions categories
+//
+// type popular id   -->   dGVybTo5
+//
+
+export async function getPopularSessions() {
+  const commonTypesSessions = gql`
+    query getSessionSlugs {
+      types(where: { include: "dGVybTo5" }) {
         nodes {
-          title
-          uri
-          status
-          slug
-          date
-          featuredImage {
-            node {
-              mediaItemUrl
-              sizes
-              srcSet
-              sourceUrl
-              mediaDetails {
-                sizes {
-                  width
-                  fileSize
-                  sourceUrl
+          sessions {
+            nodes {
+              title
+              uri
+              status
+              slug
+              date
+              contentType {
+                node {
+                  name
                 }
               }
-            }
-          }
-          mainStar {
-            sessionType {
-              nodes {
-                name
-                slug
+              featuredImage {
+                node {
+                  altText
+                  caption
+                  srcSet
+                  sourceUrl
+                  mediaDetails {
+                    width
+                    height
+                  }
+                }
+              }
+              main {
+                order
+                sessionType {
+                  nodes {
+                    name
+                    slug
+                  }
+                }
               }
             }
           }
@@ -996,8 +1012,8 @@ export async function getAllStarSessions() {
   `;
 
   const apolloClient = getApolloClient();
-  const res = await apolloClient.query({ query: allStarSessionsQuery });
-  const starSessions = res.data.starSessions;
+  const res = await apolloClient.query({ query: commonTypesSessions });
+  const commonSessions = res.data.types.nodes[0].sessions.nodes;
 
-  return starSessions;
+  return commonSessions;
 }
