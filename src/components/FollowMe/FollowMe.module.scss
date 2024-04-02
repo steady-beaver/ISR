@@ -1,0 +1,45 @@
+@import "styles/theme/theme";
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+
+    // unique one
+    font-family: Reem Kufi Fun;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 21px;
+    letter-spacing: 0.37em;
+    text-align: center;
+
+
+    position: absolute;
+    left: 50%;
+    top: 115vh;
+    transform: translate(-50%);
+
+    @include respond-width($m) {
+        top: 110vh;
+    }
+
+    @include respond-width($s) {
+        top: 105vh;
+    }
+}
+
+.iconBg {
+    fill: $black;
+
+    &:hover {
+        transition: all 0.3s ease;
+        fill: $brown;
+    }
+}
+
+.media {
+    display: flex;
+    gap: 14px;
+}

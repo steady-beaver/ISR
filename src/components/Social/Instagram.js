@@ -4,7 +4,12 @@ import styles from './logo.module.scss';
 
 const Instagram = ({ iconBg }) => {
   return (
-    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={`${styles.main}  ${iconBg}`}>
+    <a
+      href="https://www.instagram.com/smileisthekeyphotography/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${styles.main}  ${iconBg}`}
+    >
       <SocialBg className={` ${styles.bg}`} />
       <Image src="/icons/socialNew/instagram-logo.svg" alt="background" width={15} height={15} />
     </a>

@@ -1,6 +1,6 @@
 'useClient';
 
-import RightArrowBtn from 'components/RightArrowBtn/RightArrowBtn';
+import Newsletter from 'components/Newsletter/Newsletter';
 import Facebook from 'components/Social/Facebook';
 import Instagram from 'components/Social/Instagram';
 import Mail from 'components/Social/Mail';
@@ -25,17 +25,7 @@ const Footer = () => {
               <label htmlFor="newsletter" className={`${''} textS bold`}>
                 Sign up to newsletter
               </label>
-              <div className={styles.wrapper}>
-                <input
-                  type="email"
-                  id="newsletter"
-                  placeholder="E-MAIL"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className={` textXS`}
-                />
-                <RightArrowBtn onClick={() => console.log(email)} disabled={!email} className={styles.sendBtn} />
-              </div>
+              <Newsletter />
               <span className={`${styles.helper} textXS`}>
                 By signing up to our newsletter you agree to our privacy policy.
               </span>

@@ -4,6 +4,7 @@ import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
 import PersonalSection from 'scenes/PersonalSection/PersonalSection';
 
+import FollowMe from 'components/FollowMe/FollowMe';
 import styles from '../styles/pages/NewPageStyles.module.scss';
 
 export default function Contacts() {
@@ -11,6 +12,7 @@ export default function Contacts() {
     <Layout>
       <NewContainer>
         <PersonalSection />
+        <FollowMe />
 
         <ContactForm />
 
