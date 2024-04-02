@@ -6,11 +6,9 @@ import Instagram from 'components/Social/Instagram';
 import Mail from 'components/Social/Mail';
 import Pinterest from 'components/Social/Pinterest';
 import Link from 'next/link';
-import { useState } from 'react';
 import styles from './Footer.module.scss';
 
 const Footer = () => {
-  const [email, setEmail] = useState('');
   return (
     <footer className={`${styles.main} `}>
       <div className={styles.upperPart}>
