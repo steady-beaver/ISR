@@ -5,9 +5,30 @@
   justify-content: flex-end;
   padding: 20px 45px;
   color: $white;
+  position: relative;
 
   & svg {
     cursor: pointer;
+  }
+
+  .imageBg {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url('/pictures/desktop-nav-bg-low.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: 1000;
+    filter: grayscale(100%);
+  }
+
+  .blackFilter {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.88);
+    z-index: 2000;
   }
 
   .openedMenu {
@@ -17,8 +38,9 @@
     width: 100vw;
     height: 100vh;
     height: 100svh;
-    background-color: #140F0D;
-    z-index: 5;
+    // background-color: #f9662c;
+    // opacity: 0.8;
+    z-index: 5000;
     display: flex;
     flex-direction: column;
     justify-content: center;

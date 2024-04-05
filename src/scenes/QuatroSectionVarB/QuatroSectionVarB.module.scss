@@ -8,6 +8,7 @@
 
     @include respond-width($l) {
         height: 1000px;
+        margin: 100px 25px 150px;
     }
 
     @include respond-width($s) {
@@ -27,14 +28,23 @@
     display: flex;
     gap: 50px;
 
+    @include respond-width($l) {
+        gap: 25px;
+    }
+
     @include respond-width($m) {
         display: none;
     }
 
     .leftCol {
+        width: 450px;
+
+        @include respond-width($l) {
+            width: 425px;
+        }
 
         .p2 {
-            margin-top: 40px;
+            margin-top: 70px;
         }
 
         .primaryFrame {
@@ -63,6 +73,12 @@
     }
 
     .rightCol {
+        width: 450px;
+
+        @include respond-width($l) {
+            width: 425px;
+        }
+
         .title {
             margin-bottom: 25px;
         }
@@ -186,6 +202,10 @@
     min-width: 200px;
     height: 100%;
     position: relative;
+
+    @include respond-width($l) {
+        min-width: 175px;
+    }
 
     @include respond-width($m) {
         min-width: 100px;

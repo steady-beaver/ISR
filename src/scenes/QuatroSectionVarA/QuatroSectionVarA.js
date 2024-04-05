@@ -13,8 +13,8 @@ const QuatroSectionVarA = ({ header, title, p1, p2, srcPrimary, srcSecondary, id
             <Image
               src={srcPrimary}
               alt="Wedding"
-              width={375}
-              height={600}
+              width={357}
+              height={550}
               className={`${styles.imgPrimary} imgShadow`}
             />
           </div>

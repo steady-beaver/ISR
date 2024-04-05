@@ -19,14 +19,14 @@
     opacity: 1;
     animation: mainAnimation $duration linear infinite;
 
-    &>span:first-child,
+    &>span:first-of-type,
     &>h2 {
         opacity: 0;
         animation: upperTextAnimation $duration linear infinite;
     }
 
     &>p,
-    &>span:last-child {
+    &>span:last-of-type {
         opacity: 0;
         animation: bottomTextAnimation $duration linear infinite;
     }

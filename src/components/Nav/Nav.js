@@ -19,37 +19,41 @@ const Nav = () => {
   };
 
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${menuOpen ? 'opened' : 'closed'}`}>
       {menuOpen ? (
-        <div className={`${styles.openedMenu} headingH4`}>
-          <CloseIcon className={styles.closeIcon} onClick={(e) => toggleMenu(e)} />
+        <>
+          <div className={styles.imageBg} />
+          <div className={styles.blackFilter} />
+          <div className={`${styles.openedMenu} headingH4`}>
+            <CloseIcon className={styles.closeIcon} onClick={(e) => toggleMenu(e)} />
 
-          <Link href="/">
-            <span>Home</span>
-          </Link>
-          <Link href="/services">
-            <span>Services</span>
-          </Link>
-          <Link href="/session">
-            <span>Portfolio</span>
-          </Link>
-          <Link href="/about">
-            <span>About me</span>
-          </Link>
-          <Link href="/blog">
-            <span>Journal</span>
-          </Link>
-          <Link href="/contacts">
-            <span>Contact</span>
-          </Link>
+            <Link href="/">
+              <span>Home</span>
+            </Link>
+            <Link href="/services">
+              <span>Services</span>
+            </Link>
+            <Link href="/session">
+              <span>Portfolio</span>
+            </Link>
+            <Link href="/about">
+              <span>About me</span>
+            </Link>
+            <Link href="/blog">
+              <span>Journal</span>
+            </Link>
+            <Link href="/contacts">
+              <span>Contact</span>
+            </Link>
 
-          <div className={styles.social}>
-            <Facebook iconBg={styles.iconBg} />
-            <Instagram iconBg={styles.iconBg} />
-            <Pinterest iconBg={styles.iconBg} />
-            <Mail iconBg={styles.iconBg} />
+            <div className={styles.social}>
+              <Facebook iconBg={styles.iconBg} />
+              <Instagram iconBg={styles.iconBg} />
+              <Pinterest iconBg={styles.iconBg} />
+              <Mail iconBg={styles.iconBg} />
+            </div>
           </div>
-        </div>
+        </>
       ) : (
         <HamburgerIcon className={styles.hamburgerIcon} onClick={(e) => toggleMenu(e)} />
       )}
