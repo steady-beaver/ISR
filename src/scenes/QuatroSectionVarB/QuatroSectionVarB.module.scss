@@ -1,23 +1,19 @@
 @import 'src/styles/_media_queries.scss';
 
 .main {
-    margin: 100px 50px 150px;
+    margin: 200px 50px;
     display: flex;
     align-items: stretch;
     height: 1040px;
 
     @include respond-width($l) {
         height: 1000px;
-        margin: 100px 25px 150px;
+        margin-bottom: 250px;
     }
 
     @include respond-width($s) {
         height: 800px;
-    }
-
-    @include respond-width($xs) {
-        margin: 100px 25px;
-        height: 700px;
+        margin: 150px 25px;
     }
 }
 

@@ -7,12 +7,8 @@
     gap: 50px;
     align-items: center;
 
-    @include respond-width($m) {
-        margin: 150px auto;
-    }
-
     @include respond-width(600px) {
-        margin: 100px auto 100px;
+        margin: 150px auto;
         grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 20px;
     }

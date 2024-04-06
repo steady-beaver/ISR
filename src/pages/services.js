@@ -19,9 +19,7 @@ export default function Home() {
           title="For you"
           text="Capture love everywhere - from couple shoots to big weddings or elopements. Let's make memories in Portugal or any corner of the world!"
         />
-      </NewContainer>
 
-      <NewContainer>
         <QuatroSectionVarA
           id="coupleSection"
           header="Couple"
@@ -31,21 +29,13 @@ export default function Home() {
           srcPrimary="/pictures/couple-primary.jpg"
           srcSecondary="/pictures/couple-secondary.jpg"
         />
-      </NewContainer>
 
-      <NewContainer>
         <VideoSection url="https://www.youtube.com/watch?v=gW6pa6bnyVU" />
-      </NewContainer>
 
-      <NewContainer>
         <TripleSection photoSrc="/pictures/service-wedding.jpg" id="weddingSection" />
-      </NewContainer>
 
-      <NewContainer>
         <TestimonialSection />
-      </NewContainer>
 
-      <NewContainer>
         <QuatroSectionVarB
           id="elopementSection"
           header="Elopement"
@@ -55,17 +45,11 @@ export default function Home() {
           srcPrimary="/pictures/service-elopement-1.jpg"
           srcSecondary="/pictures/service-elopement-2.jpg"
         />
-      </NewContainer>
 
-      <NewContainer>
         <TravelSection primaryImg="/pictures/travel/travel-1.jpg" secondaryImg="/pictures/travel/travel-2.jpg" />
-      </NewContainer>
 
-      <NewContainer>
         <FaqSection />
-      </NewContainer>
 
-      <NewContainer>
         <PersonalSection />
       </NewContainer>
     </Layout>

@@ -2,13 +2,12 @@
 
 .main {
     max-width: 650px;
-    margin: 100px auto;
-    padding-top: 150px;
+    margin: 200px auto;
 
     @include respond-width($s) {
-        padding: 200px 50px 50px;
+        padding: 50px;
         max-width: 100%;
-        margin-bottom: 50px;
+        margin: 100px auto 0;
     }
 
     form {

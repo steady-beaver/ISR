@@ -35,8 +35,6 @@ export const getStaticProps = async ({ params }) => {
 };
 
 const Session = ({ session }) => {
-  console.log('session: ', session);
-
   return (
     <Layout>
       <NewContainer>

@@ -1,7 +1,7 @@
 @import "styles/theme/theme";
 
 .mainSHS {
-    margin: 100px 50px 100px;
+    margin: 150px 50px;
 
     @include respond-width($xs) {
         margin: 25px 25px 60px;

@@ -5,14 +5,10 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 50px;
-    // align-items: start;
-
-    @include respond-width($m) {
-        margin: 150px auto;
-    }
 
     @include respond-width($s) {
-        margin: 100px auto 100px;
+        margin: 150px auto;
+
         grid-template-columns: repeat(1, minmax(0, 1fr));
         gap: 20px;
     }

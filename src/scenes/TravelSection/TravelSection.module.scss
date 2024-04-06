@@ -1,7 +1,11 @@
 @import "styles/theme/theme";
 
 .main {
-    margin: 150px auto;
+    margin: 200px auto;
+
+    @include respond-width($s) {
+        margin: 150px auto;
+    }
 
     .textFrame {
         max-width: 660px;

@@ -8,12 +8,8 @@
     align-items: center;
     margin: 200px auto;
 
-    @include respond-width($m) {
-        margin: 150px auto;
-    }
-
     @include respond-width($s) {
-        margin: 100px auto;
+        margin: 150px auto;
     }
 }
 

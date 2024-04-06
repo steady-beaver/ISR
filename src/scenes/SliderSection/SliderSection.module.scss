@@ -7,7 +7,7 @@
     width: auto;
     height: calc(100svh - 100px);
     height: calc(100vh - 100px);
-    margin: 0 45px;
+    margin: 0 45px 150px;
 
     @include respond-width($s) {
         margin: 0 20px 150px;

@@ -5,14 +5,16 @@ import NewContainer from 'components/NewContainer/NewContainer';
 import PersonalSection from 'scenes/PersonalSection/PersonalSection';
 
 import FollowMe from 'components/FollowMe/FollowMe';
-import styles from '../styles/pages/NewPageStyles.module.scss';
+import styles from '../styles/pages/Contacts.module.scss';
 
 export default function Contacts() {
   return (
     <Layout>
       <NewContainer>
-        <PersonalSection />
-        <FollowMe />
+        <div className={styles.frame}>
+          <PersonalSection />
+          <FollowMe />
+        </div>
 
         <ContactForm />
 

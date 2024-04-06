@@ -2,7 +2,7 @@
 
 .main {
     height: 500px;
-    margin: 100px auto 100px;
+    margin: 200px auto;
     background-image: url('/pictures/testimonial-flower.png');
     background-position: center center;
     background-repeat: no-repeat;
@@ -16,6 +16,8 @@
 
     text-align: center;
     position: relative;
+
+    @include respond-width($s) {}
 
     &>* {
         max-width: 550px;

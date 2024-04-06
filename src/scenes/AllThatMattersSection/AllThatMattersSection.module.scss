@@ -4,13 +4,8 @@
     margin: 200px auto;
     text-align: center;
 
-
-    @include respond-width($m) {
-        margin: 150px auto;
-    }
-
     @include respond-width($s) {
-        margin: 100px auto;
+        margin: 150px auto;
     }
 }
 

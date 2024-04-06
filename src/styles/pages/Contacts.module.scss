@@ -1,14 +1,21 @@
 @import "styles/theme/theme";
 
+.frame {
+    position: relative;
+    // this border is important to be
+    border: 1px solid transparent;
+}
+
 .infoContainer {
     display: flex;
     justify-content: space-around;
     gap: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
 
     @include respond-width($s) {
         flex-direction: column;
         align-items: center;
         gap: 0;
+        margin-bottom: 150px;
     }
 }

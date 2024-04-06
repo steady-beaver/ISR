@@ -1,5 +1,13 @@
 @import "styles/theme/theme";
 
+.main {
+    margin: 200px auto;
+
+    @include respond-width($s) {
+        margin: 150px auto;
+    }
+}
+
 .selected {
     opacity: 1;
     transition: opacity 0.4s ease;

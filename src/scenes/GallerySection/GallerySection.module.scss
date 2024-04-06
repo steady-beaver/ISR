@@ -8,12 +8,8 @@
     overflow-x: auto;
     margin: 200px auto;
 
-    @include respond-width($m) {
-        margin: 150px auto;
-    }
-
     @include respond-width($s) {
-        margin: 100px auto 100px;
+        margin: 150px auto;
     }
 }
 

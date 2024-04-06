@@ -18,16 +18,12 @@
 
     position: absolute;
     left: 50%;
-    top: 115vh;
     transform: translate(-50%);
+    bottom: 0;
 
-    @include respond-width($m) {
-        top: 110vh;
-    }
+    @include respond-width($m) {}
 
-    @include respond-width($s) {
-        top: 105vh;
-    }
+    @include respond-width($s) {}
 }
 
 .iconBg {
