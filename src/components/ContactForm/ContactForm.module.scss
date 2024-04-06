@@ -15,7 +15,7 @@
         flex-direction: column;
         gap: 60px;
 
-        @include respond-width($xs) {
+        @include respond-width($s) {
             gap: 40px;
         }
 
@@ -23,7 +23,7 @@
             display: flex;
             justify-content: space-between;
 
-            @include respond-width($xs) {
+            @include respond-width($s) {
                 flex-direction: column;
                 gap: 40px;
             }
@@ -41,13 +41,17 @@
             line-height: 16px;
             letter-spacing: 2px;
 
-            @include respond-width($xs) {
+            @include respond-width($s) {
                 width: 100% !important;
             }
         }
 
         input[name="name"] {
-            width: 100%;
+            width: 45%;
+        }
+
+        input[name="source"] {
+            width: 45%;
         }
 
         input[name="email"] {
@@ -59,7 +63,7 @@
         }
 
         input[name="month"] {
-            width: 30%;
+            width: 45%;
         }
 
         textarea[name="message"] {
@@ -74,13 +78,13 @@
     align-items: center;
     gap: 30px;
 
-    @include respond-width($xs) {
+    @include respond-width($s) {
         flex-direction: column;
         gap: 10px !important;
     }
 
     &>span {
-        @include respond-width($xs) {
+        @include respond-width($s) {
             text-align: center;
             width: 200px;
         }

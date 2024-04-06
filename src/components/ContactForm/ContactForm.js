@@ -5,7 +5,7 @@ import { useState } from 'react';
 import Select from 'react-select';
 import styles from './ContactForm.module.scss';
 
-const options = [
+const sessionTypeOptions = [
   { value: '', label: 'Type of session' },
   { value: 'Couple', label: 'Couple session' },
   { value: 'Wedding', label: 'Wedding session' },
@@ -13,9 +13,17 @@ const options = [
   { value: 'Foreign', label: 'Sessions outside Portugal' },
 ];
 
+const sourceOptions = [
+  { value: '', label: 'Where did you find me' },
+  { value: 'Facebook', label: 'Facebook' },
+  { value: 'Instagram', label: 'Instagram' },
+  { value: 'Personal recommendation', label: 'Personal recommendation' },
+];
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
+    source: '',
     email: '',
     phone: '',
     month: '',
@@ -47,6 +55,63 @@ const ContactForm = () => {
             placeholder="NAME"
             value={formData.name}
             onChange={handleChange}
+            required
+          />
+          {/* <input
+            type="text"
+            id="source"
+            name="source"
+            placeholder="WHERE DID YOU FIND ME"
+            value={formData.source}
+            onChange={handleChange}
+            required
+          /> */}
+          <Select
+            options={sourceOptions}
+            name="source"
+            value={formData.source}
+            placeholder="WHERE DID YOU FIND ME"
+            onChange={(val) => handleChange({ target: { name: 'source', value: val } })}
+            unstyled
+            classNamePrefix="CUSTOM"
+            defaultValue=""
+            styles={{
+              container: (baseStyles) => ({
+                ...baseStyles,
+                background: 'pink',
+                fontFamily: 'basic-sans',
+                fontSize: '13px',
+                fontWeight: '300',
+                lineHeight: '16px',
+                letterSpacing: '2px',
+                textTransform: 'uppercase',
+
+                width: '45%',
+                '@media screen and (max-width: 800px)': {
+                  width: '100%',
+                },
+              }),
+              control: (baseStyles, state) => {
+                // console.log('STATE', state);
+                return {
+                  ...baseStyles,
+                  borderBottom: `1px solid #140F0D`,
+                  paddingLeft: '4px',
+                  backgroundColor: state.isFocused ? '#F5EBE5' : '#E6DFD7',
+                };
+              },
+              valueContainer: (baseStyles) => ({
+                ...baseStyles,
+                // position: 'relative',
+                // bottom: '-3px',
+              }),
+              option: (baseStyles, state) => ({
+                ...baseStyles,
+                backgroundColor: state.isFocused ? '#e3d5ca' : '#F5EBE5',
+                height: '36px',
+                padding: '12px 4px',
+              }),
+            }}
             required
           />
         </div>
@@ -90,7 +155,7 @@ const ContactForm = () => {
             required
           /> */}
           <Select
-            options={options}
+            options={sessionTypeOptions}
             name="sessionType"
             value={formData.sessionType}
             placeholder="TYPE OF SESSION"
@@ -109,8 +174,8 @@ const ContactForm = () => {
                 letterSpacing: '2px',
                 textTransform: 'uppercase',
 
-                width: '60%',
-                '@media screen and (max-width: 600px)': {
+                width: '45%',
+                '@media screen and (max-width: 800px)': {
                   width: '100%',
                 },
               }),

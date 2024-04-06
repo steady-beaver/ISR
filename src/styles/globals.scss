@@ -286,22 +286,24 @@ figcaption {
 
 .portraitOctagon {
   aspect-ratio: 540/730;
-  max-height: 730px;
-}
-
-.portraitSquare {
-  aspect-ratio: 540/730;
   width: 100%;
 }
 
 .landscapeOctagon {
   aspect-ratio: 4/3;
-  max-height: 450px;
+  max-height: 470px;
+}
+
+
+.portraitSquare {
+  max-height: 900px;
+  aspect-ratio: 540/730;
+  width: 100%;
 }
 
 .landscapeSquare {
   aspect-ratio: 4/3;
-  max-height: 450px;
+  max-height: 470px;
   width: 100%;
 }
 
