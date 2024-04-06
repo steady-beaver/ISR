@@ -284,14 +284,25 @@ figcaption {
   text-overflow: ellipsis;
 }
 
-.portrait {
-  width: 100%;
-  aspect-ratio: 0.72/1;
+.portraitOctagon {
+  aspect-ratio: 540/730;
+  max-height: 730px;
 }
 
-.landscape {
+.portraitSquare {
+  aspect-ratio: 540/730;
   width: 100%;
+}
+
+.landscapeOctagon {
   aspect-ratio: 4/3;
+  max-height: 450px;
+}
+
+.landscapeSquare {
+  aspect-ratio: 4/3;
+  max-height: 450px;
+  width: 100%;
 }
 
 html,

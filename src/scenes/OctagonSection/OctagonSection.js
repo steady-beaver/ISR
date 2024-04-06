@@ -20,30 +20,30 @@ const OctagonSection = ({ data }) => {
       <div className={styles.main}>
         {leftTitle && (
           <div className={styles.col}>
-            <div className="portrait">
+            <div className="portraitOctagon">
               <CoveredImg imageNode={leftTopImage?.node} />
             </div>
             <div className={` ${styles.textContainer}`}>
               <h6 className="subtitle uppercase">{leftTitle ?? 'Left title'}</h6>
               <p className="textXS">{leftText ?? 'Left text'}</p>
             </div>
-            <div className="landscape">
+            <div className="landscapeOctagon">
               <CoveredImg imageNode={leftMiddleImage?.node} />
             </div>
-            <div className="landscape">
+            <div className="landscapeOctagon">
               <CoveredImg imageNode={leftEndImage?.node} />
             </div>
           </div>
         )}
         {rightTitle && (
           <div className={styles.col}>
-            <div className="landscape">
+            <div className="landscapeOctagon">
               <CoveredImg imageNode={rightTopImage?.node} />
             </div>
-            <div className="landscape">
+            <div className="landscapeOctagon">
               <CoveredImg imageNode={rightMiddleImage?.node} />
             </div>
-            <div className="portrait">
+            <div className="portraitOctagon">
               <CoveredImg imageNode={rightEndImage?.node} />
             </div>
             <div className={` ${styles.textContainer}`}>

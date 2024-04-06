@@ -26,8 +26,8 @@ export default function Home() {
           title="Let's have a photoshoot that's all about your love story."
           p1="I'll make sure it's relaxed and welcoming, so you can easily be yourselves. You'll get real smiles and genuine moments of closeness. We'll capture what makes your relationship special in every photo."
           p2="We're focusing on Portugal's beautiful scenes, but I'm all about catching those quick, magic moments wherever they happen. Ready to make memories with real laughter, love, and everything that goes unsaid between you? Let's start this fun adventure."
-          srcPrimary="/pictures/couple-primary.jpg"
-          srcSecondary="/pictures/couple-secondary.jpg"
+          srcPrimary="/pictures/service_couple_9x16.jpg"
+          srcSecondary="/pictures/service_couple_1x1.jpg"
         />
 
         <VideoSection url="https://www.youtube.com/watch?v=gW6pa6bnyVU" />

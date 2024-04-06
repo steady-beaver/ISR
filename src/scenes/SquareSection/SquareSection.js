@@ -7,17 +7,17 @@ const SquareSection = ({ data }) => {
     <>
       {title && (
         <div className={styles.main}>
-          <div className="portrait">
+          <div className="portraitSquare">
             <CoveredImg imageNode={imageA?.node} />
           </div>
-          <div className="portrait">
+          <div className="portraitSquare">
             <CoveredImg imageNode={imageB?.node} />
           </div>
-          <div className={`landscape ${styles.textContainer}`}>
+          <div className={`landscapeSquare ${styles.textContainer}`}>
             <h6 className="subtitle uppercase">{title}</h6>
             <p className="textXS">{text}</p>
           </div>
-          <div className="landscape">
+          <div className="landscapeSquare">
             <CoveredImg imageNode={imageC?.node} />
           </div>
         </div>

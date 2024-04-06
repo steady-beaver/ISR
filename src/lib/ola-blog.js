@@ -996,6 +996,8 @@ export async function getPopularSessions() {
                 }
               }
               main {
+                description
+                heroLabel
                 order
                 sessionType {
                   nodes {

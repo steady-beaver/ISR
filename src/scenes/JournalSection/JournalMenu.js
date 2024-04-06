@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import styles from './JournalMenu.module.scss';
+import Date from 'components/Date/Date';
 
 const JournalMenu = ({ recentThreePosts, option, setOption }) => {
+  console.log('recentThreePosts: ', recentThreePosts);
   return (
     <div className={styles.main}>
       {recentThreePosts.map((post, i) => (
@@ -26,8 +28,10 @@ const JournalMenu = ({ recentThreePosts, option, setOption }) => {
                   <span key={i} className={styles.categorySpan}>{`${cat.name}`}</span>
                 ))}
               </div>
-              <h3 className={`${styles.title} headingH3 `}>STORY OF ALGAVRE</h3>
-              <div className={`${''} subtitleTiny`}>25.05.2023</div>
+              <h3 className={`${styles.title} headingH3 uppercase`}>{post.title}</h3>
+              <div className={`${''} subtitleTiny`}>
+                <Date>{post.date}</Date>
+              </div>
             </div>
           </div>
         </div>
