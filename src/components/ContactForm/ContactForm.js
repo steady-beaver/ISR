@@ -4,6 +4,7 @@ import SendBtn from 'components/SendBtn/SendBtn';
 import { useState } from 'react';
 import Select from 'react-select';
 import styles from './ContactForm.module.scss';
+import Link from 'next/link';
 
 const sessionTypeOptions = [
   { value: '', label: 'Type of session' },
@@ -219,9 +220,9 @@ const ContactForm = () => {
           </SendBtn>
           <span className="textXS">
             By sending the message you agree to our{' '}
-            <a href="/privacy-policy" className={styles.policy}>
+            <Link href="/privacy-policy" className={styles.policy}>
               privacy policy.
-            </a>
+            </Link>
           </span>
         </div>
       </form>

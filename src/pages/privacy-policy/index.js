@@ -176,7 +176,7 @@ const PrivacyPolicy = () => {
           </p>
           <p>
             You may also have the option of sharing additional information with the Company through Your Third-Party
-            Social Media Service's account. If You choose to provide such information and Personal Data, during
+            Social Media Service&rsquo;s account. If You choose to provide such information and Personal Data, during
             registration or otherwise, You are giving the Company permission to use, share, and store it in a manner
             consistent with this Privacy Policy.
           </p>
@@ -418,7 +418,7 @@ const PrivacyPolicy = () => {
             Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable
             means to protect Your Personal Data, We cannot guarantee its absolute security.
           </p>
-          <h2>Children's Privacy</h2>
+          <h2>Children&rsquo;s Privacy</h2>
           <p>
             Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable
             information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your
