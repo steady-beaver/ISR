@@ -1,5 +1,6 @@
 import Newsletter from 'components/Newsletter/Newsletter';
 import styles from './NewsletterWidget.module.scss';
+import Link from 'next/link';
 
 const NewsletterWidget = () => {
   return (
@@ -8,7 +9,7 @@ const NewsletterWidget = () => {
       <div className={styles.newsletterInput}>
         <Newsletter />
         <span className={`${styles.helper} textXS`}>
-          By signing up to our newsletter you agree to our privacy policy.
+          By signing up to our newsletter you agree to our <Link href="/privacy-policy">privacy policy</Link>.
         </span>
       </div>
     </div>

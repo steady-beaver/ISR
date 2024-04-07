@@ -3,7 +3,6 @@ import styles from './JournalMenu.module.scss';
 import Date from 'components/Date/Date';
 
 const JournalMenu = ({ recentThreePosts, option, setOption }) => {
-  console.log('recentThreePosts: ', recentThreePosts);
   return (
     <div className={styles.main}>
       {recentThreePosts.map((post, i) => (

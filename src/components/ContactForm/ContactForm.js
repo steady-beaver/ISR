@@ -219,7 +219,7 @@ const ContactForm = () => {
           </SendBtn>
           <span className="textXS">
             By sending the message you agree to our{' '}
-            <a href="#" className={styles.policy}>
+            <a href="/privacy-policy" className={styles.policy}>
               privacy policy.
             </a>
           </span>

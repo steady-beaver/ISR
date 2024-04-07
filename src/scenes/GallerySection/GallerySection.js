@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import styles from './GallerySection.module.scss';
@@ -44,12 +44,46 @@ const getSlidesArray = (imgNodesArr) => {
 };
 
 const GallerySection = ({ data }) => {
+  const frameRef = useRef();
   const imgNodesArr = getImgArray(data);
   const slidesArr = getSlidesArray(imgNodesArr);
   const [index, setIndex] = useState(-1);
+  const [isDown, setIsDown] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e) => {
+    setIsDown(true);
+    setStartX(e.pageX - -frameRef.current.offsetLeft);
+    setScrollLeft(frameRef.current.scrollLeft);
+  };
+
+  const handleMouseUp = (e) => {
+    e.preventDefault();
+    setIsDown(false);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDown(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - frameRef.current.offsetLeft;
+    const walk = x - startX;
+    frameRef.current.scrollLeft = scrollLeft - walk;
+  };
 
   return (
-    <div className={styles.main}>
+    <div
+      className={`${styles.frame} ${isDown ? styles.active : ''}`}
+      ref={frameRef}
+      onMouseDownCapture={handleMouseDown}
+      onMouseUpCapture={handleMouseUp}
+      onMouseMoveCapture={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
       <div className={styles.canvas}>
         <div className={`${styles.row} ${styles.upper}`}>
           {imgNodesArr.map((item, i) => {
