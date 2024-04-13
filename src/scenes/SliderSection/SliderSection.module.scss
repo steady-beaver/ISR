@@ -15,9 +15,11 @@
 }
 
 .active {
-    // opacity: 0;
-    opacity: 1;
     animation: mainAnimation $duration linear infinite;
+    &>div:first-of-type{
+        opacity: 0;
+        animation: mainAnimation $duration linear infinite;
+    }
 
     &>span:first-of-type,
     &>h2 {
@@ -31,7 +33,7 @@
         animation: bottomTextAnimation $duration linear infinite;
     }
 
-    &>div:before {
+    &>div:last-of-type:before {
         content: '';
         position: absolute;
         width: 100%;

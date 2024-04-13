@@ -23,6 +23,7 @@ const SliderSection = ({ popularSessions }) => {
             title={item.main.heroLabel}
             bottomText={item.main.description}
             className={`${i === currentIndex ? styles.active : null} `}
+            imageNode={item.featuredImage.node}
           />
         </Link>
       ))}

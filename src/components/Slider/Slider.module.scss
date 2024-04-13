@@ -8,6 +8,8 @@
     // height: calc(100vh - 100px);
     width: 100%;
     height: 100%;
+    opacity: 0;
+
 
     background-position: center;
     background-size: cover;
@@ -21,7 +23,6 @@
     flex-direction: column;
 
     text-align: center;
-    opacity: 0;
 
     @include respond-width($s) {
         justify-content: flex-end;
@@ -96,3 +97,11 @@
     overflow: hidden;
     bottom: 0;
 }
+
+.coverImage{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
