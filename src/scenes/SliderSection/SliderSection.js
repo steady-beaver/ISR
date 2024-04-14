@@ -1,7 +1,6 @@
 import Slider from 'components/Slider/Slider';
 import { useEffect, useState } from 'react';
 import styles from './SliderSection.module.scss';
-import Link from 'next/link';
 
 const SliderSection = ({ popularSessions }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -16,16 +15,16 @@ const SliderSection = ({ popularSessions }) => {
   return (
     <div className={styles.mainFrame}>
       {popularSessions.map((item, i) => (
-        <Link key={item.slug} href={`/session/${item.slug}`}>
-          <Slider
-            photoUrl={item.featuredImage.node.sourceUrl}
-            topText={item.title}
-            title={item.main.heroLabel}
-            bottomText={item.main.description}
-            className={`${i === currentIndex ? styles.active : null} `}
-            imageNode={item.featuredImage.node}
-          />
-        </Link>
+        <Slider
+          key={item.slug}
+          slug={`/session/${item.slug}`}
+          photoUrl={item.featuredImage.node.sourceUrl}
+          topText={item.title}
+          title={item.main.heroLabel}
+          bottomText={item.main.description}
+          className={`${i === currentIndex ? styles.active : styles.inactive} `}
+          imageNode={item.featuredImage.node}
+        />
       ))}
     </div>
   );

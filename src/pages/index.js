@@ -5,8 +5,10 @@ import IntroductionSection from 'scenes/IntroductionSection/IntroductionSection'
 import JournalSection from 'scenes/JournalSection/JournalSection';
 import ServiceSection from 'scenes/ServiceSection/ServiceSection';
 import SliderSection from 'scenes/SliderSection/SliderSection';
-import VideoSection from 'scenes/VideoSection/VideoSection';
+// import VideoSection from 'scenes/VideoSection/VideoSection';
+
 import { getPopularSessions } from 'lib/ola-blog';
+import HandwritedFullWidth from 'components/HandwritedFullWidth/HandwritedFullWidth';
 
 export async function getStaticProps() {
   const popularSessions = await getPopularSessions();
@@ -26,9 +28,10 @@ export default function Home({ recentThreePosts, imageStorageBase, popularSessio
       <SliderSection popularSessions={popularSessions} />
 
       <NewContainer>
+        <HandwritedFullWidth text="Emotional storytelling photography" />
         <ServiceSection />
 
-        <VideoSection url="https://www.youtube.com/watch?v=mrobdVDb8B4" />
+        {/* <VideoSection url="https://www.youtube.com/watch?v=mrobdVDb8B4" /> */}
 
         <JournalSection recentThreePosts={recentThreePosts} imgBase={imageStorageBase} />
 

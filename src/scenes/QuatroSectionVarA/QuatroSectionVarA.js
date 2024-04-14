@@ -19,11 +19,11 @@ const QuatroSectionVarA = ({ header, title, p1, p2, srcPrimary, srcSecondary, id
             />
           </div>
 
-          <p className={`${styles.p2VarA} text`}>{p2}</p>
+          <p className={`${styles.p2VarA} textS`}>{p2}</p>
         </div>
         <div className={styles.rightColVarA}>
           <h3 className={`${styles.titleVarA} headingH3`}>{title}</h3>
-          <p className={`${styles.p1VarA} text`}>{p1}</p>
+          <p className={`${styles.p1VarA} textS`}>{p1}</p>
           <div className={styles.secondaryFrameVarA}>
             <Image
               src={'/pictures/white-paper-1.png'}
@@ -57,8 +57,8 @@ const QuatroSectionVarA = ({ header, title, p1, p2, srcPrimary, srcSecondary, id
         </div>
         <div className={styles.bottomPartFrame}>
           <h3 className={`${styles.titleVarA} headingH3`}>{title}</h3>
-          <p className={`${styles.p1VarA} text`}>{p1}</p>
-          <p className={`${styles.p2VarA} text`}>{p2}</p>
+          <p className={`${styles.p1VarA} textS`}>{p1}</p>
+          <p className={`${styles.p2VarA} textS`}>{p2}</p>
         </div>
       </div>
     </div>

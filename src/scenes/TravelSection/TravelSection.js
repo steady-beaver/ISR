@@ -6,7 +6,7 @@ const TravelSection = ({ primaryImg, secondaryImg }) => {
     <div className={styles.main}>
       <div className={styles.textFrame}>
         <h2 className={`${styles.title} headingH1 uppercase`}>Travel</h2>
-        <p className={`${styles.text} textS letterSpacing`}>
+        <p className={`textS`}>
           Ready to travel anywhere for your destination wedding! Let&rsquo;s turn your dream location into the backdrop
           of your special day. I&rsquo;ll fly out to capture every moment, making sure your love story is beautifully
           told, no matter where in the world you decide to say I DO.

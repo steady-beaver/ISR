@@ -5,10 +5,10 @@
     max-height: 70vh;
     width: 100%;
     overflow-x: hidden;
-    margin: 200px auto;
+    margin: 200px auto 80px;
 
     @include respond-width($s) {
-        margin: 150px auto;
+        margin: 150px auto 80px;
     }
 }
 

@@ -2,20 +2,14 @@ import ContactForm from 'components/ContactForm/ContactForm';
 import InfoPoint from 'components/InfoPoint/InfoPoint';
 import Layout from 'components/Layout';
 import NewContainer from 'components/NewContainer/NewContainer';
-import PersonalSection from 'scenes/PersonalSection/PersonalSection';
-
-import FollowMe from 'components/FollowMe/FollowMe';
+import PersonalSectionExtended from 'scenes/PersonalSectionExtended/PersonalSectionExtended';
 import styles from '../styles/pages/Contacts.module.scss';
 
 export default function Contacts() {
   return (
     <Layout>
       <NewContainer>
-        <div className={styles.frame}>
-          <PersonalSection />
-          <FollowMe />
-        </div>
-
+        <PersonalSectionExtended />
         <ContactForm />
 
         <div className={styles.infoContainer}>

@@ -36,7 +36,7 @@
   position: absolute;
   width: 2px;
   height: 100%;
-  background-color: $black;
+  background-color: $brown-light;;
   left: 50%;
   top: 0;
   @include respond-width($xs) {
@@ -68,7 +68,7 @@
     width: 20px;
     height: 2px;
     top: 30px;
-    background-color: $black;
+    background-color: $brown-light;;
     position: absolute;
     @include respond-width($xs) {
       width: 15px;

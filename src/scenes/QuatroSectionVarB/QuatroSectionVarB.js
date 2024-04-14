@@ -20,11 +20,11 @@ const QuatroSectionVarB = ({ header, title, p1, p2, srcPrimary, srcSecondary, id
             />
           </div>
 
-          <p className={`${styles.p2} text`}>{p2}</p>
+          <p className={`${styles.p2} textS`}>{p2}</p>
         </div>
         <div className={styles.rightCol}>
           <h3 className={`${styles.title} headingH3`}>{title}</h3>
-          <p className={`${styles.p1} text`}>{p1}</p>
+          <p className={`${styles.p1} textS`}>{p1}</p>
           <div className={styles.secondaryFrame}>
             <Image src={srcSecondary} alt="Wedding" fill={true} className="imgShadow" />
           </div>
@@ -51,8 +51,8 @@ const QuatroSectionVarB = ({ header, title, p1, p2, srcPrimary, srcSecondary, id
         </div>
         <div className={styles.bottomPartFrame}>
           <h3 className={`${styles.title} headingH3`}>{title}</h3>
-          <p className={`${styles.p1} text`}>{p1}</p>
-          <p className={`${styles.p2} text`}>{p2}</p>
+          <p className={`${styles.p1} textS`}>{p1}</p>
+          <p className={`${styles.p2} textS`}>{p2}</p>
         </div>
       </div>
     </div>

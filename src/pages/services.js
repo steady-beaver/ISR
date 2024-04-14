@@ -40,7 +40,7 @@ export default function Home() {
           id="elopementSection"
           header="Elopement"
           title="There's something incredibly special about elopement weddings that resonates deeply with me."
-          p1="The intimate setting, connection between the couple, and the unique stories waiting to be told – these moments are what I cherish the most as a photographer. My services for elopement are limitless. Whether you desire to have me by your side capturing every moment from dawn till dusk, or you prefer focusing on just the pivotal moments"
+          p1="The intimate setting, connection between the couple, and the unique stories waiting to be told – these moments are what I cherish the most as a photographer. My services for elopement are limitless. Whether you desire to have me by your side capturing every moment from dawn till dusk, or you prefer focusing on just the pivotal moments."
           p2="I understand the beauty in the simplicity and the significance of these intimate exchanges, and I aim to preserve them in the most authentic way possible."
           srcPrimary="/pictures/service-elopement-1.jpg"
           srcSecondary="/pictures/service-elopement-2.jpg"

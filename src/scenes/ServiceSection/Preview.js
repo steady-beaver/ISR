@@ -23,7 +23,7 @@ const Preview = ({ title, text, srcPrimary, srcSecondary, link, className }) => 
         <Link href={link}>
           <h4 className={`${styles.title} headingH3`}>{title}</h4>
         </Link>
-        <p className={`${styles.text} text`}>{text}</p>
+        <p className={` textS`}>{text}</p>
         <ReadMoreBtn className={styles.readMore} to={`${link}`} />
       </div>
     </div>

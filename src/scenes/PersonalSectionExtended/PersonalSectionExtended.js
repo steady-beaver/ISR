@@ -3,9 +3,10 @@ import Link from 'next/link';
 import bookSessionFlower from 'public/ornaments/book-session-flower.png';
 import olaPhoto from 'public/pictures/ola-profile.webp';
 import { useInView } from 'react-intersection-observer';
-import styles from './PersonalSection.module.scss';
+import styles from './PersonalSectionExtended.module.scss';
+import FollowMe from 'components/FollowMe/FollowMe';
 
-const PersonalSection = ({ className }) => {
+const PersonalSectionExtended = ({ className }) => {
   const { ref, inView } = useInView({
     threshold: 0.6,
   });
@@ -31,12 +32,13 @@ const PersonalSection = ({ className }) => {
         </Link>
         <span className={`${styles.signature} signature`}>Ola</span>
       </div>
-      <div className={`${''} subtitleStrong uppercase`}>Book a session</div>
+      <div className={`${''} subtitleStrong uppercase`}>Contact me</div>
       <div className={`${styles.invitationText} textS`}>
         Let&rsquo;s make memories! Hit the image to book your session and bring your dream photos to life
       </div>
+      <FollowMe />
     </div>
   );
 };
 
-export default PersonalSection;
+export default PersonalSectionExtended;

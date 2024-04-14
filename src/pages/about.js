@@ -19,7 +19,7 @@ export default function Home() {
           text="A photographer who adores coffee, traveling, nature, sunsets, draws inspiration from music, loves yoga, and can spend hours gazing at the ocean."
         />
 
-        <VideoSection url="https://www.youtube.com/watch?v=JtYaDKNssbI" />
+        <VideoSection url="https://www.youtube.com/watch?v=ALqe9SiF78I" />
 
         {/* <TimelineSection>
           <Episode

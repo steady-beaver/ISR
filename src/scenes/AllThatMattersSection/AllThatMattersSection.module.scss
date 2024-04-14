@@ -1,11 +1,11 @@
 @import 'src/styles/theme/theme.scss';
 
 .main {
-    margin: 200px auto;
+    margin: 200px auto 0;
     text-align: center;
 
     @include respond-width($s) {
-        margin: 150px auto;
+        margin: 150px auto 80px
     }
 }
 

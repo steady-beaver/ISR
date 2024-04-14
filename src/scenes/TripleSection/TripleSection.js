@@ -13,18 +13,18 @@ const TripleSection = ({ photoSrc, id }) => {
           <div className={styles.colLeft}>
             <div className={styles.primaryImg}>
               <Image src={photoSrc} fill={true} alt="Wedding" className={`${styles.primarySrc} imgShadow`} />
-              <Image
+              {/* <Image
                 src={'/ornaments/tape-ornament.png'}
                 width={100}
                 height={100}
                 className={styles.tapeOrnament}
                 alt="Paper tape decoration"
-              />
+              /> */}
             </div>
             <h3 className={`${styles.title} headingH3`}>
               Wedding photos that capture your story and emotions, lasting forever.
             </h3>
-            <p className={`${styles.text} text`}>
+            <p className={`textS`}>
               During weddings, I carefully and thoughtfully capture the true atmosphere of your day. I focus on the
               realness of each moment to tell your story. I thoroughly document the essence of the celebration, making
               sure to preserve every important detail and emotion.

@@ -2,12 +2,12 @@
 
 .main {
     max-width: 650px;
-    margin: 200px auto;
+    margin: 0 auto 200px;
 
     @include respond-width($s) {
         padding: 50px;
         max-width: 100%;
-        margin: 100px auto 0;
+        margin: 0 auto 0;
     }
 
     form {
@@ -47,11 +47,7 @@
         }
 
         input[name="name"] {
-            width: 45%;
-        }
-
-        input[name="source"] {
-            width: 45%;
+            width: 100%;
         }
 
         input[name="email"] {
@@ -63,6 +59,14 @@
         }
 
         input[name="month"] {
+            width: 45%;
+        }
+
+        input[name="source"] {
+            width: 45%;
+        }
+
+        input[name="clientInstagram"] {
             width: 45%;
         }
 
