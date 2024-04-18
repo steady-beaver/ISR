@@ -54,7 +54,7 @@ export async function getStaticProps() {
       allCategories,
       imageStorageBase: process.env.WORDPRESS_UPLOADS_URL,
     },
-    revalidate: 10,
+    revalidate: 60,
   };
 }
 
