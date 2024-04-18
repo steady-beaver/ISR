@@ -75,6 +75,24 @@ const GallerySection = ({ data }) => {
     frameRef.current.scrollLeft = scrollLeft - walk;
   };
 
+  const handleTouchStart = (e) => {
+    setIsDown(true);
+    setStartX(e.touches[0].pageX - frameRef.current.offsetLeft);
+    setScrollLeft(frameRef.current.scrollLeft);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - frameRef.current.offsetLeft;
+    const walk = x - startX;
+    frameRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchEnd = () => {
+    setIsDown(false);
+  };
+
   return (
     <div
       className={`${styles.frame} ${isDown ? styles.active : ''}`}
@@ -83,6 +101,9 @@ const GallerySection = ({ data }) => {
       onMouseUpCapture={handleMouseUp}
       onMouseMoveCapture={handleMouseMove}
       onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
     >
       <div className={styles.canvas}>
         <div className={`${styles.row} ${styles.upper}`}>
