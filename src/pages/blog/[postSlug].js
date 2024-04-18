@@ -16,6 +16,7 @@ export const getStaticProps = async ({ params }) => {
       postData,
       allCategories,
     },
+    revalidate: 10,
   };
 };
 
@@ -28,7 +29,7 @@ export const getStaticPaths = async () => {
         postSlug: item.slug,
       },
     })),
-    fallback: false,
+    fallback: 'blocking',
   };
 };
 
