@@ -1,8 +1,8 @@
 import styles from './TabMenu.module.scss';
 
-const TabMenu = ({ option, setOption, className }) => {
+const TabMenu = ({ option, setOption, className, stopRotation, restoreRotation }) => {
   return (
-    <div className={className}>
+    <div className={className} onMouseEnter={stopRotation} onMouseLeave={restoreRotation}>
       <ol className={styles.olStyles}>
         <li
           className={`${option === 'couple' ? styles.active : ''} ${styles.liItem} subtitleSmall`}

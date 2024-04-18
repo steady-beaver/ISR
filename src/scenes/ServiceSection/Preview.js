@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './Preview.module.scss';
 
-const Preview = ({ title, text, srcPrimary, srcSecondary, link, className }) => {
+const Preview = ({ title, text, srcPrimary, srcSecondary, link, className, stopRotation, restoreRotation }) => {
   return (
     <div className={`${styles.main} ${className}`}>
       <div className={styles.primaryImgFrame}>
@@ -20,11 +20,16 @@ const Preview = ({ title, text, srcPrimary, srcSecondary, link, className }) => 
         <Image src={srcSecondary} alt="Wedding" fill={true} className={`${styles.secondaryImg} imgShadow`} />
       </div>
       <div className={styles.textSection}>
-        <Link href={link}>
+        <Link href={link} onMouseEnter={stopRotation} onMouseLeave={restoreRotation}>
           <h4 className={`${styles.title} headingH3`}>{title}</h4>
         </Link>
         <p className={` textS`}>{text}</p>
-        <ReadMoreBtn className={styles.readMore} to={`${link}`} />
+        <ReadMoreBtn
+          className={styles.readMore}
+          to={`${link}`}
+          onMouseEnter={stopRotation}
+          onMouseLeave={restoreRotation}
+        />
       </div>
     </div>
   );
