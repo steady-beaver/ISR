@@ -33,8 +33,8 @@ const Portfolio = ({ initialSessionsData, popularSessions }) => {
     pageInfo: initialSessionsData.pageInfo,
   });
 
-  console.log('seSSions: ', sessions);
-  console.log('popularSessions: ', popularSessions);
+  // console.log('seSSions: ', sessions);
+  // console.log('popularSessions: ', popularSessions);
 
   return (
     <Layout>

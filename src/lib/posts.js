@@ -323,7 +323,7 @@ export async function getPagesCount(posts, postsPerPage) {
 export async function getPaginatedPosts({ currentPage = 1, ...options } = {}) {
   const { posts } = await getAllPosts(options);
 
-  console.log('THErE');
+  // console.log('THErE');
   // console.log('posts: ', posts);
   const postsPerPage = await getPostsPerPage();
   const pagesCount = await getPagesCount(posts, postsPerPage);
